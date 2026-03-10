@@ -20,6 +20,10 @@
   align-items: center;
   width: 100%;
 }
+.eventSlider{
+  width: 75%;
+  margin: 2rem auto;
+}
 .eventSlider div img {
   object-fit: contain;
 }
