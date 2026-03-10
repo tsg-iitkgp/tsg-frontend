@@ -568,7 +568,7 @@ export default function Welfare() {
               <br />
               <a
                 className={globalStyles.btn}
-                href="https://gymkhana.iitkgp.ac.in/files/handbook.pdf"
+                href="https://gymkhana.iitkgp.ac.in/data/media/files/handbook.pdf"
               >
                 Click here to download Induction program handbook
               </a>
