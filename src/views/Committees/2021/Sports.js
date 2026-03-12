@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Layout from "../../../components/Layouts/Layout";
 import Styles from "../styles/socult.module.css";

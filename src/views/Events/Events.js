@@ -1,3 +1,4 @@
+"use client";
 import React, { useState, useEffect } from "react";
 import Styles from "./events.module.css";
 // import eventsData from "../components/Events/eventsData";

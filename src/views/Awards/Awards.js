@@ -1,3 +1,4 @@
+"use client";
 import Layout from "../../components/Layouts/Layout";
 import "./Awards.css";
 import {

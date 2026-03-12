@@ -41,7 +41,7 @@ export default function Home() {
         <meta name="twitter:image" content={pageImage} />
       </Head>
       
-      <div className={Styles.backgroundImage}>
+      <div className={Styles.backgroundImage} style={{ background: 'url("/images/iitkgp.jpg") center/cover no-repeat' }}>
         <div className={Styles.textOverlay}>
           <div className={Styles.kgpSvg}>
             <img

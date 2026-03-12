@@ -1,3 +1,4 @@
+"use client";
 import "./CertifGen.css";
 import Layout from "../../../components/Layouts/Layout";
 

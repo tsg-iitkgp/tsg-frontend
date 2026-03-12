@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import "./ContactUs.css";
 import Layout from "../../components/Layouts/Layout";

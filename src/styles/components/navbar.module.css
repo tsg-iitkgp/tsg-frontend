@@ -1,7 +1,10 @@
 /* header */
-:global(*) {
+* {
   box-sizing: border-box;
+  font-family: "Lato", sans-serif;
 }
+
+
 .navbarContainer {
   width: 100%;
   position: fixed;
@@ -63,12 +66,12 @@ ul.navMenu {
   margin-bottom: auto;
   justify-content: space-between;
 }
-:global(li) {
+.navMenu li {
   margin-right: 1rem;
   display: block;
   list-style: none;
 }
-:global(ul) :global(li) :global(a) {
+.navMenu li a {
   padding: 0.5rem 0rem;
   color: white;
   display: inline-block;

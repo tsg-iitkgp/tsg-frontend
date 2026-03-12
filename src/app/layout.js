@@ -9,26 +9,28 @@ import "../styles/components/withTable.css";
 export const dynamic = "force-dynamic";
 
 export const metadata = {
-  title: "| TSG",
+  title: {
+    default: "Technology Students' Gymkhana - IIT Kharagpur | TSG",
+    template: "%s | TSG",
+  },
   description:
-    "Historic collaboration between IIT Kharagpur and University of Cambridge for the Gaia Platform. Inaugural event of the 2nd phase of the International Software Derby organized by 1 Earth Holdings Inc.",
+    "Technology Students' Gymkhana is the hub of the numerous extra-curricular and co-curricular activities in IIT Kharagpur ranging from sports to socio-cultural. The Gymkhana is managed by the students, for the students, under the guidance and active participation of the faculty and staff members.",
   icons: {
     icon: "/data/media/images/general/gymkhanaLogo.png",
     apple: "/logo192.png",
   },
   openGraph: {
-    type: "article",
-    url: "https://gymkhana.iitkgp.ac.in/events/gaia-2025",
-    title:
-      "IIT Kharagpur - University of Cambridge Collaboration for Gaia Platform",
+    type: "website",
+    url: "https://gymkhana.iitkgp.ac.in",
+    title: "Technology Students' Gymkhana - IIT Kharagpur",
     description:
-      "Historic collaboration between IIT Kharagpur and University of Cambridge for the Gaia Platform. Inaugural event of the 2nd phase of the International Software Derby organized by 1 Earth Holdings Inc.",
+      "The hub of extra-curricular and co-curricular activities in IIT Kharagpur. Managed by students, for students.",
     images: [
       {
-        url: "https://gymkhana.iitkgp.ac.in/data/media/images/events/Gaia_Platform_KGP-Cambridge_Collab_thumb.JPEG",
-        width: 1200,
-        height: 675,
-        alt: "IIT Kharagpur - University of Cambridge Collaboration for Gaia Platform",
+        url: "https://gymkhana.iitkgp.ac.in/data/media/images/general/gymkhanaLogo.png",
+        width: 512,
+        height: 512,
+        alt: "Technology Students' Gymkhana Logo",
       },
     ],
     siteName: "Technology Students' Gymkhana - IIT Kharagpur",
@@ -36,13 +38,12 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    url: "https://gymkhana.iitkgp.ac.in/events/gaia-2025",
-    title:
-      "IIT Kharagpur - University of Cambridge Collaboration for Gaia Platform",
+    url: "https://gymkhana.iitkgp.ac.in",
+    title: "Technology Students' Gymkhana - IIT Kharagpur",
     description:
-      "Historic collaboration between IIT Kharagpur and University of Cambridge for the Gaia Platform. Inaugural event of the 2nd phase of the International Software Derby.",
+      "The hub of extra-curricular and co-curricular activities in IIT Kharagpur. Managed by students, for students.",
     images: [
-      "https://gymkhana.iitkgp.ac.in/data/media/images/events/Gaia_Platform_KGP-Cambridge_Collab_thumb.JPEG",
+      "https://gymkhana.iitkgp.ac.in/data/media/images/general/gymkhanaLogo.png",
     ],
   },
 };

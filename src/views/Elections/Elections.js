@@ -1,3 +1,4 @@
+"use client";
 import { Typography, Container, Box, Button } from "@material-ui/core";
 import React from "react";
 

@@ -1,3 +1,4 @@
+"use client";
 import { Typography, Container, Box, Button, CircularProgress } from "@material-ui/core";
 
 import React, { useState } from "react";

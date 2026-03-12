@@ -1,3 +1,4 @@
+"use client";
 import Layout from "../../components/Layouts/Layout";
 import Styles from "../../styles/views/contacts.module.css";
 import {

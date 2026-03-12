@@ -1,3 +1,4 @@
+"use client";
 import React, { useState, useCallback } from "react";
 import "./LetterToYou.css";
 import Layout from "../../components/Layouts/Layout";
