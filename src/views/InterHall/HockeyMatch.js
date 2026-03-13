@@ -1,6 +1,7 @@
 import React from 'react';
 import Styles from '../../styles/components/GC_Live/football.module.css';
 import * as Icon from "react-feather";
+import AppImage from "../../components/AppImage";
 
 
 function HockeyMatch({ data }) {
@@ -21,7 +22,7 @@ function HockeyMatch({ data }) {
             {data.team1_score}
           </div>
           <div className={Styles.scorers}>
-            <img src='/images/hockey-symbol.png' />
+            <AppImage alt="" src='/images/hockey-symbol.png' />
             {data.team1_goalscorers}
           </div>
         </div>
@@ -36,7 +37,7 @@ function HockeyMatch({ data }) {
             {data.team2_score}
           </div>
           <div className={Styles.scorers}>
-            <img src='/images/hockey-symbol.png' />
+            <AppImage alt="" src='/images/hockey-symbol.png' />
             {data.team2_goalscorers}
           </div>
         </div>

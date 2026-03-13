@@ -8,6 +8,7 @@ import AboutUs from "./AboutUs/AboutUs";
 import CommitteesHome from "./Committee/CommitteesHome";
 import Societies from "./Societies/Societies";
 import Greet from "./Greet";
+import AppImage from "../../components/AppImage";
 
 export default function Home() {
   const pageTitle = "Technology Students' Gymkhana - IIT Kharagpur | TSG";
@@ -44,7 +45,7 @@ export default function Home() {
       <div className={Styles.backgroundImage} style={{ background: 'url("/images/iitkgp.jpg") center/cover no-repeat' }}>
         <div className={Styles.textOverlay}>
           <div className={Styles.kgpSvg}>
-            <img
+            <AppImage
               src="/data/media/images/general/gymkhanaLogo.png"
               alt="KGP Logo"
             />

@@ -1,6 +1,7 @@
 import React from 'react'
 import Styles from "../../../styles/components/contact-card.module.css";
 import data from '../../../data/CertiTemplate.json'
+import AppImage from "../../AppImage";
 
 function ExcelPreview(props) {
     
@@ -9,7 +10,7 @@ function ExcelPreview(props) {
             <>
                 <div className={Styles.container} style={{width: '100%', margin: 'auto', backgroundColor: '#ffffffc7'}}>
                     <div className={Styles.imgbox} style={{width: '100%', margin: 'auto'}}>
-                        <img src={data.Templates[props.id].preview} alt={data.Templates[props.id].alt} style={{objectFit: 'contain'}}/>
+                        <AppImage src={data.Templates[props.id].preview} alt={data.Templates[props.id].alt} style={{objectFit: 'contain'}}/>
                     </div>
                     <ul className={Styles.sociallinks}>
                         <li>

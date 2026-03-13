@@ -6,6 +6,7 @@ import Layout from "../../../components/Layouts/Layout";
 import "./Dashboard.css";
 import Logout from "../Logout";
 import jwt from "jsonwebtoken";
+import AppImage from "../../../components/AppImage";
 export default function Dashboard() {
   const token = localStorage.getItem("authToken");
   const role = localStorage.getItem("role");
@@ -30,7 +31,7 @@ export default function Dashboard() {
         </div>
         <div className="admin-profile">
           <div className="profile-pic">
-            <img
+            <AppImage
               className="admin-pic"
               src="/data/media/images/general/gymkhanaLogo.png"
               alt="profile-pic"

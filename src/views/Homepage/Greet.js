@@ -5,7 +5,7 @@ export default function Greet() {
     <div className={Styles.animatedTitle}>
       <div className={Styles.textTop}>
         <div>
-          <span>Technology Students' Gymkhana</span>
+          <span>Technology Students&apos; Gymkhana</span>
           <span>IIT Kharagpur</span>
         </div>
       </div>

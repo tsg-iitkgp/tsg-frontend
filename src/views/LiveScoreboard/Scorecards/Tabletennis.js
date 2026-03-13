@@ -47,7 +47,7 @@ export default function Tabletennis(props) {
             <div className="popup-content">
               <div className="popup-content text">
                 <table>
-                  <tr><th>Date</th><th>Event</th><th>Match</th><th>Match 1</th><th>Match 2</th><th>Match 3</th><th>Match 4</th><th>Match 5</th><th>Final Result</th></tr>
+                  <tr><th key="k-th">Date</th><th key="k-th">Event</th><th key="k-th">Match</th><th key="k-th">Match 1</th><th key="k-th">Match 2</th><th key="k-th">Match 3</th><th key="k-th">Match 4</th><th key="k-th">Match 5</th><th key="k-th">Final Result</th></tr>
                   {props.data.data.map((val, key) => {
                     if (key >= 0 && key < 22) {
                       // console.log(val);
@@ -55,12 +55,12 @@ export default function Tabletennis(props) {
                         // console.log('yes')
                         rowspan = 2;
                         return (
-                          <tr>
-                            <th rowSpan={rowspan}>{val[0]}</th>
+                          <tr key="k-58">
+                            <th key="k-th" rowSpan={rowspan}>{val[0]}</th>
                             {val.map((cell, index) => {
                               if (key !== 0) {
                                 return (
-                                  <td>
+                                  <td key="k-63">
                                     {cell}
                                   </td>
                                 )
@@ -75,12 +75,12 @@ export default function Tabletennis(props) {
                       else if (val[0] === "16th Dec") {
                         rowspan = 2;
                         return (
-                          <tr>
-                            <th rowSpan={rowspan}>{val[0]}</th>
+                          <tr key="k-78">
+                            <th key="k-th" rowSpan={rowspan}>{val[0]}</th>
                             {val.map((cell, index) => {
                               if (key !== 2) {
                                 return (
-                                  <td>
+                                  <td key="k-83">
                                     {cell}
                                   </td>
                                 )
@@ -94,12 +94,12 @@ export default function Tabletennis(props) {
                       } else if (val[0] === "17th Dec") {
                         rowspan = 3;
                         return (
-                          <tr>
-                            <th rowSpan={rowspan}>{val[0]}</th>
+                          <tr key="k-97">
+                            <th key="k-th" rowSpan={rowspan}>{val[0]}</th>
                             {val.map((cell, index) => {
                               if (key !== 4) {
                                 return (
-                                  <td>
+                                  <td key="k-102">
                                     {cell}
                                   </td>
                                 )
@@ -114,12 +114,12 @@ export default function Tabletennis(props) {
                       else if (val[0] === "18th Dec") {
                         rowspan = 2;
                         return (
-                          <tr>
-                            <th rowSpan={rowspan}>{val[0]}</th>
+                          <tr key="k-117">
+                            <th key="k-th" rowSpan={rowspan}>{val[0]}</th>
                             {val.map((cell, index) => {
                               if (key !== 7) {
                                 return (
-                                  <td>
+                                  <td key="k-122">
                                     {cell}
                                   </td>
                                 )
@@ -133,12 +133,12 @@ export default function Tabletennis(props) {
                       } else if (val[0] === "19th Dec") {
                         rowspan = 3;
                         return (
-                          <tr>
-                            <th rowSpan={rowspan}>{val[0]}</th>
+                          <tr key="k-136">
+                            <th key="k-th" rowSpan={rowspan}>{val[0]}</th>
                             {val.map((cell, index) => {
                               if (key !== 9) {
                                 return (
-                                  <td>
+                                  <td key="k-141">
                                     {cell}
                                   </td>
                                 )
@@ -153,12 +153,12 @@ export default function Tabletennis(props) {
                       else if (val[0] === "20th Dec") {
                         rowspan = 3;
                         return (
-                          <tr>
-                            <th rowSpan={rowspan}>{val[0]}</th>
+                          <tr key="k-156">
+                            <th key="k-th" rowSpan={rowspan}>{val[0]}</th>
                             {val.map((cell, index) => {
                               if (key !== 12) {
                                 return (
-                                  <td>
+                                  <td key="k-161">
                                     {cell}
                                   </td>
                                 )
@@ -172,12 +172,12 @@ export default function Tabletennis(props) {
                       } else if (val[0] === "21st Dec") {
                         rowspan = 3;
                         return (
-                          <tr>
-                            <th rowSpan={rowspan}>{val[0]}</th>
+                          <tr key="k-175">
+                            <th key="k-th" rowSpan={rowspan}>{val[0]}</th>
                             {val.map((cell, index) => {
                               if (key !== 15) {
                                 return (
-                                  <td>
+                                  <td key="k-180">
                                     {cell}
                                   </td>
                                 )
@@ -191,12 +191,12 @@ export default function Tabletennis(props) {
                       } else if (val[0] === "22nd Dec") {
                         rowspan = 2;
                         return (
-                          <tr>
-                            <th rowSpan={rowspan}>{val[0]}</th>
+                          <tr key="k-194">
+                            <th key="k-th" rowSpan={rowspan}>{val[0]}</th>
                             {val.map((cell, index) => {
                               if (key !== 18) {
                                 return (
-                                  <td>
+                                  <td key="k-199">
                                     {cell}
                                   </td>
                                 )
@@ -210,9 +210,9 @@ export default function Tabletennis(props) {
                       }
                       else {
                         return (
-                          <tr>
+                          <tr key="k-213">
                             {val.map((cell, index) => {
-                              return (<td>{cell}</td>)
+                              return (<td key="k-td">{cell}</td>)
                             })}
                           </tr>
                         )
@@ -250,7 +250,7 @@ export default function Tabletennis(props) {
               <div className="popup-content">
                 <div className="popup-content text">
                   <table>
-                    <tr><th>Date</th><th>Event</th><th>Match</th><th>Match 1</th><th>Match 2</th><th>Match 3</th><th>Match 4</th><th>Match 5</th><th>Final Result</th></tr>
+                    <tr><th key="k-th">Date</th><th key="k-th">Event</th><th key="k-th">Match</th><th key="k-th">Match 1</th><th key="k-th">Match 2</th><th key="k-th">Match 3</th><th key="k-th">Match 4</th><th key="k-th">Match 5</th><th key="k-th">Final Result</th></tr>
                     {data.data.map((val, key) => {
                       if (key >= 0 && key < 22) {
                         // console.log(val);
@@ -258,12 +258,12 @@ export default function Tabletennis(props) {
                           // console.log('yes')
                           rowspan = 2;
                           return (
-                            <tr>
-                              <th rowSpan={rowspan}>{val[0]}</th>
+                            <tr key="k-261">
+                              <th key="k-th" rowSpan={rowspan}>{val[0]}</th>
                               {val.map((cell, index) => {
                                 if (key !== 0) {
                                   return (
-                                    <td>
+                                    <td key="k-266">
                                       {cell}
                                     </td>
                                   )
@@ -278,12 +278,12 @@ export default function Tabletennis(props) {
                         else if (val[0] === "16th Dec") {
                           rowspan = 2;
                           return (
-                            <tr>
-                              <th rowSpan={rowspan}>{val[0]}</th>
+                            <tr key="k-281">
+                              <th key="k-th" rowSpan={rowspan}>{val[0]}</th>
                               {val.map((cell, index) => {
                                 if (key !== 2) {
                                   return (
-                                    <td>
+                                    <td key="k-286">
                                       {cell}
                                     </td>
                                   )
@@ -297,12 +297,12 @@ export default function Tabletennis(props) {
                         } else if (val[0] === "17th Dec") {
                           rowspan = 3;
                           return (
-                            <tr>
-                              <th rowSpan={rowspan}>{val[0]}</th>
+                            <tr key="k-300">
+                              <th key="k-th" rowSpan={rowspan}>{val[0]}</th>
                               {val.map((cell, index) => {
                                 if (key !== 4) {
                                   return (
-                                    <td>
+                                    <td key="k-305">
                                       {cell}
                                     </td>
                                   )
@@ -317,12 +317,12 @@ export default function Tabletennis(props) {
                         else if (val[0] === "18th Dec") {
                           rowspan = 2;
                           return (
-                            <tr>
-                              <th rowSpan={rowspan}>{val[0]}</th>
+                            <tr key="k-320">
+                              <th key="k-th" rowSpan={rowspan}>{val[0]}</th>
                               {val.map((cell, index) => {
                                 if (key !== 7) {
                                   return (
-                                    <td>
+                                    <td key="k-325">
                                       {cell}
                                     </td>
                                   )
@@ -336,12 +336,12 @@ export default function Tabletennis(props) {
                         } else if (val[0] === "19th Dec") {
                           rowspan = 3;
                           return (
-                            <tr>
-                              <th rowSpan={rowspan}>{val[0]}</th>
+                            <tr key="k-339">
+                              <th key="k-th" rowSpan={rowspan}>{val[0]}</th>
                               {val.map((cell, index) => {
                                 if (key !== 9) {
                                   return (
-                                    <td>
+                                    <td key="k-344">
                                       {cell}
                                     </td>
                                   )
@@ -356,12 +356,12 @@ export default function Tabletennis(props) {
                         else if (val[0] === "20th Dec") {
                           rowspan = 3;
                           return (
-                            <tr>
-                              <th rowSpan={rowspan}>{val[0]}</th>
+                            <tr key="k-359">
+                              <th key="k-th" rowSpan={rowspan}>{val[0]}</th>
                               {val.map((cell, index) => {
                                 if (key !== 12) {
                                   return (
-                                    <td>
+                                    <td key="k-364">
                                       {cell}
                                     </td>
                                   )
@@ -375,12 +375,12 @@ export default function Tabletennis(props) {
                         } else if (val[0] === "21st Dec") {
                           rowspan = 3;
                           return (
-                            <tr>
-                              <th rowSpan={rowspan}>{val[0]}</th>
+                            <tr key="k-378">
+                              <th key="k-th" rowSpan={rowspan}>{val[0]}</th>
                               {val.map((cell, index) => {
                                 if (key !== 15) {
                                   return (
-                                    <td>
+                                    <td key="k-383">
                                       {cell}
                                     </td>
                                   )
@@ -394,12 +394,12 @@ export default function Tabletennis(props) {
                         } else if (val[0] === "22nd Dec") {
                           rowspan = 2;
                           return (
-                            <tr>
-                              <th rowSpan={rowspan}>{val[0]}</th>
+                            <tr key="k-397">
+                              <th key="k-th" rowSpan={rowspan}>{val[0]}</th>
                               {val.map((cell, index) => {
                                 if (key !== 18) {
                                   return (
-                                    <td>
+                                    <td key="k-402">
                                       {cell}
                                     </td>
                                   )
@@ -413,9 +413,9 @@ export default function Tabletennis(props) {
                         }
                         else {
                           return (
-                            <tr>
+                            <tr key="k-416">
                               {val.map((cell, index) => {
-                                return (<td>{cell}</td>)
+                                return (<td key="k-td">{cell}</td>)
                               })}
                             </tr>
                           )

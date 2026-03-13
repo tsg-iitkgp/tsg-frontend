@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import "./form.css";
+import AppImage from "../../components/AppImage";
 const SocietyForm = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -189,7 +190,7 @@ const SocietyForm = () => {
         <div className="photo-gallery-preview">
           {photoGallery.map((file, index) => (
             <div key={index} className="photo-preview">
-              <img
+              <AppImage
                 src={URL.createObjectURL(file)}
                 alt={`Preview ${index}`}
                 className="photo-thumbnail"

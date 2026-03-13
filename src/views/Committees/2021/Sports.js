@@ -34,6 +34,7 @@ import spt22 from "./images/sports/spt22.jpg";
 import spt23 from "./images/sports/spt23.jpg";
 import spt24 from "./images/sports/spt24.jpg";
 import spt25 from "./images/sports/spt25.jpg";
+import AppImage from "../../../components/AppImage";
 
 export default function Sports() {
   // const techComTeam = [
@@ -206,8 +207,8 @@ export default function Sports() {
               participation of the faculty and staff members.
             </p>
             <p className={globalStyles.description}>
-              The moto of Technology Students' Gymkhana is YOGAH KARMASU
-              KAUSALAM which in English means "Perfection in action is Yoga".
+              The moto of Technology Students&apos; Gymkhana is YOGAH KARMASU
+              KAUSALAM which in English means &quot;Perfection in action is Yoga&quot;.
               Our goal is to bring overall development in IITians through
               cultivating and nurturing their extra-curricular talents.
             </p>
@@ -224,7 +225,7 @@ export default function Sports() {
         <section>
           <center>
             <div className={globalStyles.imgContainer}>
-              <img src={spt25} alt="Open_IIT_Volleyball_Poster" />
+              <AppImage src={spt25} alt="Open_IIT_Volleyball_Poster" />
             </div>
           </center>
 
@@ -235,8 +236,8 @@ export default function Sports() {
               <br />
               Hola KGP!
               <br />
-              The Volleyball Subcommittee, Technology Students' Gymkhana, is
-              back on the courts with the 'Open IIT Volleyball Tournament 2022',
+              The Volleyball Subcommittee, Technology Students&apos; Gymkhana, is
+              back on the courts with the &apos;Open IIT Volleyball Tournament 2022&apos;,
               which is to be held on the 10th and 11th of September 2022.
               <br />
               <br />
@@ -272,7 +273,7 @@ export default function Sports() {
         <section>
           <center>
             <div className={globalStyles.imgContainer}>
-              <img src={spt24} alt="Open_IIT_Hockey_Tournament" />
+              <AppImage src={spt24} alt="Open_IIT_Hockey_Tournament" />
             </div>
           </center>
 
@@ -282,7 +283,7 @@ export default function Sports() {
               <br />
               <br />
               We are here with one of the most exciting times for the Hockey
-              lovers of IIT Kharagpur, the ‘IITKGP Hockey Premier League 2022'
+              lovers of IIT Kharagpur, the ‘IITKGP Hockey Premier League 2022&apos;
               (Open IIT) , which is to be organised from 10th September.
               <br />
               <br />
@@ -323,7 +324,7 @@ export default function Sports() {
         <section>
           <center>
             <div className={globalStyles.imgContainer}>
-              <img src={spt23} alt="Open_IIT_Basketball_Tournament_2022" />
+              <AppImage src={spt23} alt="Open_IIT_Basketball_Tournament_2022" />
             </div>
           </center>
 
@@ -375,7 +376,7 @@ export default function Sports() {
         <section>
           <center>
             <div className={globalStyles.imgContainer}>
-              <img src={spt22} alt="Hockey_Workshop_for_Girls" />
+              <AppImage src={spt22} alt="Hockey_Workshop_for_Girls" />
             </div>
           </center>
 
@@ -420,7 +421,7 @@ export default function Sports() {
         <section>
           <center>
             <div className={globalStyles.imgContainer}>
-              <img src={spt21} alt="Athletics_Championship_2022" />
+              <AppImage src={spt21} alt="Athletics_Championship_2022" />
             </div>
           </center>
 
@@ -458,13 +459,13 @@ export default function Sports() {
         <section>
           <center>
             <div className={globalStyles.imgContainer}>
-              <img src={spt20} alt="Tennis_Tournament_Poster" />
+              <AppImage src={spt20} alt="Tennis_Tournament_Poster" />
             </div>
           </center>
 
           <div className={globalStyles.centerCard}>
             <p>
-              Tennis Subcommittee, Technology Students' Gymkhana, Indian
+              Tennis Subcommittee, Technology Students&apos; Gymkhana, Indian
               Institute of Technology Kharagpur is organising an Open IIT Tennis
               Tournament 2022-2023 for students. <br />
               <br />
@@ -503,7 +504,7 @@ export default function Sports() {
         <section>
           <center>
             <div className={globalStyles.imgContainer}>
-              <img src={spt19} alt="Badminton_Tournament_Poster" />
+              <AppImage src={spt19} alt="Badminton_Tournament_Poster" />
             </div>
           </center>
 
@@ -543,7 +544,7 @@ export default function Sports() {
           <div className={globalStyles.centerCard}>
             <p>
               For the first time, the Indoor Games Subcommittee, Technology
-              Students' Gymkhana, Indian Institute of Technology Kharagpur
+              Students&apos; Gymkhana, Indian Institute of Technology Kharagpur
               successfully hosted a Table Tennis event accessible to all IIT
               Kharagpur students and staff members: The First Gymkhana Table
               Tennis Tournament!!
@@ -556,7 +557,7 @@ export default function Sports() {
               Categories:
               <ul>
                 <li>
-                  <strong>❖ Men's singles :</strong>
+                  <strong>❖ Men&apos;s singles :</strong>
                   <ul>
                     <li>○ Winner : Seemant Achari</li>
                     <li>○ 1st Runner Up : Harshit Baranwal</li>
@@ -564,7 +565,7 @@ export default function Sports() {
                   </ul>
                 </li>
                 <li>
-                  <strong>❖ Women's singles :</strong>
+                  <strong>❖ Women&apos;s singles :</strong>
                   <ul>
                     <li>○ Winner : Suparna Rooj</li>
                     <li>○ 1st Runner Up : Monika Sharma</li>
@@ -574,7 +575,7 @@ export default function Sports() {
                   </ul>
                 </li>
                 <li>
-                  <strong>❖ Men's doubles :</strong>
+                  <strong>❖ Men&apos;s doubles :</strong>
                   <ul>
                     <li>
                       ○ Winner : Sundar Kumar Roy and Akhilesh Kumar Singh
@@ -588,7 +589,7 @@ export default function Sports() {
                   </ul>
                 </li>
                 <li>
-                  <strong>❖ Women's doubles :</strong>
+                  <strong>❖ Women&apos;s doubles :</strong>
                   <ul>
                     <li>○ Winner : Sneh Lata Singh and Monika Sharma</li>
                     <li>
@@ -631,16 +632,16 @@ export default function Sports() {
         <section>
           <center>
             <div className={globalStyles.imgContainer}>
-              <img src={spt17} alt="Weightlifting_Workshop_Poster" />
+              <AppImage src={spt17} alt="Weightlifting_Workshop_Poster" />
             </div>
           </center>
 
           <div className={globalStyles.centerCard}>
             <p>
               The wait is finally over as Gymnasium and Weightlifting
-              subcommittee, Technology Students' Gymkhana is going to organize
+              subcommittee, Technology Students&apos; Gymkhana is going to organize
               Powerlifting Workshop for all the students. <br />
-              Do participate as you'll get to learn a lot about Powerlifting and
+              Do participate as you&apos;ll get to learn a lot about Powerlifting and
               Weightlifting as well. <br />
               Fill out the Google form to register yourself and get all the
               notifications related to this event.
@@ -673,7 +674,7 @@ export default function Sports() {
         <section>
           <center>
             <div className={globalStyles.imgContainer}>
-              <img src={spt18} alt="Volleyball_Workshop_Poster" />
+              <AppImage src={spt18} alt="Volleyball_Workshop_Poster" />
             </div>
           </center>
 
@@ -685,8 +686,8 @@ export default function Sports() {
               with!!! <br />
               <br />
               Here is the opportunity waiting for you. <br />
-              Technology Students' Gymkhana is going to organise "VOLLEYBALL
-              WORKSHOP" for all girls of UG, PG, PhD where you will be taught
+              Technology Students&apos; Gymkhana is going to organise &quot;VOLLEYBALL
+              WORKSHOP&quot; for all girls of UG, PG, PhD where you will be taught
               from the scratch. <br />
               <br />
               Registration Link :{" "}
@@ -714,35 +715,35 @@ export default function Sports() {
         <section>
           <center>
             <div className={globalStyles.imgContainer}>
-              <img src={spt16} alt="TT Tournament Poster" />
+              <AppImage src={spt16} alt="TT Tournament Poster" />
             </div>
           </center>
 
           <div className={globalStyles.centerCard}>
             <p>
-              "Take the initiative and make a difference; that is how we
-              improve."
+              &quot;Take the initiative and make a difference; that is how we
+              improve.&quot;
               <br />
               <br />
               For the first time, the Indoor Games Subcommittee, Technology
-              Students' Gymkhana, Indian Institute of Technology Kharagpur is
+              Students&apos; Gymkhana, Indian Institute of Technology Kharagpur is
               hosting a Table Tennis event accessible to all IIT Kharagpur
               students and staff members: The First Gymkhana Table Tennis
               Tournament!!
               <br />
               <br />
-              It's going to be an entertaining competition with a lot of sports
+              It&apos;s going to be an entertaining competition with a lot of sports
               spirit, passion, and enjoyment.
               <br />
               The top 30 students (24 boys and 6 girls) will be considered for
               Inter-IIT selections.
               <br />
-              Don't pass up this opportunity.
+              Don&apos;t pass up this opportunity.
               <br />
               <br />
               Register here:
               <br />
-              Men's and Women's Double Fixtures-
+              Men&apos;s and Women&apos;s Double Fixtures-
               <a
                 className={globalStyles.btn}
                 href="https://forms.gle/srp99vEVBfxLAWxd7"
@@ -783,10 +784,10 @@ export default function Sports() {
               <br />
               Categories:
               <ul>
-                <li>❖ Men's singles</li>
-                <li>❖ Women's singles</li>
-                <li>❖ Men's doubles</li>
-                <li>❖ Women's doubles</li>
+                <li>❖ Men&apos;s singles</li>
+                <li>❖ Women&apos;s singles</li>
+                <li>❖ Men&apos;s doubles</li>
+                <li>❖ Women&apos;s doubles</li>
                 <li>❖ Mixed doubles</li>
               </ul>
               PLEASE NOTE: Players should use Non-marking shoes and proper
@@ -803,10 +804,10 @@ export default function Sports() {
         <section>
           <center>
             <div className={globalStyles.img2Container}>
-              <img src={spt1} alt="timeline" />
+              <AppImage src={spt1} alt="timeline" />
             </div>
             <div className={globalStyles.imgContainer}>
-              <img src={spt2} alt="timeline" />
+              <AppImage src={spt2} alt="timeline" />
             </div>
           </center>
 
@@ -840,7 +841,7 @@ export default function Sports() {
           <div className={globalStyles.leftCard}>
             <center>
               <br />
-              <img className={globalStyles.cardImg} src={spt3} alt="khokho" />
+              <AppImage className={globalStyles.cardImg} src={spt3} alt="khokho" />
             </center>
           </div>
 
@@ -856,7 +857,7 @@ export default function Sports() {
               <br />
               Time- 10 AM
               <br />
-              Venue- Multipurpose Hall, Technology Students' Gymkhana. <br />
+              Venue- Multipurpose Hall, Technology Students&apos; Gymkhana. <br />
               You can follow the updates on
               <br />
               <br />
@@ -891,7 +892,7 @@ export default function Sports() {
           <div className={globalStyles.leftCard}>
             <center>
               <br />
-              <img className={globalStyles.cardImg} src={spt4} alt="khokho" />
+              <AppImage className={globalStyles.cardImg} src={spt4} alt="khokho" />
             </center>
           </div>
 
@@ -920,7 +921,7 @@ export default function Sports() {
           <div className={globalStyles.leftCard}>
             <center>
               <br />
-              <img className={globalStyles.cardImg} src={spt5} alt="khokho" />
+              <AppImage className={globalStyles.cardImg} src={spt5} alt="khokho" />
             </center>
           </div>
 
@@ -928,8 +929,8 @@ export default function Sports() {
             <p>
               <br />
               <br />
-              "Champions aren’t made in the gyms. Champions are made from
-              something they have deep inside them-a desire, a dream, a vision."
+              &quot;Champions aren’t made in the gyms. Champions are made from
+              something they have deep inside them-a desire, a dream, a vision.&quot;
               <br />
               Muhammad Ali
               <br />
@@ -960,7 +961,7 @@ export default function Sports() {
           <div className={globalStyles.leftCard}>
             <center>
               <br />
-              <img className={globalStyles.cardImg} src={spt6} alt="khokho" />
+              <AppImage className={globalStyles.cardImg} src={spt6} alt="khokho" />
             </center>
           </div>
 
@@ -1000,12 +1001,12 @@ export default function Sports() {
         <section>
           <center>
             <div className={globalStyles.imgContainer}>
-              <img src={spt7} alt="timeline" />
+              <AppImage src={spt7} alt="timeline" />
             </div>
           </center>
 
           <p className={globalStyles.centerCard}>
-            We are glad and extremely proud to announce the first-ever Women's
+            We are glad and extremely proud to announce the first-ever Women&apos;s
             Open IIT Cricket. Get ready, girls, to rule the pitch and break the
             boundaries. This will surely be an experience like no other. Display
             the best of your skills as glory and incredible exciting prizes are
@@ -1035,7 +1036,7 @@ export default function Sports() {
           <div className={globalStyles.leftCard}>
             <center>
               <br />
-              <img className={globalStyles.cardImg} src={spt8} alt="khokho" />
+              <AppImage className={globalStyles.cardImg} src={spt8} alt="khokho" />
             </center>
           </div>
 
@@ -1074,15 +1075,15 @@ export default function Sports() {
           <div className={globalStyles.leftCard}>
             <center>
               <br />
-              <img className={globalStyles.cardImg} src={spt9} alt="khokho" />
+              <AppImage className={globalStyles.cardImg} src={spt9} alt="khokho" />
             </center>
           </div>
 
           <div className={globalStyles.rightCard}>
             <p>
               <br />
-              "Your dreams are what define your individuality. They have the
-              power to give you wings and make you fly high."
+              &quot;Your dreams are what define your individuality. They have the
+              power to give you wings and make you fly high.&quot;
               <br />
               - P. V. Sindhu
               <br />
@@ -1095,7 +1096,7 @@ export default function Sports() {
               Venue -TSG Badminton courts.
               <br />
               The live scores of the Badminton Match can be viewed on the
-              official website of Technology Students' Gymkhana.
+              official website of Technology Students&apos; Gymkhana.
               https://gymkhana.iitkgp.ac.in/sports/ <br />
               <br />
               All the best teams!!
@@ -1115,7 +1116,7 @@ export default function Sports() {
           <div className={globalStyles.leftCard}>
             <center>
               <br />
-              <img className={globalStyles.cardImg} src={spt10} alt="khokho" />
+              <AppImage className={globalStyles.cardImg} src={spt10} alt="khokho" />
             </center>
           </div>
 
@@ -1123,8 +1124,8 @@ export default function Sports() {
             <p>
               <br />
               <br />
-              "An athlete runs with strength in body, passion in mind, and hope
-              in heart."
+              &quot;An athlete runs with strength in body, passion in mind, and hope
+              in heart.&quot;
               <br />
               <br />
               It is time to flag-off InterHall Athletics Gymkhana Championship.{" "}
@@ -1154,7 +1155,7 @@ export default function Sports() {
           <div className={globalStyles.leftCard}>
             <center>
               <br />
-              <img className={globalStyles.cardImg} src={spt11} alt="khokho" />
+              <AppImage className={globalStyles.cardImg} src={spt11} alt="khokho" />
             </center>
           </div>
 
@@ -1174,7 +1175,7 @@ export default function Sports() {
               Venue -TSG Volleyball courts.
               <br />
               The live scores of the Volleyball Match can be viewed on the
-              official website of Technology Students' Gymkhana.
+              official website of Technology Students&apos; Gymkhana.
               <br />
             </p>
           </div>
@@ -1191,7 +1192,7 @@ export default function Sports() {
           <div className={globalStyles.leftCard}>
             <center>
               <br />
-              <img className={globalStyles.cardImg} src={spt12} alt="khokho" />
+              <AppImage className={globalStyles.cardImg} src={spt12} alt="khokho" />
             </center>
           </div>
 
@@ -1229,7 +1230,7 @@ export default function Sports() {
         <section>
           <center>
             <div className={globalStyles.imgContainer}>
-              <img src={spt13} alt="timeline" />
+              <AppImage src={spt13} alt="timeline" />
             </div>
           </center>
 
@@ -1245,7 +1246,7 @@ export default function Sports() {
             <br />
             Date-6th March 2022
             <br />
-            Venue- Technology Students' Gymkhana
+            Venue- Technology Students&apos; Gymkhana
             <br />
             Note that the workshop is open for both boys and girls.
             <br />
@@ -1262,14 +1263,14 @@ export default function Sports() {
           <div className={globalStyles.leftCard}>
             <center>
               <br />
-              <img className={globalStyles.cardImg} src={spt14} alt="khokho" />
+              <AppImage className={globalStyles.cardImg} src={spt14} alt="khokho" />
             </center>
           </div>
 
           <div className={globalStyles.rightCard}>
             <p>
               <br />
-              "A bat is not a toy, it is the weapon"- Virat Kohli
+              &quot;A bat is not a toy, it is the weapon&quot;- Virat Kohli
               <br />
               Brace up people as we are commencing the Inter Hall Cricket
               Gymkhana Championship. This will be your pitch to score fours and
@@ -1301,19 +1302,19 @@ export default function Sports() {
           <div className={globalStyles.leftCard}>
             <center>
               <br />
-              <img className={globalStyles.cardImg} src={spt15} alt="khokho" />
+              <AppImage className={globalStyles.cardImg} src={spt15} alt="khokho" />
             </center>
           </div>
 
           <div className={globalStyles.rightCard}>
             <p>
               <br />
-              Brace up one and all, Technology Students' Gymkhana, IIT
+              Brace up one and all, Technology Students&apos; Gymkhana, IIT
               Kharagpur, brings to you the Open IIT Chess Tournament on Sunday,
               27th February. All current students of IIT Kharagpur are eligible
               to participate in the tournament.
               <br />
-              Battle it out on those 64 squares to become one of KGP's best, and
+              Battle it out on those 64 squares to become one of KGP&apos;s best, and
               also win some exciting prizes! Exceptional players will also be
               considered for selection into the Chess Club.
               <br />
@@ -1337,7 +1338,7 @@ export default function Sports() {
           <div className={globalStyles.leftCard}>
             <center>
               <br />
-              <img className={globalStyles.cardImg} src={khokho} alt="khokho" />
+              <AppImage className={globalStyles.cardImg} src={khokho} alt="khokho" />
             </center>
           </div>
 
@@ -1378,13 +1379,13 @@ export default function Sports() {
 
         <center>
           <hr className={globalStyles.hrLine} />
-          <h2 className={globalStyles.head2}>Sports' Quiz</h2>
+          <h2 className={globalStyles.head2}>Sports&apos; Quiz</h2>
         </center>
         <section className={globalStyles.cmtCard1}>
           <div className={globalStyles.leftCard}>
             <center>
               <br />
-              <img
+              <AppImage
                 className={globalStyles.cardImg}
                 src={sportsquiz}
                 alt="sports quiz"
@@ -1424,7 +1425,7 @@ export default function Sports() {
           <div className={globalStyles.leftCard}>
             <center>
               <br />
-              <img
+              <AppImage
                 className={globalStyles.cardImg}
                 src={img2}
                 alt="Chess club event"
@@ -1436,7 +1437,7 @@ export default function Sports() {
             <p>
               After an amazing response to the Introductory Seminar, it is now
               time to move on to some chess action in the form of the Freshers’
-              Tournament, 2021. Don't miss out on this opportunity since
+              Tournament, 2021. Don&apos;t miss out on this opportunity since
               selections into the club will be partly done based on your
               performance in the tournament.
               <br /> The tournament is also open to 2nd-year students who wish
@@ -1445,7 +1446,7 @@ export default function Sports() {
               <br />
               To participate in the tournament, follow the detailed steps given
               in the rulebook below. All rules and regulations related to the
-              tournament are available in the same document. Freshers'
+              tournament are available in the same document. Freshers&apos;
               Tournament 2021
               <br />
               Participation Criteria: All Freshmen/Sophomores (Both UG and PG)
@@ -1465,7 +1466,7 @@ export default function Sports() {
           <div className={globalStyles.leftCard}>
             <center>
               <br />
-              <img
+              <AppImage
                 className={globalStyles.cardImg}
                 src={img1}
                 alt="Cycling event"

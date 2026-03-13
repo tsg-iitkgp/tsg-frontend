@@ -48,7 +48,7 @@ export default function RenderResultsFromDropdown({ option }) {
       {option === "SPORTS & GAMES" && (
         <>
           {/* MEN'S STANDINGS */}
-          <h2 className="sectionHeading"> Men's Standings</h2>
+          <h2 className="sectionHeading"> Men&apos;s Standings</h2>
           <div className="table-container" data-aos="zoom-in-up">
             <table>
               <thead style={{ border: "10px solid #fff" }}>
@@ -67,7 +67,7 @@ export default function RenderResultsFromDropdown({ option }) {
               </thead>
               <tbody style={{ border: "10px solid #fff" }}>
                 {data[String(year)]?.Sports.Male.map((item) => (
-                  <tr id="overall">
+                  <tr key="k-70" id="overall">
                     <td>{item.Sport}</td>
                     <td>{item.Gold} </td>
                     <td>{item.Silver} </td>
@@ -78,7 +78,7 @@ export default function RenderResultsFromDropdown({ option }) {
             </table>
           </div>
           {/* WOMEN'S STANDINGS */}
-          <h2 className="sectionHeading"> Women's Standings</h2>
+          <h2 className="sectionHeading"> Women&apos;s Standings</h2>
           <div className="table-container" data-aos="zoom-in-up">
             <table>
               <thead style={{ border: "10px solid #fff" }}>
@@ -97,7 +97,7 @@ export default function RenderResultsFromDropdown({ option }) {
               </thead>
               <tbody style={{ border: "10px solid #fff" }}>
                 {data[String(year)]?.Sports.Female.map((item) => (
-                  <tr id="overall">
+                  <tr key="k-100" id="overall">
                     <td>{item.Sport}</td>
                     <td>{item.Gold} </td>
                     <td>{item.Silver} </td>
@@ -134,7 +134,7 @@ export default function RenderResultsFromDropdown({ option }) {
               </thead>
               <tbody style={{ border: "10px solid #fff" }}>
                 {data[String(year)]?.Socult.map((item) => (
-                  <tr id="overall">
+                  <tr key="k-137" id="overall">
                     <td>{item.Event}</td>
                     <td>{item.Gold} </td>
                     <td>{item.Silver} </td>
@@ -171,7 +171,7 @@ export default function RenderResultsFromDropdown({ option }) {
               </thead>
               <tbody style={{ border: "10px solid #fff" }}>
                 {data[String(year)]?.Technology.map((item) => (
-                  <tr id="overall">
+                  <tr key="k-174" id="overall">
                     <td>{item.Event}</td>
                     <td>{item.Gold} </td>
                     <td>{item.Silver} </td>

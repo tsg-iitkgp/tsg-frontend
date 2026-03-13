@@ -1,5 +1,6 @@
 import Modal from "react-modal";
 import { useState } from "react";
+import AppImage from "./AppImage";
 
 export default function ImageModal(props) {
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -16,7 +17,7 @@ export default function ImageModal(props) {
 
   return (
     <div className="image-container">
-      <img
+      <AppImage alt=""
         className="main-image"
         src={props.images}
         onClick={handleModalOpen}
@@ -28,7 +29,7 @@ export default function ImageModal(props) {
 
       <Modal isOpen={modalIsOpen} onRequestClose={handleModalClose} contentLabel="Image description">
         <div className="modal-close-container">
-          <img id="modal-close" src="/images/close.png" onClick={handleModalClose} />
+          <AppImage alt="" id="modal-close" src="/images/close.png" onClick={handleModalClose} />
         </div>
         <h1> {props.title} </h1>
 
@@ -42,7 +43,7 @@ export default function ImageModal(props) {
           ></iframe>
         ) : (
           <>
-            <img
+            <AppImage alt=""
               className="modal-image"
               src={props.images}
               onError={(e) => {
@@ -53,7 +54,7 @@ export default function ImageModal(props) {
 
             {props.ProposalLink && (
               <a href={`/election/${props.ProposalLink}`} target="_blank" rel="noreferrer noopener">
-                Candidate's Proposal
+                Candidate&apos;s Proposal
               </a>
             )}
 
@@ -62,7 +63,7 @@ export default function ImageModal(props) {
               <p>
                 <h4>Heads:</h4>
                 {props.Heads.map((head) => (
-                  <li>
+                  <li key="k-65">
                     {head.name} (<a href={"mailto:" + head.email}>{head.email}</a>){" "}
                   </li>
                 ))}

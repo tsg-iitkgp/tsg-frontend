@@ -9,6 +9,7 @@ import Popper from "./Popper";
 // import html2canvas from "html2canvas";
 // import jsPDF from "jspdf";
 import axios from "axios";
+import AppImage from "../../components/AppImage";
 // html2pdf is imported dynamically to avoid SSR issues (uses `self`)
 
 //https://gymkhana.iitkgp.ac.in/certifgen/view/NjYxYWFlOGM4ZjU0NTJjZmNlM2IxZjIx
@@ -110,13 +111,13 @@ const ViewCertificate = () => {
                     cursor: "pointer",
                 }}
             >
-                <img
+                <AppImage
                     src="/data/media/images/general/gymkhanaLogo.png"
                     alt="gymk_logo"
                     className="gymk_logo"
                 />
                 <div style={{ textAlign: "centre" }}>
-                    <h1>Technology Students' Gymkhana</h1>
+                    <h1>Technology Students&apos; Gymkhana</h1>
                     <h2 style={{ color: "white" }}>
                         Indian Institute of Technology Kharagpur
                     </h2>
@@ -171,8 +172,8 @@ const ViewCertificate = () => {
                                         <a href="mailto:tech.coordi@iitkgp.ac.in">
                                             tech.coordi@iitkgp.ac.in
                                         </a>
-                                        ) with the subject "Error in viewing TSG
-                                        certificate".
+                                        ) with the subject &quot;Error in viewing TSG
+                                        certificate&quot;.
                                     </li>
                                 </ol>
                             </div>
@@ -225,7 +226,7 @@ const ViewCertificate = () => {
                                 </button>
                             </div>
                         </div>
-                        <img src={certificateImage} alt="Certificate" />
+                        <AppImage src={certificateImage} alt="Certificate" />
                         <Popper />
                     </>
                 )}

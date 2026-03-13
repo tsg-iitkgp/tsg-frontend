@@ -5,6 +5,7 @@ import axios from 'axios';
 import * as Icon from "react-feather";
 import { useState } from 'react';
 import PointsTable from "./PointsTable";
+import AppImage from "../../../../components/AppImage";
 
 export default function FootballMatch(props) {
 
@@ -68,7 +69,7 @@ export default function FootballMatch(props) {
                                                             {val.team1_score}
                                                         </div>
                                                         <div className={Styles.scorers}>
-                                                            <img src='https://github.com/tsg-iitkgp/tsg-site/blob/main/public/images/soccer-ball.png?raw=true' alt="Error" />
+                                                            <AppImage src='https://github.com/tsg-iitkgp/tsg-site/blob/main/public/images/soccer-ball.png?raw=true' alt="Error" />
                                                             {val.team1_goalscorers}
                                                         </div>
                                                     </div>
@@ -83,7 +84,7 @@ export default function FootballMatch(props) {
                                                             {val.team2_score}
                                                         </div>
                                                         <div className={Styles.scorers}>
-                                                            <img src='https://github.com/tsg-iitkgp/tsg-site/blob/main/public/images/soccer-ball.png?raw=true' alt="Error" />
+                                                            <AppImage src='https://github.com/tsg-iitkgp/tsg-site/blob/main/public/images/soccer-ball.png?raw=true' alt="Error" />
                                                             {val.team2_goalscorers}
                                                         </div>
                                                     </div>
@@ -158,7 +159,7 @@ export default function FootballMatch(props) {
                                                             {val.team1_score}
                                                         </div>
                                                         <div className={Styles.scorers}>
-                                                            <img src='https://github.com/tsg-iitkgp/tsg-site/blob/main/public/images/soccer-ball.png?raw=true' alt="Error" />
+                                                            <AppImage src='https://github.com/tsg-iitkgp/tsg-site/blob/main/public/images/soccer-ball.png?raw=true' alt="Error" />
                                                             {val.team1_goalscorers}
                                                         </div>
                                                     </div>
@@ -173,7 +174,7 @@ export default function FootballMatch(props) {
                                                             {val.team2_score}
                                                         </div>
                                                         <div className={Styles.scorers}>
-                                                            <img src='https://github.com/tsg-iitkgp/tsg-site/blob/main/public/images/soccer-ball.png?raw=true' alt="Error" />
+                                                            <AppImage src='https://github.com/tsg-iitkgp/tsg-site/blob/main/public/images/soccer-ball.png?raw=true' alt="Error" />
                                                             {val.team2_goalscorers}
                                                         </div>
                                                     </div>

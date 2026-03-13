@@ -89,24 +89,24 @@ export default function FacilityModal(props) {
                                     </th>
                                     <th className={styles.tableHeader}>
                                         One-time registration fees for STUDENTS <br />
-                                        (Sep '21 TO Dec '21)*
+                                        (Sep &apos;21 TO Dec &apos;21)*
                                     </th>
                                     <th className={styles.tableHeader}>
                                         One time registration fees for FACULTY
                                         AND STAFF <br />
-                                        (Sep '21 To Dec '21)
+                                        (Sep &apos;21 To Dec &apos;21)
                                     </th>
                                     <th className={styles.tableHeader}>
                                         Monthly Registration Fees FOR FACULTY
                                         AND STAFF <br />
                                         (Till
-                                        Dec '21)
+                                        Dec &apos;21)
                                     </th>
                                 </tr>
                             </thead>
                             <tbody>
                                 {props.facilityData.map((eachFacility) => (
-                                    <tr>
+                                    <tr key="k-109">
                                         <td>
                                             {eachFacility.facility}
                                         </td>
@@ -149,7 +149,7 @@ export default function FacilityModal(props) {
                             </thead>
                             <tbody>
                                 {props.slotsData.map((eachSlot) => (
-                                    <tr>
+                                    <tr key="k-152">
                                         <td>
                                             {eachSlot.title}
                                         </td>

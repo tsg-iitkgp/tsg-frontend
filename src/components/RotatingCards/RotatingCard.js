@@ -1,5 +1,6 @@
 import React from "react";
 import Styles from "../../styles/components/soc.module.css";
+import AppImage from "../AppImage";
 export default function RotatingCard({
   shortform,
   name,
@@ -9,7 +10,7 @@ export default function RotatingCard({
   return (
     <div className={Styles.card}>
       <div className={Styles.cardfront}>
-        <img
+        <AppImage
           className={Styles.img1}
           src={`/data/media/images/societies/${shortform}.png`}
           loading="lazy"

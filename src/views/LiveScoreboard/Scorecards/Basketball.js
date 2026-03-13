@@ -47,19 +47,19 @@ export default function Basketball(props) {
             <div className="popup-content">
               <div className="popup-content text">
                 <table>
-                  <tr><th>Date</th><th>Event</th><th>Match (T1 v/s T2)</th><th>Quarter1</th><th>Quarter2</th><th>Quarter 3</th><th>Quarter 4</th><th>Final Score</th></tr>
+                  <tr><th key="k-th">Date</th><th key="k-th">Event</th><th key="k-th">Match (T1 v/s T2)</th><th key="k-th">Quarter1</th><th key="k-th">Quarter2</th><th key="k-th">Quarter 3</th><th key="k-th">Quarter 4</th><th key="k-th">Final Score</th></tr>
                   {props.data.data.map((val, key) => {
                     if (key >= 0 && key < 16) {
                       // console.log(val);
                       if (val[0] === "17th Dec") {
                         rowspan = 3;
                         return (
-                          <tr>
-                            <th rowSpan={rowspan}>{val[0]}</th>
+                          <tr key="k-57">
+                            <th key="k-th" rowSpan={rowspan}>{val[0]}</th>
                             {val.map((cell, index) => {
                               if (key !== 0) {
                                 return (
-                                  <td>
+                                  <td key="k-62">
                                     {cell}
                                   </td>
                                 )
@@ -74,12 +74,12 @@ export default function Basketball(props) {
                       else if (val[0] === "18th Dec") {
                         rowspan = 3;
                         return (
-                          <tr>
-                            <th rowSpan={rowspan}>{val[0]}</th>
+                          <tr key="k-77">
+                            <th key="k-th" rowSpan={rowspan}>{val[0]}</th>
                             {val.map((cell, index) => {
                               if (key !== 3) {
                                 return (
-                                  <td>
+                                  <td key="k-82">
                                     {cell}
                                   </td>
                                 )
@@ -93,12 +93,12 @@ export default function Basketball(props) {
                       } else if (val[0] === "19th Dec") {
                         rowspan = 3;
                         return (
-                          <tr>
-                            <th rowSpan={rowspan}>{val[0]}</th>
+                          <tr key="k-96">
+                            <th key="k-th" rowSpan={rowspan}>{val[0]}</th>
                             {val.map((cell, index) => {
                               if (key !== 6) {
                                 return (
-                                  <td>
+                                  <td key="k-101">
                                     {cell}
                                   </td>
                                 )
@@ -112,12 +112,12 @@ export default function Basketball(props) {
                       } else if (val[0] === "20th Dec") {
                         rowspan = 3;
                         return (
-                          <tr>
-                            <th rowSpan={rowspan}>{val[0]}</th>
+                          <tr key="k-115">
+                            <th key="k-th" rowSpan={rowspan}>{val[0]}</th>
                             {val.map((cell, index) => {
                               if (key !== 9) {
                                 return (
-                                  <td>
+                                  <td key="k-120">
                                     {cell}
                                   </td>
                                 )
@@ -131,12 +131,12 @@ export default function Basketball(props) {
                       } else if (val[0] === "21st Dec") {
                         rowspan = 3;
                         return (
-                          <tr>
-                            <th rowSpan={rowspan}>{val[0]}</th>
+                          <tr key="k-134">
+                            <th key="k-th" rowSpan={rowspan}>{val[0]}</th>
                             {val.map((cell, index) => {
                               if (key !== 12) {
                                 return (
-                                  <td>
+                                  <td key="k-139">
                                     {cell}
                                   </td>
                                 )
@@ -150,9 +150,9 @@ export default function Basketball(props) {
                       } 
                       else {
                         return (
-                          <tr>
+                          <tr key="k-153">
                             {val.map((cell, index) => {
-                              return (<td>{cell}</td>)
+                              return (<td key="k-td">{cell}</td>)
                             })}
                           </tr>
                         )
@@ -190,19 +190,19 @@ export default function Basketball(props) {
             <div className="popup-content">
               <div className="popup-content text">
                 <table>
-                  <tr><th>Date</th><th>Event</th><th>Match (T1 v/s T2)</th><th>Quarter1</th><th>Quarter2</th><th>Quarter 3</th><th>Quarter 4</th><th>Final Score</th></tr>
+                  <tr><th key="k-th">Date</th><th key="k-th">Event</th><th key="k-th">Match (T1 v/s T2)</th><th key="k-th">Quarter1</th><th key="k-th">Quarter2</th><th key="k-th">Quarter 3</th><th key="k-th">Quarter 4</th><th key="k-th">Final Score</th></tr>
                   {data.data.map((val, key) => {
                     if (key >= 0 && key < 16) {
                       // console.log(val);
                       if (val[0] === "17th Dec") {
                         rowspan = 3;
                         return (
-                          <tr>
-                            <th rowSpan={rowspan}>{val[0]}</th>
+                          <tr key="k-200">
+                            <th key="k-th" rowSpan={rowspan}>{val[0]}</th>
                             {val.map((cell, index) => {
                               if (key !== 0) {
                                 return (
-                                  <td>
+                                  <td key="k-205">
                                     {cell}
                                   </td>
                                 )
@@ -217,12 +217,12 @@ export default function Basketball(props) {
                       else if (val[0] === "18th Dec") {
                         rowspan = 3;
                         return (
-                          <tr>
-                            <th rowSpan={rowspan}>{val[0]}</th>
+                          <tr key="k-220">
+                            <th key="k-th" rowSpan={rowspan}>{val[0]}</th>
                             {val.map((cell, index) => {
                               if (key !== 3) {
                                 return (
-                                  <td>
+                                  <td key="k-225">
                                     {cell}
                                   </td>
                                 )
@@ -236,12 +236,12 @@ export default function Basketball(props) {
                       } else if (val[0] === "19th Dec") {
                         rowspan = 3;
                         return (
-                          <tr>
-                            <th rowSpan={rowspan}>{val[0]}</th>
+                          <tr key="k-239">
+                            <th key="k-th" rowSpan={rowspan}>{val[0]}</th>
                             {val.map((cell, index) => {
                               if (key !== 6) {
                                 return (
-                                  <td>
+                                  <td key="k-244">
                                     {cell}
                                   </td>
                                 )
@@ -255,12 +255,12 @@ export default function Basketball(props) {
                       } else if (val[0] === "20th Dec") {
                         rowspan = 3;
                         return (
-                          <tr>
-                            <th rowSpan={rowspan}>{val[0]}</th>
+                          <tr key="k-258">
+                            <th key="k-th" rowSpan={rowspan}>{val[0]}</th>
                             {val.map((cell, index) => {
                               if (key !== 9) {
                                 return (
-                                  <td>
+                                  <td key="k-263">
                                     {cell}
                                   </td>
                                 )
@@ -274,12 +274,12 @@ export default function Basketball(props) {
                       } else if (val[0] === "21st Dec") {
                         rowspan = 3;
                         return (
-                          <tr>
-                            <th rowSpan={rowspan}>{val[0]}</th>
+                          <tr key="k-277">
+                            <th key="k-th" rowSpan={rowspan}>{val[0]}</th>
                             {val.map((cell, index) => {
                               if (key !== 12) {
                                 return (
-                                  <td>
+                                  <td key="k-282">
                                     {cell}
                                   </td>
                                 )
@@ -293,9 +293,9 @@ export default function Basketball(props) {
                       } 
                       else {
                         return (
-                          <tr>
+                          <tr key="k-296">
                             {val.map((cell, index) => {
-                              return (<td>{cell}</td>)
+                              return (<td key="k-td">{cell}</td>)
                             })}
                           </tr>
                         )

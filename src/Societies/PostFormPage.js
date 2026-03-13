@@ -5,6 +5,7 @@ import { useParams } from "next/navigation";
 import { BASE_URL } from "../constants/api";
 import "./PostFormPage.css";
 import Layout from "../components/Layouts/Layout";
+import AppImage from "../components/AppImage";
 
 const inputTypes = {
   text: (props) => {
@@ -226,7 +227,7 @@ const PostFormPage = () => {
     <Layout>
       <div className='form-container' style={{ marginTop: "5rem" }}>
         <div className='form-header'>
-          <img src={post.society_logo} alt={post.society_name} className='form-logo' />
+          <AppImage src={post.society_logo} alt={post.society_name} className='form-logo' />
           <div>
             <div className='form-society-name'>{post.society_name}</div>
             <div className='form-title'>{post.title}</div>

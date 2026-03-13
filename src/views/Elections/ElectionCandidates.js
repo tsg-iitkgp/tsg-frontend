@@ -39,7 +39,7 @@ export default function Elections() {
             className={Styles.selectButton}
           >
             {posts.map((post, index) => (
-              <option value={post.value}>{post.name}</option>
+              <option key="k-option" value={post.value}>{post.name}</option>
             ))}
           </select>
           {post === "Secy" && (
@@ -52,7 +52,7 @@ export default function Elections() {
               }}
             >
               {secyPosts.map((post, index) => (
-                <option value={post.value}>{post.name}</option>
+                <option key="k-option" value={post.value}>{post.name}</option>
               ))}
             </select>
           )}

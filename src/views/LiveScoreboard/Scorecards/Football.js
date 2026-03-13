@@ -47,19 +47,19 @@ export default function Football(props) {
                             <table>
                                 <tr>
                                     {props.data.header.map((val, key) => {
-                                        return <th>{val}</th>
+                                        return <th key="k-th">{val}</th>
                                     })}
                                 </tr>
-                                <tbody>
+                                <tbody key="k-50">
                                     {
                                         props.data.data.map((val, key) => {
-                                            return <tr>
+                                            return <tr key="k-56">
                                                 {val.map((value, index) => {
                                                     if(index===0){
-                                                        return <th>{value}</th>
+                                                        return <th key="k-th">{value}</th>
                                                     }
                                                     else{
-                                                        return <td>{value}</td>
+                                                        return <td key="k-td">{value}</td>
                                                     }
                                                 })}
                                             </tr>
@@ -97,19 +97,19 @@ else if (props.show === true && data !== null) {
                             <table>
                                 <tr>
                                     {data.header.map((val, key) => {
-                                        return <th>{val}</th>
+                                        return <th key="k-th">{val}</th>
                                     })}
                                 </tr>
-                                <tbody>
+                                <tbody key="k-100">
                                     {
                                         data.data.map((val, key) => {
-                                            return <tr>
+                                            return <tr key="k-106">
                                                 {val.map((value, index) => {
                                                     if(index===0){
-                                                        return <th>{value}</th>
+                                                        return <th key="k-th">{value}</th>
                                                     }
                                                     else{
-                                                        return <td>{value}</td>
+                                                        return <td key="k-td">{value}</td>
                                                     }
                                                 })}
                                             </tr>

@@ -5,6 +5,7 @@ import React, { useState, useEffect, useCallback, useRef } from "react";
 import { useParams } from "next/navigation";
 import { BASE_URL } from "../constants/api";
 import "./EventsSection.css";
+import AppImage from "../components/AppImage";
 
 const EventsSection = () => {
   const routeParams = useParams();
@@ -55,6 +56,7 @@ const EventsSection = () => {
 
   useEffect(() => {
     fetchEvents(1, false);
+// eslint-disable-next-line react-hooks/exhaustive-deps
   }, [society_slug]);
 
   useEffect(() => {
@@ -125,7 +127,7 @@ const EventsSection = () => {
           {events.map((event) => (
             <div key={event.id} className='event-card'>
               <div className='event-image'>
-                <img
+                <AppImage
                   src={
                     event.image_url ||
                     "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMzMzIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iI2ZiYmYyNCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkV2ZW50PC90ZXh0Pjwvc3ZnPg=="

@@ -47,16 +47,16 @@ export default function Cricket(props) {
                             <table>
                                 <tr>
                                     {props.data.header.map((val, key) => {
-                                        return <th>{val}</th>
+                                        return <th key="k-th">{val}</th>
                                     })}
                                 </tr>
-                                <tbody>
+                                <tbody key="k-50">
                                     {
                                         props.data.data.map((val, key) => {
                                             if(key<8){
-                                            return <tr>
+                                            return <tr key="k-57">
                                                 {val.map((value, index) => {
-                                                    return <td>{value}</td>
+                                                    return <td key="k-td">{value}</td>
                                                 })}
                                             </tr>
                                             }
@@ -103,16 +103,16 @@ else if (props.show === true && data !== null) {
                             <table>
                                 <tr>
                                     {data.header.map((val, key) => {
-                                        return <th>{val}</th>
+                                        return <th key="k-th">{val}</th>
                                     })}
                                 </tr>
-                                <tbody>
+                                <tbody key="k-106">
                                     {
                                         data.data.map((val, key) => {
                                             if(key<8){
-                                                return <tr>
+                                                return <tr key="k-113">
                                                     {val.map((value, index) => {
-                                                        return <td>{value}</td>
+                                                        return <td key="k-td">{value}</td>
                                                     })}
                                                 </tr>
                                                 }

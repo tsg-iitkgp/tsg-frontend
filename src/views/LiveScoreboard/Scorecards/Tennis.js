@@ -47,19 +47,19 @@ export default function Tennis(props) {
             <div className="popup-content">
               <div className="popup-content text">
                 <table>
-                  <tr><th>Date</th><th>Event</th><th>Match (T1 v/s T2)</th><th>Points</th><th>Singles</th><th>Doubles</th><th>Reverse Singles</th></tr>
+                  <tr><th key="k-th">Date</th><th key="k-th">Event</th><th key="k-th">Match (T1 v/s T2)</th><th key="k-th">Points</th><th key="k-th">Singles</th><th key="k-th">Doubles</th><th key="k-th">Reverse Singles</th></tr>
                   {props.data.data.map((val, key) => {
                     if (key >= 0 && key < 20) {
                       // console.log(val);
                       if (val[0] === "15th Dec") {
                         rowspan = 3;
                         return (
-                          <tr>
-                            <th rowSpan={rowspan}>{val[0]}</th>
+                          <tr key="k-57">
+                            <th key="k-th" rowSpan={rowspan}>{val[0]}</th>
                             {val.map((cell, index) => {
                               if (key !== 0) {
                                 return (
-                                  <td>
+                                  <td key="k-62">
                                     {cell}
                                   </td>
                                 )
@@ -74,12 +74,12 @@ export default function Tennis(props) {
                       else if (val[0] === "16th Dec") {
                         rowspan = 2;
                         return (
-                          <tr>
-                            <th rowSpan={rowspan}>{val[0]}</th>
+                          <tr key="k-77">
+                            <th key="k-th" rowSpan={rowspan}>{val[0]}</th>
                             {val.map((cell, index) => {
                               if (key !== 3) {
                                 return (
-                                  <td>
+                                  <td key="k-82">
                                     {cell}
                                   </td>
                                 )
@@ -93,12 +93,12 @@ export default function Tennis(props) {
                       } else if (val[0] === "17th Dec") {
                         rowspan = 2;
                         return (
-                          <tr>
-                            <th rowSpan={rowspan}>{val[0]}</th>
+                          <tr key="k-96">
+                            <th key="k-th" rowSpan={rowspan}>{val[0]}</th>
                             {val.map((cell, index) => {
                               if (key !== 5) {
                                 return (
-                                  <td>
+                                  <td key="k-101">
                                     {cell}
                                   </td>
                                 )
@@ -112,12 +112,12 @@ export default function Tennis(props) {
                       } else if (val[0] === "18th Dec") {
                         rowspan = 2;
                         return (
-                          <tr>
-                            <th rowSpan={rowspan}>{val[0]}</th>
+                          <tr key="k-115">
+                            <th key="k-th" rowSpan={rowspan}>{val[0]}</th>
                             {val.map((cell, index) => {
                               if (key !== 7) {
                                 return (
-                                  <td>
+                                  <td key="k-120">
                                     {cell}
                                   </td>
                                 )
@@ -131,12 +131,12 @@ export default function Tennis(props) {
                       } else if (val[0] === "19th Dec") {
                         rowspan = 3;
                         return (
-                          <tr>
-                            <th rowSpan={rowspan}>{val[0]}</th>
+                          <tr key="k-134">
+                            <th key="k-th" rowSpan={rowspan}>{val[0]}</th>
                             {val.map((cell, index) => {
                               if (key !==9) {
                                 return (
-                                  <td>
+                                  <td key="k-139">
                                     {cell}
                                   </td>
                                 )
@@ -150,12 +150,12 @@ export default function Tennis(props) {
                       } else if (val[0] === "20th Dec") {
                         rowspan = 3;
                         return (
-                          <tr>
-                            <th rowSpan={rowspan}>{val[0]}</th>
+                          <tr key="k-153">
+                            <th key="k-th" rowSpan={rowspan}>{val[0]}</th>
                             {val.map((cell, index) => {
                               if (key !== 12) {
                                 return (
-                                  <td>
+                                  <td key="k-158">
                                     {cell}
                                   </td>
                                 )
@@ -169,12 +169,12 @@ export default function Tennis(props) {
                       } else if (val[0] === "21st Dec") {
                         rowspan = 3;
                         return (
-                          <tr>
-                            <th rowSpan={rowspan}>{val[0]}</th>
+                          <tr key="k-172">
+                            <th key="k-th" rowSpan={rowspan}>{val[0]}</th>
                             {val.map((cell, index) => {
                               if (key !== 15) {
                                 return (
-                                  <td>
+                                  <td key="k-177">
                                     {cell}
                                   </td>
                                 )
@@ -188,12 +188,12 @@ export default function Tennis(props) {
                       } else if (val[0] === "22nd Dec") {
                         rowspan = 2;
                         return (
-                          <tr>
-                            <th rowSpan={rowspan}>{val[0]}</th>
+                          <tr key="k-191">
+                            <th key="k-th" rowSpan={rowspan}>{val[0]}</th>
                             {val.map((cell, index) => {
                               if (key !== 18) {
                                 return (
-                                  <td>
+                                  <td key="k-196">
                                     {cell}
                                   </td>
                                 )
@@ -207,9 +207,9 @@ export default function Tennis(props) {
                       } 
                       else {
                         return (
-                          <tr>
+                          <tr key="k-210">
                             {val.map((cell, index) => {
-                              return (<td>{cell}</td>)
+                              return (<td key="k-td">{cell}</td>)
                             })}
                           </tr>
                         )
@@ -247,19 +247,19 @@ export default function Tennis(props) {
             <div className="popup-content">
               <div className="popup-content text">
                 <table>
-                  <tr><th>Date</th><th>Event</th><th>Match (T1 v/s T2)</th><th>Points</th><th>Singles</th><th>Doubles</th><th>Reverse Singles</th></tr>
+                  <tr><th key="k-th">Date</th><th key="k-th">Event</th><th key="k-th">Match (T1 v/s T2)</th><th key="k-th">Points</th><th key="k-th">Singles</th><th key="k-th">Doubles</th><th key="k-th">Reverse Singles</th></tr>
                   {data.data.map((val, key) => {
                     if (key >= 0 && key < 20) {
                       // console.log(val);
                       if (val[0] === "15th Dec") {
                         rowspan = 3;
                         return (
-                          <tr>
-                            <th rowSpan={rowspan}>{val[0]}</th>
+                          <tr key="k-257">
+                            <th key="k-th" rowSpan={rowspan}>{val[0]}</th>
                             {val.map((cell, index) => {
                               if (key !== 0) {
                                 return (
-                                  <td>
+                                  <td key="k-262">
                                     {cell}
                                   </td>
                                 )
@@ -274,12 +274,12 @@ export default function Tennis(props) {
                       else if (val[0] === "16th Dec") {
                         rowspan = 2;
                         return (
-                          <tr>
-                            <th rowSpan={rowspan}>{val[0]}</th>
+                          <tr key="k-277">
+                            <th key="k-th" rowSpan={rowspan}>{val[0]}</th>
                             {val.map((cell, index) => {
                               if (key !== 3) {
                                 return (
-                                  <td>
+                                  <td key="k-282">
                                     {cell}
                                   </td>
                                 )
@@ -293,12 +293,12 @@ export default function Tennis(props) {
                       } else if (val[0] === "17th Dec") {
                         rowspan = 2;
                         return (
-                          <tr>
-                            <th rowSpan={rowspan}>{val[0]}</th>
+                          <tr key="k-296">
+                            <th key="k-th" rowSpan={rowspan}>{val[0]}</th>
                             {val.map((cell, index) => {
                               if (key !== 5) {
                                 return (
-                                  <td>
+                                  <td key="k-301">
                                     {cell}
                                   </td>
                                 )
@@ -312,12 +312,12 @@ export default function Tennis(props) {
                       } else if (val[0] === "18th Dec") {
                         rowspan = 2;
                         return (
-                          <tr>
-                            <th rowSpan={rowspan}>{val[0]}</th>
+                          <tr key="k-315">
+                            <th key="k-th" rowSpan={rowspan}>{val[0]}</th>
                             {val.map((cell, index) => {
                               if (key !== 7) {
                                 return (
-                                  <td>
+                                  <td key="k-320">
                                     {cell}
                                   </td>
                                 )
@@ -331,12 +331,12 @@ export default function Tennis(props) {
                       } else if (val[0] === "19th Dec") {
                         rowspan = 3;
                         return (
-                          <tr>
-                            <th rowSpan={rowspan}>{val[0]}</th>
+                          <tr key="k-334">
+                            <th key="k-th" rowSpan={rowspan}>{val[0]}</th>
                             {val.map((cell, index) => {
                               if (key !==9) {
                                 return (
-                                  <td>
+                                  <td key="k-339">
                                     {cell}
                                   </td>
                                 )
@@ -350,12 +350,12 @@ export default function Tennis(props) {
                       } else if (val[0] === "20th Dec") {
                         rowspan = 3;
                         return (
-                          <tr>
-                            <th rowSpan={rowspan}>{val[0]}</th>
+                          <tr key="k-353">
+                            <th key="k-th" rowSpan={rowspan}>{val[0]}</th>
                             {val.map((cell, index) => {
                               if (key !== 12) {
                                 return (
-                                  <td>
+                                  <td key="k-358">
                                     {cell}
                                   </td>
                                 )
@@ -369,12 +369,12 @@ export default function Tennis(props) {
                       } else if (val[0] === "21st Dec") {
                         rowspan = 3;
                         return (
-                          <tr>
-                            <th rowSpan={rowspan}>{val[0]}</th>
+                          <tr key="k-372">
+                            <th key="k-th" rowSpan={rowspan}>{val[0]}</th>
                             {val.map((cell, index) => {
                               if (key !== 15) {
                                 return (
-                                  <td>
+                                  <td key="k-377">
                                     {cell}
                                   </td>
                                 )
@@ -388,12 +388,12 @@ export default function Tennis(props) {
                       } else if (val[0] === "22nd Dec") {
                         rowspan = 2;
                         return (
-                          <tr>
-                            <th rowSpan={rowspan}>{val[0]}</th>
+                          <tr key="k-391">
+                            <th key="k-th" rowSpan={rowspan}>{val[0]}</th>
                             {val.map((cell, index) => {
                               if (key !== 18) {
                                 return (
-                                  <td>
+                                  <td key="k-396">
                                     {cell}
                                   </td>
                                 )
@@ -407,9 +407,9 @@ export default function Tennis(props) {
                       } 
                       else {
                         return (
-                          <tr>
+                          <tr key="k-410">
                             {val.map((cell, index) => {
-                              return (<td>{cell}</td>)
+                              return (<td key="k-td">{cell}</td>)
                             })}
                           </tr>
                         )

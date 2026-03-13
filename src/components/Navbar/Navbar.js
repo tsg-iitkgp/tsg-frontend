@@ -10,6 +10,7 @@ import eventsData from "../../views/Events/eventsData.js";
 import Notification from "./Notification";
 import { useRouter, usePathname } from "next/navigation";
 import ResultsDropdown from "./ResultsDropdown.js";
+import AppImage from "../AppImage";
 
 export default function Navbar() {
   // Custom Hook useNavbar for logic of navbarClass
@@ -63,7 +64,7 @@ export default function Navbar() {
         <div className={Styles.navLogo}>
           <Link href='/' style={{ display: "flex", alignItems: "center" }}>
             {" "}
-            <img src='/data/media/images/general/gymkhanaLogo.png' alt='KGP_logo' />
+            <AppImage src='/data/media/images/general/gymkhanaLogo.png' alt='KGP_logo' />
             <span>&nbsp;TSG</span>
           </Link>
         </div>

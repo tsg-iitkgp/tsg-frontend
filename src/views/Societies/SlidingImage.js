@@ -1,4 +1,5 @@
 import React from "react";
+import AppImage from "../../components/AppImage";
 
 const SlidingImages = () => {
   // Array to simulate 10 images
@@ -29,7 +30,7 @@ const SlidingImages = () => {
               minWidth:"160px"
             }}
           >
-            <img
+            <AppImage
               src={img}
               alt="Governor"
               style={{

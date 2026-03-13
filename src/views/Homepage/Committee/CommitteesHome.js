@@ -40,7 +40,7 @@ export default function CommitteesHome() {
         <h2 className={Styles.sectionHeading}>Committees</h2>
         <div className={Styles.committeesContainer}>
           {data.map((item, index) => (
-            <div data-aos="zoom-in-up">
+            <div key="k-43" data-aos="zoom-in-up">
               <CommitteeCard key={index} data={item} />
             </div>
           ))}

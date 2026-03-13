@@ -77,7 +77,7 @@ function PointsTable(props) {
                                         <tbody>
                                             {
                                                 pointsData.map((row) => (
-                                                    <tr>
+                                                    <tr key="k-80">
                                                         <td className={Styles.team}>
                                                             {row.team}
                                                         </td>
@@ -170,7 +170,7 @@ function PointsTable(props) {
                                         <tbody>
                                             {
                                                 pointsData.map((row) => (
-                                                    <tr>
+                                                    <tr key="k-173">
                                                         <td className={Styles.team}>
                                                             {row.team}
                                                         </td>

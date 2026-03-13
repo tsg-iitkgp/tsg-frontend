@@ -3,6 +3,7 @@ import Styles from "../../../../styles/components/GC_Live/football.module.css";
 import React from 'react'
 import axios from 'axios';
 import { useState } from 'react';
+import AppImage from "../../../../components/AppImage";
 
 export default function HockeyMatch(props) {
 
@@ -63,7 +64,7 @@ export default function HockeyMatch(props) {
                                                             {val.team1_score}
                                                         </div>
                                                         <div className={Styles.scorers}>
-                                                            <img src='https://github.com/tsg-iitkgp/tsg-site/blob/main/public/images/hockey-symbol.png?raw=true' alt="Err_loadnig_img" />
+                                                            <AppImage src='https://github.com/tsg-iitkgp/tsg-site/blob/main/public/images/hockey-symbol.png?raw=true' alt="Err_loadnig_img" />
                                                             {val.team1_goalscorers}
                                                         </div>
                                                     </div>
@@ -78,7 +79,7 @@ export default function HockeyMatch(props) {
                                                             {val.team2_score}
                                                         </div>
                                                         <div className={Styles.scorers}>
-                                                            <img src='https://github.com/tsg-iitkgp/tsg-site/blob/main/public/images/hockey-symbol.png?raw=true' alt="Err_loadnig_img" />
+                                                            <AppImage src='https://github.com/tsg-iitkgp/tsg-site/blob/main/public/images/hockey-symbol.png?raw=true' alt="Err_loadnig_img" />
                                                             {val.team2_goalscorers}
                                                         </div>
                                                     </div>
@@ -136,7 +137,7 @@ export default function HockeyMatch(props) {
                                                             {val.team1_score}
                                                         </div>
                                                         <div className={Styles.scorers}>
-                                                            <img src='https://github.com/tsg-iitkgp/tsg-site/blob/main/public/images/hockey-symbol.png?raw=true' alt="Err_loadnig_img" />
+                                                            <AppImage src='https://github.com/tsg-iitkgp/tsg-site/blob/main/public/images/hockey-symbol.png?raw=true' alt="Err_loadnig_img" />
                                                             {val.team1_goalscorers}
                                                         </div>
                                                     </div>
@@ -151,7 +152,7 @@ export default function HockeyMatch(props) {
                                                             {val.team2_score}
                                                         </div>
                                                         <div className={Styles.scorers}>
-                                                            <img src='https://github.com/tsg-iitkgp/tsg-site/blob/main/public/images/hockey-symbol.png?raw=true' alt="Err_loadnig_img" />
+                                                            <AppImage src='https://github.com/tsg-iitkgp/tsg-site/blob/main/public/images/hockey-symbol.png?raw=true' alt="Err_loadnig_img" />
                                                             {val.team2_goalscorers}
                                                         </div>
                                                     </div>

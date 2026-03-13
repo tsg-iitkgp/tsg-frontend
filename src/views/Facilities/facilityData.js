@@ -1,4 +1,4 @@
-export default {
+const facilitydata = {
     facilities: [
         {
             facility: 'GYM',
@@ -72,3 +72,5 @@ export default {
         },
     ],
 };
+
+export default facilitydata;

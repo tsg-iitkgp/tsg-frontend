@@ -85,6 +85,7 @@ export default function CurrentOfficeBearers({ year }) {
         };
 
         getContacts();
+// eslint-disable-next-line react-hooks/exhaustive-deps
     }, [refreshContacts]);
 
     return (
@@ -162,7 +163,7 @@ export default function CurrentOfficeBearers({ year }) {
                                 {contacts["THIRD YEAR COUNCIL"].map(
                                     (member, index) => {
                                         return (
-                                            <div data-aos="zoom-in-up">
+                                            <div key="k-165" data-aos="zoom-in-up">
                                                 <ContactCard
                                                     name={member.name}
                                                     designation={member.por}
@@ -185,7 +186,7 @@ export default function CurrentOfficeBearers({ year }) {
                             <div className={Styles.multipleCards}>
                                 {contacts["SECRETARY"].map((member, index) => {
                                     return (
-                                        <div data-aos="zoom-in-up">
+                                        <div key="k-188" data-aos="zoom-in-up">
                                             <ContactCard
                                                 name={member.name}
                                                 designation={member.por}

@@ -3,6 +3,7 @@ import { FaTimes } from "react-icons/fa";
 import { Share2 } from "lucide-react"; // <-- Add this import
 import { BASE_URL } from "../constants/api";
 import "./PostModal.css";
+import AppImage from "../components/AppImage";
 
 const PostModal = ({ post, onClose }) => {
   const [postData, setPostData] = useState(null);
@@ -72,7 +73,7 @@ const PostModal = ({ post, onClose }) => {
           <FaTimes />
         </button>
         <div className='modal-image'>
-          <img
+          <AppImage
             src={postData.image_url}
             alt={postData.title}
             onError={(e) => {
@@ -85,7 +86,7 @@ const PostModal = ({ post, onClose }) => {
           <span className='modal-title'>{postData.title}</span>
           <div className='modal-header-info'>
             <div>
-              <img src={postData.society_logo} alt={postData.title} className='modal-logo-img' />
+              <AppImage src={postData.society_logo} alt={postData.title} className='modal-logo-img' />
               <span>{postData.society_name}</span>
             </div>
             <span>

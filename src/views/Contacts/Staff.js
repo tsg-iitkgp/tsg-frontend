@@ -9,7 +9,7 @@ export default function Staff() {
       <div className={Styles.multipleCards}>
         {staffData.data.map((member, index) => {
           return (
-            <div data-aos="zoom-in-up">
+            <div key="k-12" data-aos="zoom-in-up">
               <ContactCard
                 name={member.Name}
                 designation={member.Post}

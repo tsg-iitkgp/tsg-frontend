@@ -23,6 +23,7 @@ function Highlight({ sheetName = 'Highlight1' }) {
                 setMatchData(responseData.data);
                 setIsLoading(false);
             }).catch((err) => setIsLoading(false));
+// eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     const openModal = (index) => {

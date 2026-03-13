@@ -2,6 +2,7 @@
 import React from "react";
 import Styles from "./footer.module.css";
 import { FaFacebook, FaGithub, FaInstagram, FaYoutube } from "react-icons/fa";
+import AppImage from "../AppImage";
 
 export default function Footer() {
   const linksList = [
@@ -67,10 +68,10 @@ export default function Footer() {
       <div className={Styles.footerContainer}>
         <div className={Styles.tsgContainer}>
           <div className={Styles.imgContainer}>
-            <img src="/data/media/images/general/gymkhanaLogo.png" alt="TSG Logo" />
+            <AppImage src="/data/media/images/general/gymkhanaLogo.png" alt="TSG Logo" />
           </div>
           <div className={Styles.tsgDescription}>
-            <h2 className={Styles.tsgHeading}>Technology Students' Gymkhana</h2>
+            <h2 className={Styles.tsgHeading}>Technology Students&apos; Gymkhana</h2>
             <p className={Styles.address}>
               Indian Institute of Technology Kharagpur,
               <br />
@@ -127,8 +128,8 @@ export default function Footer() {
           })}
         </div>
         <div className={Styles.contactSection}>
-          <span>We're here</span>
-          <span>Let's talk</span>
+          <span>We&apos;re here</span>
+          <span>Let&apos;s talk</span>
           <a href="/ContactUs">
             <button className={Styles.contactButton}>Get in Touch</button>
           </a>
@@ -136,7 +137,7 @@ export default function Footer() {
       </div>
       <div className={Styles.footerLine}></div>
       <div>
-        <p className={Styles.copyright}>&copy; Technology Students' Gymkhana, IIT Kharagpur &diams; <a href="https://github.com/tsg-iitkgp/web-frontend" target="_blank" rel="noreferrer">Source Code</a></p>
+        <p className={Styles.copyright}>&copy; Technology Students&apos; Gymkhana, IIT Kharagpur &diams; <a href="https://github.com/tsg-iitkgp/web-frontend" target="_blank" rel="noreferrer">Source Code</a></p>
       </div>
     </footer>
   );

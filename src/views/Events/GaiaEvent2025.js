@@ -5,6 +5,7 @@ import Head from "next/head";
 import Layout from "../../components/Layouts/Layout";
 import { Share2, X as CloseIcon } from "lucide-react";
 import "./GaiaEvent2025.css";
+import AppImage from "../../components/AppImage";
 
 export default function GaiaEvent2025() {
   const pageTitle = "Gaia Event 2025 - IIT Kharagpur Cambridge Collaboration | TSG";
@@ -154,14 +155,14 @@ export default function GaiaEvent2025() {
         </div>
 
         <div className="gaia-event-image-container">
-          <img
+          <AppImage
             src="/data/media/images/events/Gaia_Platform_KGP-Cambridge_Collab.JPEG"
             className="gaia-event-image"
             alt="Gaia Event 2025 - IIT Kharagpur Cambridge Collaboration"
           />
           <div className="gaia-event-image-caption-wrapper">
             <p className="gaia-event-image-caption">
-              Fortress of talent : 1 Earth Holdings Inc.'s Tiger Team of solution architects and information alchemists at the inaugural event
+              Fortress of talent : 1 Earth Holdings Inc.&apos;s Tiger Team of solution architects and information alchemists at the inaugural event
             </p>
             <div className="gaia-event-share-wrapper" ref={shareMenuRef}>
               <button
@@ -295,7 +296,7 @@ export default function GaiaEvent2025() {
 
         <div className="gaia-event-section">
           <h2 className="gaia-event-section-title">
-            IIT Kharagpur's Contribution
+            IIT Kharagpur&apos;s Contribution
           </h2>
           <p className="gaia-event-paragraph">
             I am thrilled to have joined this future-ready startup alongside{" "}
@@ -309,7 +310,7 @@ export default function GaiaEvent2025() {
             Our startup has introduced a pioneering sustainable business model
             integrating the four bottom lines, going beyond People, Planet, and
             Profit. We believe a global biosphere consciousness revolution will
-            spark the world's largest sustainable industry in our
+            spark the world&apos;s largest sustainable industry in our
             lifetime—powered by eco-cosmopolitan citizens and consumers.
           </p>
         </div>
@@ -325,7 +326,7 @@ export default function GaiaEvent2025() {
           </p>
 
           <p className="gaia-event-paragraph">
-            On the Gaia Platform, there will be no "users" or "followers." We
+            On the Gaia Platform, there will be no &quot;users&quot; or &quot;followers.&quot; We
             are all crew on this spaceship Earth. Everyone will be a{" "}
             <strong>planetarian</strong> - a responsible participant in a global
             purpose economy.
@@ -350,9 +351,9 @@ export default function GaiaEvent2025() {
           </p>
 
           <p className="gaia-event-quote gaia-event-highlight">
-            "Mankind invented the atomic bomb, but no mouse would ever construct
+            &quot;Mankind invented the atomic bomb, but no mouse would ever construct
             a mousetrap. Let us hope it is not too late to restore wisdom and
-            sanity." - Albert Einstein
+            sanity.&quot; - Albert Einstein
           </p>
         </div>
 
@@ -360,7 +361,7 @@ export default function GaiaEvent2025() {
           <h2 className="gaia-event-section-title">Acknowledgments</h2>
           <p className="gaia-event-paragraph">
             We also express our gratitude to{" "}
-            <strong>Smt. Mamata Banerjee</strong>, Hon'ble Chief Minister of
+            <strong>Smt. Mamata Banerjee</strong>, Hon&apos;ble Chief Minister of
             West Bengal, in anticipation of her support for our climate, soccer,
             and media initiatives being launched from this state.
           </p>

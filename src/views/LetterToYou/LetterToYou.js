@@ -2,6 +2,7 @@
 import React, { useState, useCallback } from "react";
 import "./LetterToYou.css";
 import Layout from "../../components/Layouts/Layout";
+import AppImage from "../../components/AppImage";
 
 function debounce(func, delay) {
   let timer;
@@ -42,6 +43,7 @@ const Form = () => {
     setFormData({ ...formData, [name]: value });
   };
 
+// eslint-disable-next-line react-hooks/exhaustive-deps
   const sendOtp = useCallback(
     debounce(async () => {
       if (!isEmailValid) return;
@@ -112,13 +114,13 @@ const Form = () => {
           <div className="overlay"></div>
           <div className="desc-content">
           <h2>
-            <img src="https://freedesignfile.com/image/preview/18609/graduation-hat-drawing-black-and-white-clipart.png"/>
+            <AppImage alt="" src="https://freedesignfile.com/image/preview/18609/graduation-hat-drawing-black-and-white-clipart.png"/>
             A Letter To The Passing <br></br> Out You!
           </h2>
           <p>
             To all the bright-eyed futurists of today, the Editorship presents
-            this unique opportunity to write a heartfelt 'encrypted and totally
-            secure' letter to your future self, one that will be delivered to
+            this unique opportunity to write a heartfelt &apos;encrypted and totally
+            secure&apos; letter to your future self, one that will be delivered to
             you on your graduation day.<br/><br /> So, why wait? Immerse yourself in a
             reflective thought and let your words weave the bridge between the
             person you are today and the graduate you will become.<br /> <br /> Share your

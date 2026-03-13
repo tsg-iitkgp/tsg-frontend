@@ -48,19 +48,19 @@ export default function Weightlifting(props) {
               <div className="popup-content text">
               <h3 style={{"color": "#f1c40f", "textAlign": "center"}}>Overall : Silver</h3><br />
                 <table>
-                  <tr><th>Date</th><th>Event</th><th>Player Name</th><th>Snatch Lift 1</th><th>Snatch Lift 2</th><th>Snatch Lift 3</th><th>CJ Lift 1</th><th>CJ Lift 2</th><th>CJ Lift 3</th><th>Final Position</th></tr>
+                  <tr><th key="k-th">Date</th><th key="k-th">Event</th><th key="k-th">Player Name</th><th key="k-th">Snatch Lift 1</th><th key="k-th">Snatch Lift 2</th><th key="k-th">Snatch Lift 3</th><th key="k-th">CJ Lift 1</th><th key="k-th">CJ Lift 2</th><th key="k-th">CJ Lift 3</th><th key="k-th">Final Position</th></tr>
                   {props.data.data.map((val, key) => {
                     if (key >= 0 && key < 16) {
                       // console.log(val);
                       if (val[0] === "16th Dec") {
                         rowspan = 6;
                         return (
-                          <tr>
-                            <th rowSpan={rowspan}>{val[0]}</th>
+                          <tr key="k-58">
+                            <th key="k-th" rowSpan={rowspan}>{val[0]}</th>
                             {val.map((cell, index) => {
                               if (key !== 0) {
                                 return (
-                                  <td>
+                                  <td key="k-63">
                                     {cell}
                                   </td>
                                 )
@@ -75,12 +75,12 @@ export default function Weightlifting(props) {
                       else if (val[0] === "17th Dec") {
                         rowspan = 3;
                         return (
-                          <tr>
-                            <th rowSpan={rowspan}>{val[0]}</th>
+                          <tr key="k-78">
+                            <th key="k-th" rowSpan={rowspan}>{val[0]}</th>
                             {val.map((cell, index) => {
                               if (key !== 6) {
                                 return (
-                                  <td>
+                                  <td key="k-83">
                                     {cell}
                                   </td>
                                 )
@@ -94,9 +94,9 @@ export default function Weightlifting(props) {
                       } 
                       else {
                         return (
-                          <tr>
+                          <tr key="k-97">
                             {val.map((cell, index) => {
-                              return (<td>{cell}</td>)
+                              return (<td key="k-td">{cell}</td>)
                             })}
                           </tr>
                         )
@@ -135,19 +135,19 @@ export default function Weightlifting(props) {
                 <div className="popup-content text">
                   <h3 style={{"color": "#f1c40f", "textAlign": "center"}}>Overall : Silver</h3><br />
                   <table>
-                    <tr><th>Date</th><th>Event</th><th>Player Name</th><th>Snatch Lift 1</th><th>Snatch Lift 2</th><th>Snatch Lift 3</th><th>CJ Lift 1</th><th>CJ Lift 2</th><th>CJ Lift 3</th><th>Final Position</th></tr>
+                    <tr><th key="k-th">Date</th><th key="k-th">Event</th><th key="k-th">Player Name</th><th key="k-th">Snatch Lift 1</th><th key="k-th">Snatch Lift 2</th><th key="k-th">Snatch Lift 3</th><th key="k-th">CJ Lift 1</th><th key="k-th">CJ Lift 2</th><th key="k-th">CJ Lift 3</th><th key="k-th">Final Position</th></tr>
                     {data.data.map((val, key) => {
                       if (key >= 0 && key < 16) {
                         // console.log(val);
                         if (val[0] === "16th Dec") {
                           rowspan = 6;
                           return (
-                            <tr>
-                              <th rowSpan={rowspan}>{val[0]}</th>
+                            <tr key="k-145">
+                              <th key="k-th" rowSpan={rowspan}>{val[0]}</th>
                               {val.map((cell, index) => {
                                 if (key !== 0) {
                                   return (
-                                    <td>
+                                    <td key="k-150">
                                       {cell}
                                     </td>
                                   )
@@ -162,12 +162,12 @@ export default function Weightlifting(props) {
                         else if (val[0] === "17th Dec") {
                           rowspan = 3;
                           return (
-                            <tr>
-                              <th rowSpan={rowspan}>{val[0]}</th>
+                            <tr key="k-165">
+                              <th key="k-th" rowSpan={rowspan}>{val[0]}</th>
                               {val.map((cell, index) => {
                                 if (key !== 6) {
                                   return (
-                                    <td>
+                                    <td key="k-170">
                                       {cell}
                                     </td>
                                   )
@@ -181,9 +181,9 @@ export default function Weightlifting(props) {
                         } 
                         else {
                           return (
-                            <tr>
+                            <tr key="k-184">
                               {val.map((cell, index) => {
-                                return (<td>{cell}</td>)
+                                return (<td key="k-td">{cell}</td>)
                               })}
                             </tr>
                           )

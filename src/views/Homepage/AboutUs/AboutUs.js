@@ -13,8 +13,8 @@ export default function AboutUs() {
           participation of the faculty and staff members.
         </p>
         <p className={Styles.description}>
-          The motto of Technology Students' Gymkhana is <strong>YOGAH KARMASU KAUSALAM</strong>&nbsp;
-          which in English means <strong>"Excellence in action is Yoga"</strong>. Our goal is to
+          The motto of Technology Students&apos; Gymkhana is <strong>YOGAH KARMASU KAUSALAM</strong>&nbsp;
+          which in English means <strong>&quot;Excellence in action is Yoga&quot;</strong>. Our goal is to
           bring overall development in IITians through cultivating and nurturing
           their extra-curricular talents.
         </p>

@@ -6,6 +6,7 @@ import './ControlledCarousel.css';
 
 import CertiTemplate from '../../../data/CertiTemplate.json'
 import ExcelPreview from './ExcelPreview';
+import AppImage from "../../AppImage";
 
 function ControlledCarousel(props) {
     const [index, setIndex] = useState(0);
@@ -47,7 +48,7 @@ function ControlledCarousel(props) {
                     {CertiTemplate.Templates.map(template => (
                         <Carousel.Item key={template.id}>
                             <div className='div-shrink m-auto'>
-                                <img
+                                <AppImage
                                     className="d-block w-200"
                                     src={template.src}
                                     alt={template.alt}

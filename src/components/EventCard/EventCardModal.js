@@ -1,5 +1,6 @@
 import React from "react";
 import "./EventCardModal.css"
+import AppImage from "../AppImage";
 
 const EventCardModal = (props) => {
     const eventData = props.eventViewStatus.eventData;
@@ -24,7 +25,7 @@ const EventCardModal = (props) => {
                     <p>
                         {eventData.description}
                     </p>
-                    <img 
+                    <AppImage 
                         src={imgSrc} 
                         alt={eventData.title}  
                         className="poster-img" />

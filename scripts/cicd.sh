@@ -8,7 +8,7 @@ git fetch origin
 git reset --hard origin/main
 
 # Build Stage
-sudo docker build -t proffapt/tsg-site-frontend .
+sudo docker build -t tsg-iitkgp/tsg-frontend .
 
 # Deploy Stage
 sudo docker-compose down

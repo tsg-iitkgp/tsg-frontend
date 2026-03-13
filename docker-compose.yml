@@ -3,7 +3,7 @@ version: '3'
 services:
   tsg-site-frontend:
     build: .
-    image: proffapt/tsg-site-frontend
+    image: tsg-iitkgp/tsg-frontend
     container_name: tsg-site-frontend
     restart: unless-stopped
     ports:

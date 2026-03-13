@@ -56,7 +56,7 @@ export default function CricketScoreCardModal({ matchData, onRequestClose, ...pr
                                                 {
                                                     modalData.filter((...props) => filterData(matchData.team1, 'batsman', ...props))
                                                         .map((item) => (
-                                                            <tr>
+                                                            <tr key="k-59">
                                                                 <td className={Styles.batsman}>
                                                                     {item.player_name} <br />
                                                                     <span>
@@ -118,7 +118,7 @@ export default function CricketScoreCardModal({ matchData, onRequestClose, ...pr
                                                 {
                                                     modalData.filter((...props) => filterData(matchData.team2, 'bowler', ...props))
                                                         .map((item) => (
-                                                            <tr>
+                                                            <tr key="k-121">
                                                                 <td className={Styles.batsman}>
                                                                     {item.player_name}
                                                                 </td>
@@ -166,7 +166,7 @@ export default function CricketScoreCardModal({ matchData, onRequestClose, ...pr
                                                 {
                                                     modalData.filter((...props) => filterData(matchData.team2, 'batsman', ...props))
                                                         .map((item) => (
-                                                            <tr>
+                                                            <tr key="k-169">
                                                                 <td className={Styles.batsman}>
                                                                     {item.player_name} <br />
                                                                     <span>
@@ -228,7 +228,7 @@ export default function CricketScoreCardModal({ matchData, onRequestClose, ...pr
                                                 {
                                                     modalData.filter((...props) => filterData(matchData.team1, 'bowler', ...props))
                                                         .map((item) => (
-                                                            <tr>
+                                                            <tr key="k-231">
                                                                 <td className={Styles.batsman}>
                                                                     {item.player_name}
                                                                 </td>

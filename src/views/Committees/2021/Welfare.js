@@ -17,6 +17,7 @@ import sw5 from "./images/welfare/sw5.jpg";
 import sw6 from "./images/welfare/sw6.jpg";
 import sw7 from "./images/welfare/sw7.jpg";
 import sw8 from "./images/welfare/sw8.jpg";
+import AppImage from "../../../components/AppImage";
 
 export default function Welfare() {
   // const techComTeam = [
@@ -70,7 +71,7 @@ export default function Welfare() {
           <div className={globalStyles.backgroundImage}></div>
           <div className={globalStyles.welcomeContent}>
             <h1 className={globalStyles.committeeHeading}>
-              Students' Welfare Committee
+              Students&apos; Welfare Committee
             </h1>
           </div>
         </div>
@@ -88,8 +89,8 @@ export default function Welfare() {
               participation of the faculty and staff members.
             </p>
             <p className={globalStyles.description}>
-              The moto of Technology Students' Gymkhana is YOGAH KARMASU
-              KAUSALAM which in English means "Perfection in action is Yoga".
+              The moto of Technology Students&apos; Gymkhana is YOGAH KARMASU
+              KAUSALAM which in English means &quot;Perfection in action is Yoga&quot;.
               Our goal is to bring overall development in IITians through
               cultivating and nurturing their extra-curricular talents.
             </p>
@@ -105,7 +106,7 @@ export default function Welfare() {
         <section>
           <center>
             <div className={globalStyles.imgContainer}>
-              <img src={sw8} alt="pride_march" />
+              <AppImage src={sw8} alt="pride_march" />
             </div>
           </center>
           <div className={globalStyles.centerCard}>
@@ -116,7 +117,7 @@ export default function Welfare() {
               <br />
               Date: 7 PM on Tuesday, September 6, 2022
               <br />
-              Starting point: Technology Students' Gymkhana
+              Starting point: Technology Students&apos; Gymkhana
               <br />
               Route: 2.2
               <br />
@@ -137,7 +138,7 @@ export default function Welfare() {
         <section>
           <center>
             <div className={globalStyles.imgContainer}>
-              <img src={sw7} alt="talk_with_dr_Bittu" />
+              <AppImage src={sw7} alt="talk_with_dr_Bittu" />
             </div>
           </center>
           <div className={globalStyles.centerCard}>
@@ -161,7 +162,7 @@ export default function Welfare() {
         <section>
           <center>
             <div className={globalStyles.imgContainer}>
-              <img src={sw6} alt="storytelling_session" />
+              <AppImage src={sw6} alt="storytelling_session" />
             </div>
           </center>
           <div className={globalStyles.centerCard}>
@@ -184,7 +185,7 @@ export default function Welfare() {
         </center>
         <section className={globalStyles.cmtCard1}>
           <div className={globalStyles.leftCard}>
-            <img
+            <AppImage
               className={globalStyles.cardImg3}
               src={sw5}
               alt="Words_Of_Pride"
@@ -213,7 +214,7 @@ export default function Welfare() {
         </center>
         <section className={globalStyles.cmtCard1}>
           <div className={globalStyles.leftCard}>
-            <img
+            <AppImage
               className={globalStyles.cardImg3}
               src={sw3}
               alt="Anubhuti_Poster"
@@ -252,7 +253,7 @@ export default function Welfare() {
         </center>
         <section className={globalStyles.cmtCard1}>
           <div className={globalStyles.leftCard}>
-            <img
+            <AppImage
               className={globalStyles.cardImg3}
               src={sw4}
               alt="Khat_Poster"
@@ -262,12 +263,12 @@ export default function Welfare() {
           <div className={globalStyles.rightCard}>
             <p>
               <br />
-              "Every new friend is a new adventure...the start of more
-              memories." <br />
+              &quot;Every new friend is a new adventure...the start of more
+              memories.&quot; <br />
               <br />
-              Texting is the new normal; it's been Online for a couple of years.
-              Let's go back in time, recalling those old communication means.
-              Let's grab some Envelopes and send end-to-end encrypted messages
+              Texting is the new normal; it&apos;s been Online for a couple of years.
+              Let&apos;s go back in time, recalling those old communication means.
+              Let&apos;s grab some Envelopes and send end-to-end encrypted messages
               to your lovely friends.
               <br />
               <br /> This FRIENDSHIP DAY, INSTITUTE WELLNESS GROUP is frenzied
@@ -277,7 +278,7 @@ export default function Welfare() {
               <br />
               Date: 4th and 5th August 2022. <br />
               <br />
-              Venue: Technology Students' Gymkhana.
+              Venue: Technology Students&apos; Gymkhana.
             </p>
           </div>
         </section>
@@ -288,7 +289,7 @@ export default function Welfare() {
         </center>
         <section className={globalStyles.cmtCard1}>
           <div className={globalStyles.leftCard}>
-            <img
+            <AppImage
               className={globalStyles.cardImg}
               src={sw2}
               alt="Music result"
@@ -334,7 +335,7 @@ export default function Welfare() {
           <div className={globalStyles.leftCard}>
             <center>
               <br />
-              <img
+              <AppImage
                 className={globalStyles.cardImg}
                 src={english}
                 alt="english mentorship"
@@ -351,14 +352,14 @@ export default function Welfare() {
               <br />
               <br />
               English is the prevailing language of all time. Having a good
-              command of language boosts one's faith and self-esteem. Here is an
+              command of language boosts one&apos;s faith and self-esteem. Here is an
               opportunity for all those who want to surpass the standards of
               English. English Mentorship Programme in collaboration with ACSESS
               (Advanced Communication Skills for Engineering and Science
               Students), a platform Sponsored by Dr Ranbir Sinha, an Alumni of
               IIT KGP for the welfare of the KGP community, with certification
               after completion of the course. So hurry up KGPians Do Register
-              before "10th January 2022, 11:59 PM".
+              before &quot;10th January 2022, 11:59 PM&quot;.
               <br />
               Registration Form:-
               <a
@@ -380,7 +381,7 @@ export default function Welfare() {
           <div className={globalStyles.leftCard}>
             <center>
               <br />
-              <img
+              <AppImage
                 className={globalStyles.cardImg}
                 src={projects}
                 alt="projects"
@@ -400,7 +401,7 @@ export default function Welfare() {
               their varied projects for social welfare.
               <br />
               Through this we intent to emphasize the spirit of “ Not me But
-              you" while providing a platform for the students and NGOs to
+              you&quot; while providing a platform for the students and NGOs to
               collaborate for social growth, through a tremendously fulfilling
               and rewarding experience. <br />
               We invite all the NGOs with their social projects to partner with
@@ -430,7 +431,7 @@ export default function Welfare() {
         <section className={globalStyles.cmtCard1}>
           <div className={globalStyles.leftCard}>
             <center>
-              <img
+              <AppImage
                 className={globalStyles.cardImg}
                 src={img2}
                 alt="Have you felt anxious"
@@ -470,7 +471,7 @@ export default function Welfare() {
         <section className={globalStyles.cmtCard1}>
           <div className={globalStyles.leftCard}>
             <center>
-              <img
+              <AppImage
                 className={globalStyles.cardImg}
                 src={induction}
                 alt="Induction"
@@ -586,7 +587,7 @@ export default function Welfare() {
         <section className={globalStyles.cmtCard1}>
           <div className={globalStyles.leftCard}>
             <center>
-              <img
+              <AppImage
                 className={globalStyles.cardImg}
                 src={img1}
                 alt="Mental welness workshop"
@@ -598,8 +599,8 @@ export default function Welfare() {
             <p>
               <br />
               <br />
-              "You don't have to control your thoughts. You just have to stop
-              letting them control you."
+              &quot;You don&apos;t have to control your thoughts. You just have to stop
+              letting them control you.&quot;
               <br /> ~ Dan Millman
               <br />
               The online semester has affected our emotions, relationships and
@@ -610,7 +611,7 @@ export default function Welfare() {
               <br />
               GoodLives in association with IIT Kharagpur will be conducting a
               series of Mental Health awareness workshops. The workshops will be
-              targeting multiple topics of college student's life and their
+              targeting multiple topics of college student&apos;s life and their
               families.
             </p>
           </div>

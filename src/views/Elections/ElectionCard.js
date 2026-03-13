@@ -1,6 +1,7 @@
 import React from "react";
 import Styles from "./electionCard.module.css";
 import MenuBookIcon from "@material-ui/icons/MenuBook";
+import AppImage from "../../components/AppImage";
 function ElectionCard({
   name,
   designation,
@@ -15,7 +16,7 @@ function ElectionCard({
   return (
     <div className={Styles.container}>
       <div className={Styles.imgbox}>
-        <img src={imgSrc} alt={`${name}_image`} />
+        <AppImage src={imgSrc} alt={`${name}_image`} />
       </div>
       {post !== "Secy" && (
         <ul className={Styles.sociallinks}>

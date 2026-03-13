@@ -1,4 +1,4 @@
-export default {
+const contactsdata2122 = {
   data: [
     {
       RollNo: "President",
@@ -166,3 +166,5 @@ export default {
     },
   ],
 };
+
+export default contactsdata2122;

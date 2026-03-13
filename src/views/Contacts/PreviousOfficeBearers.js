@@ -100,7 +100,7 @@ const startYear = parseInt(currentYear.split("-")[0], 10);
                                 ? senateData[currentYear][currentTab][
                                       "profs"
                                   ]?.map((winner) => (
-                                      <div data-aos="zoom-in-up">
+                                      <div key="k-103" data-aos="zoom-in-up">
                                           <ContactCard
                                               name={winner.Name}
                                               imgSrc={primg}
@@ -110,7 +110,7 @@ const startYear = parseInt(currentYear.split("-")[0], 10);
                                   ))
                                 : senateData[currentYear][currentTab].map(
                                       (winner) => (
-                                          <div data-aos="zoom-in-up">
+                                          <div key="k-113" data-aos="zoom-in-up">
                                               <ContactCard
                                                   name={winner.Name}
                                                   imgSrc={"primg"}
@@ -127,7 +127,7 @@ const startYear = parseInt(currentYear.split("-")[0], 10);
                         <div className={Styles.senateCard}>
                             {senateData[currentYear][currentTab]["honours"].map(
                                 (winner) => (
-                                    <card
+                                    <card key="k-130"
                                         className={Styles.card1}
                                         data-aos="zoom-in-up"
                                     >

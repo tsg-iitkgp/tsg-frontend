@@ -1,4 +1,4 @@
-export default {
+const facilities = {
     data: [
       {
         title: "Technology Students' Gymkhana",
@@ -65,4 +65,5 @@ export default {
       },
     ],
   };
-  
+
+export default facilities;

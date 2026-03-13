@@ -11,6 +11,7 @@ import ContactTab from "./ContactTab";
 import ContactComponent from "./ContactComponent";
 import Resgiteration from "./Registration";
 import ImageGalleryTab from "./ImageGalleryTab";
+import AppImage from "../../components/AppImage";
 
 export default function SocietyLayout() {
   const [activeSection, setActiveSection] = useState("Description");
@@ -20,11 +21,11 @@ export default function SocietyLayout() {
       <div className={Styles.parentDiv}>
         <div className={Styles.coverPhotoDiv}>
           {/* <h1 className={Styles.coverPhotoHeading}>180 Degrees Consulting</h1> */}
-          <img src={background} className={Styles.coverImg}></img>
+          <AppImage alt="" src={background} className={Styles.coverImg}></AppImage>
         </div>
         <div className={Styles.headDiv}>
           <div className={Styles.headDiv1}>
-            <img
+            <AppImage alt=""
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwun4XIcQgZi91uWOOkVArN5sbsLZgnJEdEg&s"
               className={Styles.headImg}
             />

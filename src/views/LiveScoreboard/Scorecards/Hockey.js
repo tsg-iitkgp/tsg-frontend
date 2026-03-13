@@ -45,13 +45,13 @@ export default function Hockey(props) {
                     <div className="popup-content">
                         <div className="popup-content text">
                             <table>
-                                <tr><th>Date</th><th>Event</th><th>Match (T1 v/s T2)</th><th colSpan="2">Half Time Score</th><th colSpan="2">Full Time Score</th></tr>
+                                <tr><th key="k-th">Date</th><th key="k-th">Event</th><th key="k-th">Match (T1 v/s T2)</th><th key="k-th" colSpan="2">Half Time Score</th><th key="k-th" colSpan="2">Full Time Score</th></tr>
                                 <tbody>
                                     {
                                         props.data.data.map((val, key) => {
-                                            return <tr>
+                                            return <tr key="k-52">
                                                 {val.map((value, index) => {
-                                                    return <td>{value}</td>
+                                                    return <td key="k-td">{value}</td>
                                                 })}
                                             </tr>
                                         })
@@ -86,13 +86,13 @@ else if (props.show === true && data !== null) {
                     <div className="popup-content">
                         <div className="popup-content text">
                             <table>
-                                <tr><th>Date</th><th>Event</th><th>Match (T1 v/s T2)</th><th colSpan="2">Half Time Score</th><th colSpan="2">Full Time Score</th></tr>
+                                <tr><th key="k-th">Date</th><th key="k-th">Event</th><th key="k-th">Match (T1 v/s T2)</th><th key="k-th" colSpan="2">Half Time Score</th><th key="k-th" colSpan="2">Full Time Score</th></tr>
                                 <tbody>
                                     {
                                         data.data.map((val, key) => {
-                                            return <tr>
+                                            return <tr key="k-93">
                                                 {val.map((value, index) => {
-                                                    return <td>{value}</td>
+                                                    return <td key="k-td">{value}</td>
                                                 })}
                                             </tr>
                                         })

@@ -5,6 +5,7 @@ import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { BASE_URL } from "../constants/api";
 import "./SocietiesList.css";
 import Layout from "../components/Layouts/Layout";
+import AppImage from "../components/AppImage";
 
 const SocietiesList = () => {
   if (typeof window !== "undefined") document.title = "Societies | TSG";
@@ -124,7 +125,7 @@ const SocietiesList = () => {
                 href={`/societies/${society.slug}`}
                 style={{ textDecoration: "none" }}>
                 <div className='society-logo'>
-                  <img
+                  <AppImage
                     src={society.logo_url}
                     alt={`${society.name} logo`}
                     onError={(e) => {

@@ -12,7 +12,7 @@ export default function RotatingCards({ name, category }) {
           .filter((data) => data.category === category)
           .map((item, i) => {
             return (
-              <RotatingCard
+              <RotatingCard key="k-15"
                 name={item.name}
                 description={item.description}
                 shortform={item.shortform}

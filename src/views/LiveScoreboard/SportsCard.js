@@ -1,5 +1,6 @@
 import React from "react";
 import "./LiveScoreboard.css";
+import AppImage from "../../components/AppImage";
 
 export default function SportsCard(props) {
     let sportsData= props.data;
@@ -23,7 +24,7 @@ export default function SportsCard(props) {
                 <div className="sports-box">
                     <div className="icon-div">
                         <span className="live-status">{sportsData.status}</span>
-                        <img src={sportsData.image} alt={sportsData.imgName} className="sport-img"/>
+                        <AppImage src={sportsData.image} alt={sportsData.imgName} className="sport-img"/>
                         <h4 className="sport-name">{sportsData.name}</h4>
                     </div >
                 </div>

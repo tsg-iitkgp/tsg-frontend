@@ -6,7 +6,7 @@ function Highlight({ events }) {
     <div>
       {events.map((event, index) => {
         return (
-          <div className={Styles.highlight}>
+          <div key="k-9" className={Styles.highlight}>
             <div className={Styles.highlightHeadingContainer}>
               <h1>{event.title}</h1>
             </div>
@@ -25,7 +25,7 @@ function Highlight({ events }) {
                   event.dates.map((date, index) => {
                     // console.log(date);
                     return (
-                      <div style={{ display: "flex" }}>
+                      <div key="k-28" style={{ display: "flex" }}>
                         <p style={{ color: "#f1c40f" }}>
                           {date.title} : &nbsp;
                         </p>
@@ -38,7 +38,7 @@ function Highlight({ events }) {
 
               {event.links.map((link, index) => {
                 return (
-                  <p>
+                  <p key="k-41">
                     {link.description} &nbsp;
                     <a href={link.href} target="blank">
                       {link.content}

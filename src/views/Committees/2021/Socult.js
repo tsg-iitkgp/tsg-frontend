@@ -35,6 +35,7 @@ import sc17 from "./images/socult/sc17.jpg";
 import sc18 from "./images/socult/sc18.jpg";
 import sc19 from "./images/socult/sc19.jpg";
 import sc20 from "./images/socult/sc20.jpg";
+import AppImage from "../../../components/AppImage";
 
 export default function Socult() {
   // const techComTeam = [
@@ -142,8 +143,8 @@ export default function Socult() {
               participation of the faculty and staff members.
             </p>
             <p className={globalStyles.description}>
-              The moto of Technology Students' Gymkhana is YOGAH KARMASU
-              KAUSALAM which in English means "Perfection in action is Yoga".
+              The moto of Technology Students&apos; Gymkhana is YOGAH KARMASU
+              KAUSALAM which in English means &quot;Perfection in action is Yoga&quot;.
               Our goal is to bring overall development in IITians through
               cultivating and nurturing their extra-curricular talents.
             </p>
@@ -172,16 +173,16 @@ export default function Socult() {
           <section>
             <center>
               <div className={globalStyles.imgContainer}>
-                <img src={sc20} alt="Open_IIT_Solo_Dance" />
+                <AppImage src={sc20} alt="Open_IIT_Solo_Dance" />
               </div>
             </center>
             <div className={globalStyles.centerCard}>
               <p>
-                "Dance Is a Language Beyond Words, Expressing That for Which We
-                Have No Words. " - Suja Dinkar
+                &quot;Dance Is a Language Beyond Words, Expressing That for Which We
+                Have No Words. &quot; - Suja Dinkar
                 <br />
                 <br />
-                Technology Students' Gymkhana, IIT Kharagpur presents OPEN IIT
+                Technology Students&apos; Gymkhana, IIT Kharagpur presents OPEN IIT
                 Solo Dance Competition.
                 <br />
                 <br />
@@ -221,7 +222,7 @@ export default function Socult() {
           </center>
           <section className={globalStyles.cmtCard1}>
             <div className={globalStyles.leftCard}>
-              <img
+              <AppImage
                 className={globalStyles.cardImg}
                 src={sc19}
                 alt="Open_IIT_Sketching"
@@ -243,7 +244,7 @@ export default function Socult() {
                 Horton Cooley
                 <br />
                 <br />
-                Technology Students' Gymkhana brings to you the first of the
+                Technology Students&apos; Gymkhana brings to you the first of the
                 OPEN-IIT for this Academic year, OPEN-IIT Sketching
                 <br />
                 <br />
@@ -287,7 +288,7 @@ export default function Socult() {
           <section>
             <center>
               <div className={globalStyles.imgContainer}>
-                <img src={sc18} alt="Open_IIT_Vocals" />
+                <AppImage src={sc18} alt="Open_IIT_Vocals" />
               </div>
             </center>
             <div className={globalStyles.centerCard}>
@@ -297,7 +298,7 @@ export default function Socult() {
                 bones.” ― Keith Richards
                 <br />
                 <br />
-                Technology Students' Gymkhana, IIT Kharagpur presents OPEN IIT
+                Technology Students&apos; Gymkhana, IIT Kharagpur presents OPEN IIT
                 VOCALS.
                 <br />
                 <br />
@@ -367,7 +368,7 @@ export default function Socult() {
           </center>
           <section className={globalStyles.cmtCard1}>
             <div className={globalStyles.leftCard}>
-              <img
+              <AppImage
                 className={globalStyles.cardImg}
                 src={sc16}
                 alt="Comic_Kaun_Poster"
@@ -381,15 +382,15 @@ export default function Socult() {
             </div>
             <div className={globalStyles.rightCard}>
               <p>
-                Technology Students' Gymkhana presents Talent Cafe. Talent Cafe
+                Technology Students&apos; Gymkhana presents Talent Cafe. Talent Cafe
                 will be a series of events aiming to attract the KGP Community
                 to indulge in Social and Cultural Activities. <br /> <br />
-                "Comedy is an escape, not from truth but from despair; a narrow
-                escape into faith." <br />
+                &quot;Comedy is an escape, not from truth but from despair; a narrow
+                escape into faith.&quot; <br />
                 - Christopher Fry <br />
                 <br />
                 We bring to you the first of this series, COMIC कौन? - STAND-UP
-                COMPETITION. So let's break the monotony of a full week of
+                COMPETITION. So let&apos;s break the monotony of a full week of
                 offline class and join us for the first-ever Talent Cafe.
                 <br />
                 <br />
@@ -426,7 +427,7 @@ export default function Socult() {
           </center>
           <section className={globalStyles.cmtCard1}>
             <div className={globalStyles.leftCard}>
-              <img
+              <AppImage
                 className={globalStyles.cardImg}
                 src={sc17}
                 alt="PAN_IIT_Cooking_Ppster"
@@ -475,7 +476,7 @@ export default function Socult() {
           <section>
             <center>
               <div className={globalStyles.imgContainer}>
-                <img src={sc1} alt="timeline" />
+                <AppImage src={sc1} alt="timeline" />
               </div>
             </center>
 
@@ -502,7 +503,7 @@ export default function Socult() {
           </center>
           <section className={globalStyles.cmtCard1}>
             <div className={globalStyles.leftCard}>
-              <img
+              <AppImage
                 className={globalStyles.cardImg}
                 src={sc2}
                 alt="Music result"
@@ -530,11 +531,11 @@ export default function Socult() {
 
           <center>
             <hr className={globalStyles.hrLine} />
-            <h2 className={globalStyles.head2}>What's the Good Word</h2>
+            <h2 className={globalStyles.head2}>What&apos;s the Good Word</h2>
           </center>
           <section className={globalStyles.cmtCard1}>
             <div className={globalStyles.leftCard}>
-              <img
+              <AppImage
                 className={globalStyles.cardImg}
                 src={sc3}
                 alt="Music result"
@@ -544,7 +545,7 @@ export default function Socult() {
               <p>
                 Hello everyone,
                 <br />
-                " Hot,Red,Rash,Extinguish, Water...." . Can you guess a
+                &quot; Hot,Red,Rash,Extinguish, Water....&quot; . Can you guess a
                 relatable word these words?
                 <br />
                 Brainstorm junta,you can do it? For those who could not crack it
@@ -575,7 +576,7 @@ export default function Socult() {
           <section>
             <center>
               <div className={globalStyles.imgContainer}>
-                <img src={sc4} alt="timeline" />
+                <AppImage src={sc4} alt="timeline" />
               </div>
             </center>
 
@@ -601,7 +602,7 @@ export default function Socult() {
           </center>
           <section className={globalStyles.cmtCard1}>
             <div className={globalStyles.leftCard}>
-              <img
+              <AppImage
                 className={globalStyles.cardImg}
                 src={sc5}
                 alt="Music result"
@@ -634,7 +635,7 @@ export default function Socult() {
           </center>
           <section className={globalStyles.cmtCard1}>
             <div className={globalStyles.leftCard}>
-              <img
+              <AppImage
                 className={globalStyles.cardImg}
                 src={sc6}
                 alt="Music result"
@@ -663,7 +664,7 @@ export default function Socult() {
           <section>
             <center>
               <div className={globalStyles.imgContainer}>
-                <img src={sc7} alt="timeline" />
+                <AppImage src={sc7} alt="timeline" />
               </div>
             </center>
 
@@ -695,7 +696,7 @@ export default function Socult() {
           </center>
           <section className={globalStyles.cmtCard1}>
             <div className={globalStyles.leftCard}>
-              <img
+              <AppImage
                 className={globalStyles.cardImg}
                 src={sc8}
                 alt="Music result"
@@ -726,7 +727,7 @@ export default function Socult() {
           </center>
           <section className={globalStyles.cmtCard1}>
             <div className={globalStyles.leftCard}>
-              <img
+              <AppImage
                 className={globalStyles.cardImg}
                 src={sc9}
                 alt="Music result"
@@ -734,8 +735,8 @@ export default function Socult() {
             </div>
             <div className={globalStyles.rightCard}>
               <p>
-                " For good ideas and true innovation, you need human
-                interaction, conflict, argument, debate."
+                &quot; For good ideas and true innovation, you need human
+                interaction, conflict, argument, debate.&quot;
                 <br />
                 <br />
                 Are you a great speaker and spontaneous thinker? Can you make
@@ -764,7 +765,7 @@ export default function Socult() {
           </center>
           <section className={globalStyles.cmtCard1}>
             <div className={globalStyles.leftCard}>
-              <img
+              <AppImage
                 className={globalStyles.cardImg}
                 src={sc10}
                 alt="Music result"
@@ -776,7 +777,7 @@ export default function Socult() {
                 creation,enthralled with expression,fueled by compulsion and
                 blindsided by inspiration- then get ready to bring fruition of
                 your creativity and inner artist with Inter Hall Thermocol and
-                Clay Modelling. It's time bestow your imagination a shape,a
+                Clay Modelling. It&apos;s time bestow your imagination a shape,a
                 structure,a story ,a spectacle like no other and paint success
                 for your halls. Date-06/03/2022
                 <br />
@@ -798,7 +799,7 @@ export default function Socult() {
           </center>
           <section className={globalStyles.cmtCard1}>
             <div className={globalStyles.leftCard}>
-              <img
+              <AppImage
                 className={globalStyles.cardImg}
                 src={sc11}
                 alt="Music result"
@@ -831,7 +832,7 @@ export default function Socult() {
           <section>
             <center>
               <div className={globalStyles.imgContainer}>
-                <img src={sc12} alt="timeline" />
+                <AppImage src={sc12} alt="timeline" />
               </div>
             </center>
 
@@ -845,7 +846,7 @@ export default function Socult() {
               Needless to say, there are other extremely exhilarating activities
               coming up for you all. So keep up the high spirit.We hope you
               enjoy all the upcoming activities vivaciously. Do have a look on
-              the event's timeline below.
+              the event&apos;s timeline below.
               <br />
               <br />
               So stay tuned to stay thrilled!!!!
@@ -860,7 +861,7 @@ export default function Socult() {
           </center>
           <section className={globalStyles.cmtCard1}>
             <div className={globalStyles.leftCard}>
-              <img
+              <AppImage
                 className={globalStyles.cardImg}
                 src={sc13}
                 alt="Music result"
@@ -878,7 +879,7 @@ export default function Socult() {
                 the inner emotions through beautiful colors on a blank canvas.{" "}
                 <br />
                 <br />
-                Technology Students' Gymkhana brings you an opportunity to
+                Technology Students&apos; Gymkhana brings you an opportunity to
                 unleash your inner artist and paint to reveal your love for art
                 through OPEN IIT PAINTING.
                 <br />
@@ -896,7 +897,7 @@ export default function Socult() {
           </center>
           <section className={globalStyles.cmtCard1}>
             <div className={globalStyles.leftCard}>
-              <img
+              <AppImage
                 className={globalStyles.cardImg}
                 src={sc14}
                 alt="Music result"
@@ -924,7 +925,7 @@ export default function Socult() {
           </center>
           <section className={globalStyles.cmtCard1}>
             <div className={globalStyles.leftCard}>
-              <img
+              <AppImage
                 className={globalStyles.cardImg}
                 src={sc15}
                 alt="Music result"
@@ -965,7 +966,7 @@ export default function Socult() {
           <section>
             <center>
               <div className={globalStyles.imgContainer}>
-                <img src={jantimeline} alt="timeline" />
+                <AppImage src={jantimeline} alt="timeline" />
               </div>
             </center>
 
@@ -979,7 +980,7 @@ export default function Socult() {
               Needless to say, there are other extremely exhilarating activities
               coming up for you all. So keep up the high spirit.We hope you
               enjoy all the upcoming activities vivaciously. <br />
-              Do have a look on the event's timeline below.
+              Do have a look on the event&apos;s timeline below.
               <br />
               So stay tuned to stay thrilled!!!!
               <br />
@@ -993,7 +994,7 @@ export default function Socult() {
           </center>
           <section className={globalStyles.cmtCard1}>
             <div className={globalStyles.leftCard}>
-              <img
+              <AppImage
                 className={globalStyles.cardImg}
                 src={resultmusic}
                 alt="Music result"
@@ -1004,7 +1005,7 @@ export default function Socult() {
                 <br />
                 <br />
                 <br />
-                Technology Students' Gymkhana ,Social and Cultural Committee
+                Technology Students&apos; Gymkhana ,Social and Cultural Committee
                 heartily congratulates the top 3 winners of the Digital Music
                 Making Competition. <br />
                 <br />
@@ -1031,7 +1032,7 @@ export default function Socult() {
           </center>
           <section className={globalStyles.cmtCard1}>
             <div className={globalStyles.leftCard}>
-              <img
+              <AppImage
                 className={globalStyles.cardImg3}
                 src={elocu}
                 alt="Elocution"
@@ -1039,7 +1040,7 @@ export default function Socult() {
             </div>
             <div className={globalStyles.rightCard}>
               <p>
-                Speech is power: Speech is to persuade,to compel, to inspire"
+                Speech is power: Speech is to persuade,to compel, to inspire&quot;
                 Technology Student’s Gymkhana welcomes you all to enjoy the
                 freedom of speech and let your thoughts splurge, with Open IIT
                 Elocution Event. Grab this opportunity to let your confidence
@@ -1099,7 +1100,7 @@ export default function Socult() {
                 <br />
                 <br />
                 <br />
-                <img
+                <AppImage
                   className={globalStyles.cardImg}
                   src={logomaking}
                   alt="logo making"
@@ -1162,7 +1163,7 @@ export default function Socult() {
           </center>
           <section className={globalStyles.cmtCard1}>
             <div className={globalStyles.leftCard}>
-              <img
+              <AppImage
                 className={globalStyles.cardImg}
                 src={comedynight}
                 alt="comedy night"
@@ -1175,7 +1176,7 @@ export default function Socult() {
                 <br />
                 Hello Everyone!
                 <br />
-                Technology Students' Gymkhana, Social and Cultural Committee
+                Technology Students&apos; Gymkhana, Social and Cultural Committee
                 Presents “Comedy Night” Laughter is the best medicine to cure
                 all the stress and mundanity of our daily lives.
                 <br /> On this note, we are thrilled to announce a stand-up
@@ -1197,7 +1198,7 @@ export default function Socult() {
           <section className={globalStyles.cmtCard1}>
             <div className={globalStyles.leftCard}>
               <center>
-                <img
+                <AppImage
                   className={globalStyles.cardImg}
                   src={mime}
                   alt="mime result"
@@ -1207,7 +1208,7 @@ export default function Socult() {
 
             <div className={globalStyles.rightCard}>
               <p>
-                Technology Students' Gymkhana ,Social and Cultural Committee
+                Technology Students&apos; Gymkhana ,Social and Cultural Committee
                 heartily congratulates the top 3 winners of Mime Competition.{" "}
                 <br />
                 <b>Winners:</b>
@@ -1230,7 +1231,7 @@ export default function Socult() {
           <section className={globalStyles.cmtCard1}>
             <div className={globalStyles.leftCard}>
               <center>
-                <img
+                <AppImage
                   className={globalStyles.cardImg}
                   src={kgplex}
                   alt="kgplex"
@@ -1242,8 +1243,8 @@ export default function Socult() {
               <p>
                 Are you missing hanging out with friends during a movie night,
                 stuffing yourself with popcorns, and jamming in the fun? Though
-                we are all apart don't worry, as the fun is never meant to be
-                ceased. Technology Students' Gymkhana, Social and Cultural
+                we are all apart don&apos;t worry, as the fun is never meant to be
+                ceased. Technology Students&apos; Gymkhana, Social and Cultural
                 Committee invites you to a fun-filled virtual Movie Night. We
                 have planned a perfect party for you all as movies are the best
                 means to bond, talk, laugh, cry and most importantly create
@@ -1283,7 +1284,7 @@ export default function Socult() {
           <section className={globalStyles.cmtCard1}>
             <div className={globalStyles.leftCard}>
               <center>
-                <img
+                <AppImage
                   className={globalStyles.cardImg}
                   src={flute}
                   alt="flute workshop"
@@ -1296,7 +1297,7 @@ export default function Socult() {
                 Playing flute is like writing a melodious book of music. We
                 bring to you an opportunity to dive into flute repertoire.
                 <br />
-                Technology Students' Gymkhana brings to you an exciting NCA
+                Technology Students&apos; Gymkhana brings to you an exciting NCA
                 Flute Workshop in coordination and support of Academy of Folk
                 Arts IIT Kharagpur, under the guidance of Prof. Pallab Dasgupta
                 and Professor Parmananda Roy. The Academy of Classical and Folk
@@ -1325,7 +1326,7 @@ export default function Socult() {
           <section className={globalStyles.cmtCard1}>
             <div className={globalStyles.leftCard}>
               <center>
-                <img
+                <AppImage
                   className={globalStyles.cardImg}
                   src={img1}
                   alt="Theme Photography Event"

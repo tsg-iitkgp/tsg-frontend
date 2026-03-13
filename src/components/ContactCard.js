@@ -4,6 +4,7 @@ import CopyToClipboard from "react-copy-to-clipboard";
 import Snackbar from '@material-ui/core/Snackbar';
 import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
+import AppImage from "./AppImage";
 
 function ContactCard({
   name,
@@ -34,7 +35,7 @@ function ContactCard({
   return (
     <div className={Styles.container}>
       <div className={Styles.imgbox}>
-        <img src={imgSrc} alt={`${name}_image`} />
+        <AppImage src={imgSrc} alt={`${name}_image`} />
       </div>
       <ul className={Styles.sociallinks}>
         <li>

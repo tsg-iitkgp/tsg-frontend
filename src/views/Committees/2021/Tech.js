@@ -28,6 +28,7 @@ import tc10 from "./images/tech/tc10.png";
 import tc11 from "./images/tech/tc11.png";
 import tc12 from "./images/tech/tc12.png";
 import tc13 from "./images/tech/tc13.png";
+import AppImage from "../../../components/AppImage";
 
 export default function Tech() {
   // const techComTeam = [
@@ -183,7 +184,7 @@ export default function Tech() {
         <section>
           <center>
             <div className={globalStyles.imgContainer}>
-              <img src={tc1} alt="timeline" />
+              <AppImage src={tc1} alt="timeline" />
             </div>
           </center>
 
@@ -205,7 +206,7 @@ export default function Tech() {
             <br />
             Score - 400
             <br />
-            2) SILICON LABS' SOCIAL ENTREPRENEURSHIP CHALLENGE
+            2) SILICON LABS&apos; SOCIAL ENTREPRENEURSHIP CHALLENGE
             <br />
             Score - 400
             <br />
@@ -213,7 +214,7 @@ export default function Tech() {
             <br />
             Score - 400
             <br />
-            4) DRDO's UAV- GUIDED UGV NAVIGATION CHALLENGE
+            4) DRDO&apos;s UAV- GUIDED UGV NAVIGATION CHALLENGE
             <br />
             Score - 250
             <br />
@@ -237,7 +238,7 @@ export default function Tech() {
             <br />
             𝗕𝗥𝗢𝗡𝗭𝗘 𝗪𝗶𝗻𝗻𝗶𝗻𝗴 𝗘𝘃𝗲𝗻𝘁𝘀
             <br />
-            1) BLUE YONDER'S SUSTAINABLE SUPPLY- CHAIN
+            1) BLUE YONDER&apos;S SUSTAINABLE SUPPLY- CHAIN
             <br />
             Score - 318.87
             <br />
@@ -267,7 +268,7 @@ export default function Tech() {
         </center>
         <section className={globalStyles.cmtCard1}>
           <div className={globalStyles.leftCard}>
-            <img
+            <AppImage
               className={globalStyles.cardImg}
               src={tc2}
               alt="Music result"
@@ -299,7 +300,7 @@ export default function Tech() {
         <section>
           <center>
             <div className={globalStyles.imgContainer}>
-              <img src={tc3} alt="err_loading_image" />
+              <AppImage src={tc3} alt="err_loading_image" />
             </div>
           </center>
 
@@ -323,7 +324,7 @@ export default function Tech() {
         </center>
         <section className={globalStyles.cmtCard1}>
           <div className={globalStyles.leftCard}>
-            <img
+            <AppImage
               className={globalStyles.cardImg}
               src={tc4}
               alt="Music result"
@@ -360,7 +361,7 @@ export default function Tech() {
         </center>
         <section className={globalStyles.cmtCard1}>
           <div className={globalStyles.leftCard}>
-            <img
+            <AppImage
               className={globalStyles.cardImg}
               src={tc5}
               alt="Music result"
@@ -392,7 +393,7 @@ export default function Tech() {
         <section>
           <center>
             <div className={globalStyles.imgContainer}>
-              <img src={tc6} alt="timeline" />
+              <AppImage src={tc6} alt="timeline" />
             </div>
           </center>
 
@@ -415,7 +416,7 @@ export default function Tech() {
         </center>
         <section className={globalStyles.cmtCard1}>
           <div className={globalStyles.leftCard}>
-            <img
+            <AppImage
               className={globalStyles.cardImg}
               src={tc7}
               alt="Music result"
@@ -423,7 +424,7 @@ export default function Tech() {
           </div>
           <div className={globalStyles.rightCard}>
             <p>
-              Technology Students' Gymkhana invites you all to the Open IIT Math
+              Technology Students&apos; Gymkhana invites you all to the Open IIT Math
               Olympiad 2021-22. We summon all the math minds to participate in
               Maths Olympiad and compete with their brilliant problem-solving
               skills.
@@ -458,7 +459,7 @@ export default function Tech() {
         </center>
         <section className={globalStyles.cmtCard1}>
           <div className={globalStyles.leftCard}>
-            <img
+            <AppImage
               className={globalStyles.cardImg}
               src={tc8}
               alt="Music result"
@@ -468,7 +469,7 @@ export default function Tech() {
             <p>
               Fond of taking up challenging problems and moulding them into
               reality? Eager to present your innovative ideas and designs?
-              Technology Students' Gymkhana gladly announces the Open IIT
+              Technology Students&apos; Gymkhana gladly announces the Open IIT
               Product Design 2021-2022 for all the creative minds out there.{" "}
               <br />
               So, get ready to put your imaginative thoughts into action and
@@ -490,7 +491,7 @@ export default function Tech() {
         </center>
         <section className={globalStyles.cmtCard1}>
           <div className={globalStyles.leftCard}>
-            <img
+            <AppImage
               className={globalStyles.cardImg}
               src={tc9}
               alt="Music result"
@@ -520,7 +521,7 @@ export default function Tech() {
         </center>
         <section className={globalStyles.cmtCard1}>
           <div className={globalStyles.leftCard}>
-            <img
+            <AppImage
               className={globalStyles.cardImg}
               src={tc10}
               alt="Music result"
@@ -549,7 +550,7 @@ export default function Tech() {
         <section>
           <center>
             <div className={globalStyles.imgContainer}>
-              <img src={tc11} alt="timeline" />
+              <AppImage src={tc11} alt="timeline" />
             </div>
           </center>
 
@@ -594,7 +595,7 @@ export default function Tech() {
         </center>
         <section className={globalStyles.cmtCard1}>
           <div className={globalStyles.leftCard}>
-            <img
+            <AppImage
               className={globalStyles.cardImg}
               src={tc12}
               alt="Music result"
@@ -643,7 +644,7 @@ export default function Tech() {
         </center>
         <section className={globalStyles.cmtCard1}>
           <div className={globalStyles.leftCard}>
-            <img
+            <AppImage
               className={globalStyles.cardImg}
               src={tc13}
               alt="Music result"
@@ -667,7 +668,7 @@ export default function Tech() {
               The session will cover all you need to know about this grand
               technological fiesta.
               <br />
-              Don't miss out on this opportunity guys.
+              Don&apos;t miss out on this opportunity guys.
               <br />
             </p>
           </div>
@@ -681,7 +682,7 @@ export default function Tech() {
         <section className={globalStyles.cmtCard1}>
           <div className={globalStyles.leftCard}>
             <center>
-              <img
+              <AppImage
                 className={globalStyles.cardImg}
                 src={sociop}
                 alt="Sociopreneurship"
@@ -695,7 +696,7 @@ export default function Tech() {
               <br />
               You all have been waiting in the wings to bring forth an
               extraordinary idea that can change the world with your powerful
-              innovation. Technology Students' Gymkhana provides you with a
+              innovation. Technology Students&apos; Gymkhana provides you with a
               brilliant opportunity with Sociopreneurship Challenge. We haul you
               to present the greatest ideas from your brightest business minds
               that creatively tackle giant social issues. The competition will
@@ -720,7 +721,7 @@ export default function Tech() {
               Registration Deadline: 4th February 2022, 8 PM
               <br />
               The winners might also get a chance to get seed-funded by
-              Technology Students' Gymkhana on their winning prototypes.
+              Technology Students&apos; Gymkhana on their winning prototypes.
             </p>
           </div>
         </section>
@@ -739,7 +740,7 @@ export default function Tech() {
         <section className={globalStyles.cmtCard1}>
           <div className={globalStyles.leftCard}>
             <center>
-              <img
+              <AppImage
                 className={globalStyles.cardImg}
                 src={openiit}
                 alt="open iit tech intro"
@@ -806,7 +807,7 @@ export default function Tech() {
 
           <div className={globalStyles.rightCard}>
             <center>
-              <img className={globalStyles.cardImg}
+              <AppImage className={globalStyles.cardImg}
                 src={openiit}
                 alt="open iit tech intro"
               />
@@ -828,7 +829,7 @@ export default function Tech() {
         <section className={globalStyles.cmtCard1}>
           <div className={globalStyles.leftCard}>
             <center>
-              <img
+              <AppImage
                 className={globalStyles.cardImg2}
                 src={techmeet}
                 alt="Tech meet"
@@ -852,12 +853,12 @@ export default function Tech() {
               solutions. He has been consistently performing well and is
               determined to give his best to secure Gold.
               <br />
-              Mann's message to all the KGPians: "With the other two inter IIT
+              Mann&apos;s message to all the KGPians: &quot;With the other two inter IIT
               trophies already at kgp, now is the time to set the records
               straight and make kgp the defending champion in all the 3 inter
               iits at the same time. To realise this kgp dream, I call out each
               and every kgpian to put in their cent per cent in the upcoming
-              tech meet."
+              tech meet.&quot;
               <br />
             </p>
           </div>
@@ -876,7 +877,7 @@ export default function Tech() {
         <section className={globalStyles.cmtCard1}>
           <div className={globalStyles.leftCard}>
             <center>
-              <img className={globalStyles.cardImg} src={tradex} alt="tradex" />
+              <AppImage className={globalStyles.cardImg} src={tradex} alt="tradex" />
             </center>
           </div>
 
@@ -906,7 +907,7 @@ export default function Tech() {
             <center>
               <br />
               <br />
-              <img
+              <AppImage
                 className={globalStyles.cardImg}
                 src={result_t}
                 alt="tradex"
@@ -950,7 +951,7 @@ export default function Tech() {
         <section className={globalStyles.cmtCard1}>
           <div className={globalStyles.leftCard}>
             <center>
-              <img
+              <AppImage
                 className={globalStyles.cardImg}
                 src={techvistara}
                 alt="Tech vistara"
@@ -1003,14 +1004,14 @@ export default function Tech() {
         <section className={globalStyles.cmtCard1}>
           <div className={globalStyles.leftCard}>
             <center>
-              <img className={globalStyles.cardImg} src={img1} alt="Website" />
+              <AppImage className={globalStyles.cardImg} src={img1} alt="Website" />
             </center>
           </div>
 
           <div className={globalStyles.rightCard}>
             <p>
               In this event, the students were expected to develop a website
-              that would synchronize a student's academic, extracurricular, and
+              that would synchronize a student&apos;s academic, extracurricular, and
               co-curricular information in one place. As a part of the event,
               the participating teams would develop an API-based backend for the
               website and use it to serve the content for the frontend(s).
@@ -1040,7 +1041,7 @@ export default function Tech() {
         <section className={globalStyles.cmtCard1}>
           <div className={globalStyles.leftCard}>
             <center>
-              <img
+              <AppImage
                 className={globalStyles.cardImg}
                 src={img2}
                 alt="Samsung innovation"
@@ -1055,14 +1056,14 @@ export default function Tech() {
               <br />
               <br />
               Samsung Innovation Award-IIT Kharagpur Chapter was organised by
-              Technology Students' Gymkhana, IIT Kharagpur, and Entrepreneurship
+              Technology Students&apos; Gymkhana, IIT Kharagpur, and Entrepreneurship
               Cell, IIT Kharagpur. Samsung Innovation Award is organized
               annually by the Samsung R&D Institute India Bangalore aims to
               identify, encourage and reward innovative ideas and projects.
               <br />
               The Silver Jubilee Edition is a Multi-IIT event with all our IIT
               partners from the last ten editions. The theme for the 2021
-              edition is 'Metaverse', i.e., technologies ranging from AR/VR, 3d
+              edition is &apos;Metaverse&apos;, i.e., technologies ranging from AR/VR, 3d
               Spaces and Reconstruction, to experiences in gaming, tourism, and
               many more.
             </p>
@@ -1077,7 +1078,7 @@ export default function Tech() {
         <section className={globalStyles.cmtCard1}>
           <div className={globalStyles.leftCard}>
             <center>
-              <img
+              <AppImage
                 className={globalStyles.cardImg}
                 src={img3}
                 alt="Techvistara"

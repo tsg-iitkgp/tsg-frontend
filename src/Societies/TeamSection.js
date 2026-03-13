@@ -6,6 +6,7 @@ import { useParams } from 'next/navigation';
 import { FaInstagram, FaLinkedin, FaFacebook } from 'react-icons/fa';
 import './TeamSection.css';
 import { BASE_URL } from '../constants/api';
+import AppImage from "../components/AppImage";
 
 const TeamSection = () => {
   const routeParams = useParams();
@@ -70,7 +71,7 @@ const TeamSection = () => {
               return (
                 <div key={member.id} className="team-member-card">
                   <div className="member-image-container">
-                    <img
+                    <AppImage
                       src={member.image_url}
                       alt={member.name}
                       className="member-image"

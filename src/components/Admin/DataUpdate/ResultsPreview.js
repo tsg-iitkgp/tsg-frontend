@@ -1,4 +1,5 @@
 import "../../PopupStyles.css";
+import AppImage from "../../AppImage";
 
 const ResultsPreview = (props) => {
     let imgSrc = null;
@@ -65,7 +66,7 @@ const ResultsPreview = (props) => {
                                 textAlign: "center",
                                 margin: "0 auto"
                             }}>
-                                <img src={imgSrc} alt="Result Poster" style={{
+                                <AppImage src={imgSrc} alt="Result Poster" style={{
                                     width: "auto"
                                 }} />
                             </div>

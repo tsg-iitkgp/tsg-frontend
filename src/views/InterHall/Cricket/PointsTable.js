@@ -78,7 +78,7 @@ function PointsTable() {
               </thead>
               <tbody>
                 {pointsData.map((row) => (
-                  <tr>
+                  <tr key="k-81">
                     <td className={Styles.team}>{row.team}</td>
                     <td className={Styles.points}>{row.p}</td>
                     <td className={Styles.points}>{row.w}</td>

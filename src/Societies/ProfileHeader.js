@@ -6,6 +6,7 @@ import { FaYoutube, FaInstagram, FaLinkedin, FaFacebook, FaArrowLeft } from "rea
 import { BASE_URL } from "../constants/api";
 import "./ProfileHeader.css";
 import gymkhanaLogo from "../assets/gymkhanaLogo.png";
+import AppImage from "../components/AppImage";
 
 const cache = {};
 
@@ -93,7 +94,7 @@ const ProfileHeader = () => {
           <div className='profile-section'>
             {/* Profile Logo */}
             <div className='profile-logo' style={{ position: "relative", alignSelf: "top" }}>
-              <img
+              <AppImage
                 src={society.logo_url}
                 alt={`${society.name} Logo`}
                 style={{
@@ -111,7 +112,7 @@ const ProfileHeader = () => {
               />
               {society.is_under_gymkhana && (
                 <div style={{ position: "absolute", bottom: "-1px", right: "-1px" }}>
-                  <img
+                  <AppImage
                     src={gymkhanaLogo}
                     alt='Gymkhana'
                     className='gymkhana-logo-badge'

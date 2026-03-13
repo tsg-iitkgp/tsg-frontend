@@ -17,6 +17,7 @@ import {
 } from "react-icons/fa";
 import "./AboutSection.css";
 import { BASE_URL } from "../constants/api";
+import AppImage from "../components/AppImage";
 
 const AboutSection = ({ society: propSociety }) => {
   const routeParams = useParams();
@@ -148,7 +149,7 @@ const AboutSection = ({ society: propSociety }) => {
                 &#8592;
               </button>
               <div className='gallery-slider-image-wrapper'>
-                <img
+                <AppImage
                   src={gallery[currentSlide].image_url}
                   alt={gallery[currentSlide].caption || `Gallery ${currentSlide + 1}`}
                   className='gallery-slider-image'
@@ -163,7 +164,7 @@ const AboutSection = ({ society: propSociety }) => {
             </div>
             <div className='gallery-slider-thumbnails'>
               {gallery.map((img, idx) => (
-                <img
+                <AppImage
                   key={img.id || idx}
                   src={img.image_url}
                   alt={img.caption || `Gallery ${idx + 1}`}

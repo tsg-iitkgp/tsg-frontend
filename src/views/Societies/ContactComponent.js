@@ -1,15 +1,16 @@
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 import Styles from "../../styles/views/Society/ContactComponent.module.css"
+import AppImage from "../../components/AppImage";
 export default function ContactComponent(props) {
   return (
     <div className={Styles.parentDiv}>
       <h1 className={Styles.heading}>Contacts</h1>
       <div className={Styles.contactDiv}>
         <div className={Styles.imageDiv} >
-          <img className={Styles.img}
+          <AppImage alt="" className={Styles.img}
             src={
               "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=pexels-simon-robben-55958-614810.jpg&fm=jpg"}
-          ></img>
+          ></AppImage>
           <span className={Styles.span}>Governor</span>
           <div className={Styles.div}>
             <a href={""} className={Styles.Link} target="_blank">
@@ -25,10 +26,10 @@ export default function ContactComponent(props) {
           </div>
         </div>
         <div className={Styles.imageDiv} >
-          <img className={Styles.img}
+          <AppImage alt="" className={Styles.img}
             src={
               "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=pexels-simon-robben-55958-614810.jpg&fm=jpg"}
-          ></img>
+          ></AppImage>
           <span className={Styles.span}>Governor</span>
           <div className={Styles.div}>
             <a href={""} className={Styles.Link} target="_blank">
@@ -44,10 +45,10 @@ export default function ContactComponent(props) {
           </div>
         </div>
         <div className={Styles.imageDiv} >
-          <img className={Styles.img}
+          <AppImage alt="" className={Styles.img}
             src={
               "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=pexels-simon-robben-55958-614810.jpg&fm=jpg"}
-          ></img>
+          ></AppImage>
           <span className={Styles.span}>Governor</span>
           <div className={Styles.div}>
             <a href={""} className={Styles.Link} target="_blank">

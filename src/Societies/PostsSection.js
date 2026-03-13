@@ -5,6 +5,7 @@ import { useParams, usePathname, useSearchParams } from 'next/navigation';
 import PostModal from './PostModal';
 import { BASE_URL } from '../constants/api';
 import './PostsSection.css';
+import AppImage from "../components/AppImage";
 
 const PostsSection = () => {
   const routeParams = useParams();
@@ -55,6 +56,7 @@ const PostsSection = () => {
 
   useEffect(() => {
     fetchPosts(1, false);
+// eslint-disable-next-line react-hooks/exhaustive-deps
   }, [society_slug]);
 
   useEffect(() => {
@@ -140,7 +142,7 @@ const PostsSection = () => {
               onClick={() => handlePostClick(post)}
             >
               <div className="post-image">
-                <img src={post.image_url} alt="" />
+                <AppImage src={post.image_url} alt="" />
               </div>
             </div>
           ))}

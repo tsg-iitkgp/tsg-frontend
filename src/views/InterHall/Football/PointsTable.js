@@ -91,7 +91,7 @@ function PointsTable() {
                                     <tbody>
                                         {
                                             pointsData.map((row) => (
-                                                <tr>
+                                                <tr key="k-94">
                                                     <td className={Styles.team}>
                                                         {row.team}
                                                     </td>

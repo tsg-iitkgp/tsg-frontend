@@ -4,6 +4,7 @@ import Styles from "../../../../styles/components/GC_Live/sports.module.css";
 import React from 'react'
 import axios from 'axios';
 import { useState } from 'react';
+import AppImage from "../../../../components/AppImage";
 
 export default function AthleticsMatch(props) {
 
@@ -63,7 +64,7 @@ export default function AthleticsMatch(props) {
                                                             {val.team1_score}
                                                         </div>
                                                         <div className={Styles.scorers}>
-                                                            <img src='/images/soccer-ball.png' alt="Err" />
+                                                            <AppImage src='/images/soccer-ball.png' alt="Err" />
                                                             {val.team1_goalscorers}
                                                         </div>
                                                     </div>
@@ -78,7 +79,7 @@ export default function AthleticsMatch(props) {
                                                             {val.team2_score}
                                                         </div>
                                                         <div className={Styles.scorers}>
-                                                            <img src='/images/soccer-ball.png' alt="Err" />
+                                                            <AppImage src='/images/soccer-ball.png' alt="Err" />
                                                             {val.team2_goalscorers}
                                                         </div>
                                                     </div>
@@ -150,7 +151,7 @@ export default function AthleticsMatch(props) {
                                                             {val.team1_score}
                                                         </div>
                                                         <div className={Styles.scorers}>
-                                                            <img src='/images/soccer-ball.png' alt="Err" />
+                                                            <AppImage src='/images/soccer-ball.png' alt="Err" />
                                                             {val.team1_goalscorers}
                                                         </div>
                                                     </div>
@@ -165,7 +166,7 @@ export default function AthleticsMatch(props) {
                                                             {val.team2_score}
                                                         </div>
                                                         <div className={Styles.scorers}>
-                                                            <img src='/images/soccer-ball.png' alt="Err" />
+                                                            <AppImage src='/images/soccer-ball.png' alt="Err" />
                                                             {val.team2_goalscorers}
                                                         </div>
                                                     </div>
