@@ -28,24 +28,14 @@ export const metadata = {
       "The hub of extra-curricular and co-curricular activities in IIT Kharagpur. Managed by students, for students.",
     images: [
       {
-        url: "https://gymkhana.iitkgp.ac.in/data/media/images/general/gymkhanaLogo.png",
-        width: 512,
-        height: 512,
+        url: "/data/media/images/general/gymkhanaLogo-og.png",
+        width: 200,
+        height: 218,
         alt: "Technology Students' Gymkhana Logo",
       },
     ],
     siteName: "Technology Students' Gymkhana - IIT Kharagpur",
     locale: "en_US",
-  },
-  twitter: {
-    card: "summary_large_image",
-    url: "https://gymkhana.iitkgp.ac.in",
-    title: "Technology Students' Gymkhana - IIT Kharagpur",
-    description:
-      "The hub of extra-curricular and co-curricular activities in IIT Kharagpur. Managed by students, for students.",
-    images: [
-      "https://gymkhana.iitkgp.ac.in/data/media/images/general/gymkhanaLogo.png",
-    ],
   },
 };
 
