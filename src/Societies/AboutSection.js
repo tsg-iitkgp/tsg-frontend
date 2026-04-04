@@ -18,6 +18,29 @@ import {
 import "./AboutSection.css";
 import { BASE_URL } from "../constants/api";
 import AppImage from "../components/AppImage";
+import { motion } from "framer-motion";
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15
+    }
+  }
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut"
+    }
+  }
+};
 
 const AboutSection = ({ society: propSociety }) => {
   const routeParams = useParams();
@@ -86,22 +109,27 @@ const AboutSection = ({ society: propSociety }) => {
         {/* Hero Section */}
 
         {/* Main Content Grid */}
-        <div className="about-content">
+        <motion.div 
+          className="about-content"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+        >
           {/* Description Section */}
-          <div className="about-description-card">
+          <motion.div variants={itemVariants} className="about-description-card">
             <h3 className="card-title">About Us</h3>
             <p className="about-description">{society.description}</p>
-          </div>
+          </motion.div>
 
           {/* Contact & Website Section */}
-          <div className="about-contact-card">
+          <motion.div variants={itemVariants} className="about-contact-card">
             <h3 className="card-title">Get In Touch</h3>
             <div className="contact-grid">
               {contact.email && (
                 <div className="contact-item">
                   <FaEnvelope className="contact-icon" />
                   <div>
-                    <span className="contact-label">Email</span>
                     <a href={`mailto:${contact.email}`} className="contact-value">
                       {contact.email}
                     </a>
@@ -112,7 +140,6 @@ const AboutSection = ({ society: propSociety }) => {
                 <div className="contact-item">
                   <FaPhone className="contact-icon" />
                   <div>
-                    <span className="contact-label">Phone</span>
                     <a href={`tel:${contact.mobile}`} className="contact-value">
                       {contact.mobile}
                     </a>
@@ -123,7 +150,6 @@ const AboutSection = ({ society: propSociety }) => {
                 <div className="contact-item">
                   <FaMapMarkerAlt className="contact-icon" />
                   <div>
-                    <span className="contact-label">Location</span>
                     <span className="contact-value">{contact.location}</span>
                   </div>
                 </div>
@@ -142,13 +168,19 @@ const AboutSection = ({ society: propSociety }) => {
                 </a>
               </div>
             )}
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         {/* Full-width Gallery Slider */}
         {!galleryLoading && gallery.length > 0 && (
-          <div className="about-gallery-slider-full">
-            <h3 className="gallery-title">Gallery</h3>
+          <motion.div 
+            className="about-gallery-slider-full"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <h3 className="card-title" style={{textAlign: "center"}}>Gallery</h3>
             <div className="gallery-slider-main">
               <button className="gallery-arrow left" onClick={handlePrev} aria-label="Previous">
                 &#8592;
@@ -182,7 +214,7 @@ const AboutSection = ({ society: propSociety }) => {
                 />
               ))}
             </div>
-          </div>
+          </motion.div>
         )}
       </div>
     </div>

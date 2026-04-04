@@ -45,9 +45,8 @@
   transform: translateY(0);
 }
 
-.modal-header,
 .modal-footer {
-  padding: 10px;
+  padding-top: 15px;
 }
 .modal-title {
   margin: 0;

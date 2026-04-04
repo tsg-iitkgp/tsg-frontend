@@ -6,6 +6,29 @@ import { BASE_URL } from "../constants/api";
 import "./SocietiesList.css";
 import Layout from "../components/Layouts/Layout";
 import AppImage from "../components/AppImage";
+import { motion, AnimatePresence } from "framer-motion";
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1
+    }
+  }
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut"
+    }
+  }
+};
 
 const SocietiesList = () => {
   if (typeof window !== "undefined") document.title = "Societies | TSG";
@@ -65,26 +88,19 @@ const SocietiesList = () => {
   }, [activeCategory]);
 
   const handleCategoryChange = (category) => {
+    if (activeCategory === category) return; // Prevent re-fetching if clicking same tab
     setActiveCategory(category);
   };
-
-  if (loading) {
-    return (
-      <Layout>
-        <div className="societies-container">
-          <div className="societies-loading">
-            <div className="loading-spinner"></div>
-            <p>Loading societies...</p>
-          </div>
-        </div>
-      </Layout>
-    );
-  }
 
   return (
     <Layout>
       <div className="societies-container">
-        <div className="societies-header">
+        <motion.div 
+          className="societies-header"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
           <h1 className="societies-title">Societies</h1>
           <div className="category-filters category-tabs">
             <button
@@ -103,7 +119,7 @@ const SocietiesList = () => {
               </button>
             ))}
           </div>
-        </div>
+        </motion.div>
 
         {error && (
           <div className="error-message">
@@ -114,79 +130,94 @@ const SocietiesList = () => {
           </div>
         )}
 
-        <div className="societies-grid">
-          {societies.length === 0 && !loading && !error ? (
-            <div
-              className="no-societies"
-              style={{ textAlign: "center", color: "#fff", fontSize: "1.2rem" }}
-            >
-              <p>No societies found for this category.</p>
-            </div>
-          ) : (
-            societies.map((society) => (
-              <a
-                key={society.id}
-                className="society-card"
-                href={`/societies/${society.slug}`}
-                style={{ textDecoration: "none" }}
+        {loading ? (
+          <div className="societies-loading">
+            <div className="loading-spinner"></div>
+            <p style={{ color: "#FED403", fontWeight: "700" }}>Loading societies...</p>
+          </div>
+        ) : (
+          <motion.div 
+            className="societies-grid"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+          >
+            {societies.length === 0 && !error ? (
+              <motion.div
+                variants={cardVariants}
+                className="no-societies"
+                style={{ textAlign: "center", color: "#FED403", fontSize: "1.2rem", fontWeight: "700", gridColumn: "1 / -1", textTransform: "uppercase" }}
               >
-                <div className="society-logo">
-                  <AppImage
-                    src={society.logo_url}
-                    alt={`${society.name} logo`}
-                    width={110}
-                    height={110}
-                    onError={(e) => {
-                      e.target.src =
-                        "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMzMzIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iI2ZiYmYyNCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkxvZ288L3RleHQ+PC9zdmc+";
-                    }}
-                  />
-                </div>
-                <div className="society-info">
-                  <h3 className="society-name">{society.name}</h3>
-                  <div className="social-icons">
-                    {society.social_media?.facebook && (
-                      <a
-                        href={society.social_media.facebook}
-                        className="social-link"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        onClick={(e) => e.stopPropagation()}
-                      >
-                        <FaFacebook />
-                      </a>
-                    )}
-                    {society.social_media?.instagram && (
-                      <a
-                        href={society.social_media.instagram}
-                        className="social-link"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        onClick={(e) => e.stopPropagation()}
-                      >
-                        <FaInstagram />
-                      </a>
-                    )}
-                    {society.social_media?.linkedin && (
-                      <a
-                        href={society.social_media.linkedin}
-                        className="social-link"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        onClick={(e) => e.stopPropagation()}
-                      >
-                        <FaLinkedin />
-                      </a>
-                    )}
+                <p>No societies found for this category.</p>
+              </motion.div>
+            ) : (
+              societies.map((society) => (
+                <motion.a
+                  variants={cardVariants}
+                  key={society.id}
+                  className="society-card"
+                  href={`/societies/${society.slug}`}
+                  style={{ textDecoration: "none" }}
+                >
+                  <div className="society-logo">
+                    <AppImage
+                      src={society.logo_url}
+                      alt={`${society.name} logo`}
+                      width={110}
+                      height={110}
+                      onError={(e) => {
+                        e.target.src =
+                          "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMzMzIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJNb250c2VycmF0IiBmb250LXdlaWdodD0iYm9sZCIgZm9udC1zaXplPSIxNCIgZmlsbD0iI2ZiYmYyNCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkxvZ288L3RleHQ+PC9zdmc+";
+                      }}
+                    />
                   </div>
-                </div>
-              </a>
-            ))
-          )}
-        </div>
+                  <div className="society-info">
+                    <h3 className="society-name">{society.name}</h3>
+                    <div className="social-icons">
+                      {society.social_media?.facebook && (
+                        <a
+                          href={society.social_media.facebook}
+                          className="social-link"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          <FaFacebook />
+                        </a>
+                      )}
+                      {society.social_media?.instagram && (
+                        <a
+                          href={society.social_media.instagram}
+                          className="social-link"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          <FaInstagram />
+                        </a>
+                      )}
+                      {society.social_media?.linkedin && (
+                        <a
+                          href={society.social_media.linkedin}
+                          className="social-link"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          <FaLinkedin />
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                </motion.a>
+              ))
+            )}
+          </motion.div>
+        )}
       </div>
     </Layout>
   );
 };
 
 export default SocietiesList;
+

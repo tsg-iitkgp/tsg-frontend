@@ -1,6 +1,20 @@
 import React from "react";
 import Styles from "../../styles/components/soc.module.css";
 import AppImage from "../AppImage";
+import { motion } from "framer-motion";
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { 
+    opacity: 1, 
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut"
+    }
+  }
+};
+
 export default function RotatingCard({
   shortform,
   name,
@@ -8,7 +22,7 @@ export default function RotatingCard({
   facebook_link,
 }) {
   return (
-    <div className={Styles.card}>
+    <motion.div variants={cardVariants} className={Styles.card}>
       <div className={Styles.cardfront}>
         <AppImage
           className={Styles.img1}
@@ -34,6 +48,7 @@ export default function RotatingCard({
           </a>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
+

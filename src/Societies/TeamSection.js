@@ -7,6 +7,41 @@ import { FaInstagram, FaLinkedin, FaFacebook } from "react-icons/fa";
 import "./TeamSection.css";
 import { BASE_URL } from "../constants/api";
 import AppImage from "../components/AppImage";
+import { motion } from "framer-motion";
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1
+    }
+  }
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut"
+    }
+  }
+};
+
+const titleVariants = {
+  hidden: { opacity: 0, y: -20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut"
+    }
+  }
+};
 
 const TeamSection = () => {
   const routeParams = useParams();
@@ -32,6 +67,8 @@ const TeamSection = () => {
   }, [society_slug]);
 
   const parseSocial = (socialStr) => {
+    if (!socialStr) return {};
+    if (typeof socialStr === 'object') return socialStr;
     try {
       return JSON.parse(socialStr);
     } catch {
@@ -59,13 +96,22 @@ const TeamSection = () => {
   return (
     <div className="team-container">
       {mergeGroupsByPosition(teamGroups).map((group, idx) => (
-        <div key={idx} className="team-section">
-          <h2 className="team-category-title">{group.position}</h2>
+        <motion.div 
+          key={idx} 
+          className="team-section"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={containerVariants}
+        >
+          <motion.h2 variants={titleVariants} className="team-category-title">
+            {group.position}
+          </motion.h2>
           <div className="team-grid">
             {group.members.map((member) => {
               const social = parseSocial(member.social_media);
               return (
-                <div key={member.id} className="team-member-card">
+                <motion.div variants={cardVariants} key={member.id} className="team-member-card">
                   <div className="member-image-container">
                     <AppImage
                       src={member.image_url}
@@ -75,7 +121,7 @@ const TeamSection = () => {
                       height={200}
                       onError={(e) => {
                         e.target.src =
-                          "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMzMzIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvcnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iI2ZiYmYyNCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkltYWdlPC90ZXh0Pjwvc3ZnPg==";
+                          "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMzMzIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJNb250c2VycmF0IiBmb250LXdlaWdodD0iYm9sZCIgZm9udC1zaXplPSIxNCIgZmlsbD0iI2ZiYmYyNCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkltYWdlPC90ZXh0Pjwvc3ZnPg==";
                       }}
                     />
                     <div className="social-overlay">
@@ -101,11 +147,11 @@ const TeamSection = () => {
                   <div className="member-info">
                     <h3 className="member-name">{member.name}</h3>
                   </div>
-                </div>
+                </motion.div>
               );
             })}
           </div>
-        </div>
+        </motion.div>
       ))}
     </div>
   );

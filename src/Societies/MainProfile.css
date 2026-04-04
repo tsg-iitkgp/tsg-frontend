@@ -1,18 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Inter:wght@400;500;600&display=swap");
 
 .profile-container {
-  margin-top:6vh;
+  margin-top: 6vh;
   min-height: 100vh;
   background-color: #000000;
-  color: #ffffff;
-  font-family: 'Lato', sans-serif;
+  color: #FFFFFF;
+  font-family: 'Inter', sans-serif;
   overflow-x: hidden;
 }
 
 .content-wrapper {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 3rem 2rem;
+  padding: 80px 2rem;
   opacity: 0;
   transform: translateY(30px);
   animation: fadeInUp 0.8s ease forwards;
@@ -26,142 +26,100 @@
 }
 
 .expertise-section {
-  margin-top: 3rem;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 1s ease 0.3s forwards;
+  margin-top: 80px;
 }
 
 .section-title {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #fbbf24;
-  margin-bottom: 1.5rem;
-  position: relative;
-  display: inline-block;
-}
-
-.section-title::after {
-  content: '';
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 0;
-  height: 3px;
-  background: linear-gradient(90deg, #fbbf24, #f59e0b);
-  animation: slideWidth 1s ease 0.5s forwards;
-}
-
-@keyframes slideWidth {
-  to {
-    width: 100%;
-  }
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #FED403;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  letter-spacing: 2px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .expertise-items {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 .expertise-item {
-  margin-bottom: 1rem;
-  padding: 1.5rem;
-  background: rgba(31, 41, 55, 0.3);
-  border-radius: 8px;
-  border-left: 4px solid #fbbf24;
+  padding: 2rem;
+  background: transparent;
+  border-left: 2px solid rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
-  transform: translateX(-20px);
-  opacity: 0;
-  animation: slideInLeft 0.6s ease forwards;
-}
-
-.expertise-item:nth-child(1) { animation-delay: 0.2s; }
-.expertise-item:nth-child(2) { animation-delay: 0.4s; }
-.expertise-item:nth-child(3) { animation-delay: 0.6s; }
-
-@keyframes slideInLeft {
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
 }
 
 .expertise-item:hover {
-  background: rgba(31, 41, 55, 0.5);
+  border-left-color: #FED403;
+  background: rgba(254, 212, 3, 0.05);
   transform: translateX(10px);
-  box-shadow: 0 10px 25px rgba(251, 191, 36, 0.2);
 }
 
 .expertise-title {
-  font-size: 1.125rem;
+  font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .highlight {
-  color: #fbbf24;
+  color: #FFFFFF;
   font-weight: 700;
 }
 
 .expertise-description {
-  color: #d1d5db;
-  line-height: 1.6;
-  margin: 0;
-  font-family: 'Lato', sans-serif;
+  color: #B0B0B0;
+  font-weight: 400;
+  line-height: 1.8;
 }
 
 .website-section {
-  margin-top: 3rem;
-  opacity: 0;
-  animation: fadeInUp 0.8s ease 0.8s forwards;
+  margin-top: 80px;
 }
 
 .website-link {
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: 1rem;
-  background: rgba(31, 41, 55, 0.2);
-  border-radius: 8px;
-  transition: all 0.3s ease;
+  padding: 1.5rem;
+  background: #111;
+  border: 1px solid rgba(255,255,255,0.05);
+  transition: all 0.4s ease;
 }
 
 .website-link:hover {
-  background: rgba(31, 41, 55, 0.4);
-  transform: translateY(-2px);
+  background: #1a1a1a;
+  transform: translateY(-5px);
+  border-color: rgba(255,255,255,0.1);
 }
 
 .website-url {
-  color: #d1d5db;
-  font-family: 'Lato', sans-serif;
+  color: #FFFFFF;
+  font-weight: 500;
 }
 
 .visit-button {
-  background: linear-gradient(45deg, #fbbf24, #f59e0b);
-  border: none;
-  color: #000;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 1rem;
+  background: transparent;
+  border: 1px solid #FED403;
+  color: #FED403;
+  padding: 0.5rem 1.5rem;
+  font-size: 0.9rem;
   font-weight: 600;
-  font-family: 'Lato', sans-serif;
   transition: all 0.3s ease;
   text-decoration: none;
+  margin-left: auto;
 }
 
 .visit-button:hover {
-  background: linear-gradient(45deg, #f59e0b, #d97706);
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(251, 191, 36, 0.4);
+  background: #FED403;
+  color: #000000;
 }
 
 .social-section {
-  margin-top: 2rem;
-  opacity: 0;
-  animation: fadeInUp 0.8s ease 1s forwards;
+  margin-top: 80px;
 }
 
 .social-icons {
@@ -170,77 +128,55 @@
 }
 
 .social-icon {
-  font-size: 2rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  padding: 0.5rem;
+  font-size: 1.5rem;
+  color: #B0B0B0;
+  background: #111;
+  padding: 1rem;
   border-radius: 50%;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .social-icon:hover {
-  transform: translateY(-5px) scale(1.1);
+  transform: translateY(-5px);
+  color: #FED403;
+  background: rgba(254, 212, 3, 0.1);
 }
 
-.social-icon.youtube {
-  color: #ef4444;
-}
-
-.social-icon.youtube:hover {
-  color: #f87171;
-  background: rgba(239, 68, 68, 0.1);
-  box-shadow: 0 10px 20px rgba(239, 68, 68, 0.3);
-}
-
-.social-icon.instagram {
-  color: #ec4899;
-}
-
-.social-icon.instagram:hover {
-  color: #f472b6;
-  background: rgba(236, 72, 153, 0.1);
-  box-shadow: 0 10px 20px rgba(236, 72, 153, 0.3);
-}
-
-.social-icon.linkedin {
-  color: #3b82f6;
-}
-
-.social-icon.linkedin:hover {
-  color: #60a5fa;
-  background: rgba(59, 130, 246, 0.1);
-  box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
-}
+.social-icon.youtube:hover { color: #ff0000; background: rgba(255, 0, 0, 0.1); }
+.social-icon.instagram:hover { color: #e1306c; background: rgba(225, 48, 108, 0.1); }
+.social-icon.linkedin:hover { color: #0077b5; background: rgba(0, 119, 181, 0.1); }
 
 .coming-soon {
   text-align: center;
-  color: #d1d5db;
+  color: #B0B0B0;
   font-size: 1.2rem;
-  font-family: 'Lato', sans-serif;
-  margin-top: 3rem;
-  padding: 2rem;
-  background: rgba(31, 41, 55, 0.3);
-  border-radius: 8px;
-  border: 1px solid rgba(251, 191, 36, 0.2);
+  font-weight: 500;
+  margin-top: 80px;
+  padding: 40px;
+  background: #111;
+  border: 1px dashed rgba(255,255,255,0.1);
 }
 
-/* Logo styling fix */
 .logo {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 44px;
   height: 44px;
-  background: transparent;
-  border-radius: 8px;
+  border-radius: 50%;
   overflow: hidden;
+  background: #111;
+  border: 1px solid rgba(255,255,255,0.1);
   margin-right: 12px;
 }
 
 .logo img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  border-radius: 8px;
-  background: transparent;
+  object-fit: contain;
   display: block;
 }

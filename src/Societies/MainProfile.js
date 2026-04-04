@@ -18,11 +18,26 @@ const MainProfile = () => {
   const params = useParams();
   const society_slug = params?.society_slug;
   const searchParams = useSearchParams();
-  const postid = searchParams.get("postid");
-  const activeTab = searchParams.get("tab") || (postid ? "posts" : "about"); // default to posts if postid is present
-
+  
+  const [activeTab, setActiveTab] = useState("about");
   const [society, setSociety] = useState(null);
   const [loading, setLoading] = useState(true);
+
+  // Initialize active tab only once
+  useEffect(() => {
+    const postid = searchParams.get("postid");
+    const initialTab = searchParams.get("tab") || (postid ? "posts" : "about");
+    setActiveTab(initialTab);
+  }, []);
+
+  const handleTabChange = (tabId) => {
+    setActiveTab(tabId);
+    
+    // Smoothly update the URL without triggering a Next.js re-render
+    const url = new URL(window.location);
+    url.searchParams.set("tab", tabId);
+    window.history.pushState({}, '', url);
+  };
 
   useEffect(() => {
     if (!society_slug) return;
@@ -74,7 +89,7 @@ const MainProfile = () => {
     <Layout>
       <div className='profile-container'>
         <ProfileHeader society={society} />
-        <NavigationTabs activeTab={activeTab} /> {/* Pass activeTab here */}
+        <NavigationTabs activeTab={activeTab} onTabChange={handleTabChange} />
         {renderTabContent()}
       </div>
     </Layout>

@@ -1,11 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Inter:wght@400;500;600&display=swap");
 
 .societies-container {
-  /* min-height: 100vh; */
-  background: #000;
-  padding: 2rem;
+  background: #000000;
+  padding: 80px 2rem;
   margin-top: 2rem;
-  font-family: "Lato", sans-serif;
+  font-family: "Inter", sans-serif;
+  min-height: 100vh;
 }
 
 .societies-header {
@@ -14,11 +14,12 @@
 }
 
 .societies-title {
-  font-size: 4rem;
-  font-weight: 900;
-  color: #fbbf24;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #FFFFFF;
   margin: 0 0 3rem 0;
-  text-shadow: 0 4px 20px rgba(251, 191, 36, 0.3);
+  letter-spacing: 1px;
+  font-family: "Montserrat", sans-serif;
 }
 
 .category-tabs {
@@ -26,37 +27,40 @@
   flex-wrap: nowrap;
   overflow-x: auto;
   justify-content: center;
-  gap: 0.7rem;
+  gap: 1rem;
   margin-top: 1.2rem;
-  margin-bottom: 1.8rem;
-  scrollbar-width: thin;
-  scrollbar-color: #fbbf24 #232323;
+  margin-bottom: 3rem;
+  scrollbar-width: none;
+}
+
+.category-tabs::-webkit-scrollbar {
+  display: none;
 }
 
 .category-btn {
-  background: #232323;
-  color: #fbbf24;
-  border: 2px solid #fbbf24;
-  border-radius: 20px;
-  padding: 0.5rem 1.4rem;
-  font-weight: 700;
+  background: #121212;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.8rem 1.6rem;
+  font-weight: 500;
   margin-bottom: 1rem;
   font-size: 1rem;
   cursor: pointer;
-  transition: background 0.18s, color 0.18s, border 0.18s;
+  transition: all 0.3s ease;
   white-space: nowrap;
 }
 
 .category-btn:hover {
-  background: #fbbf24;
-  color: #232323;
-  border-color: #fbbf24;
+  background: rgba(254, 212, 3, 0.1);
+  color: #FED403;
+  border-color: #FED403;
 }
 
 button.category-btn.active {
-  background: #fbbf24 !important;
-  color: #000;
-  box-shadow: 0 8px 20px rgba(251, 191, 36, 0.4);
+  background: #FED403 !important;
+  color: #000000;
+  border-color: #FED403;
+  font-weight: 600;
 }
 
 .societies-loading {
@@ -65,44 +69,38 @@ button.category-btn.active {
   align-items: center;
   justify-content: center;
   min-height: 50vh;
-  color: #fbbf24;
+  color: #FFFFFF;
 }
 
 .loading-spinner {
   width: 50px;
   height: 50px;
-  border: 4px solid rgba(251, 191, 36, 0.3);
-  border-left: 4px solid #fbbf24;
+  border: 4px solid rgba(255,255,255,0.1);
+  border-left: 4px solid #FED403;
   border-radius: 50%;
   animation: spin 1s linear infinite;
   margin-bottom: 1rem;
 }
 
 @keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 .error-message {
   text-align: center;
-  color: #ef4444;
+  color: #FFFFFF;
   padding: 2rem;
   margin-bottom: 2rem;
-  background: rgba(239, 68, 68, 0.1);
-  border: 1px solid rgba(239, 68, 68, 0.3);
-  border-radius: 12px;
+  background: rgba(255, 0, 0, 0.1);
+  border: 1px solid rgba(255, 0, 0, 0.2);
 }
 
 .retry-btn {
-  background: #fbbf24;
-  color: #000;
+  background: #FED403;
+  color: #000000;
   border: none;
   padding: 0.75rem 1.5rem;
-  border-radius: 8px;
   cursor: pointer;
   font-weight: 600;
   margin-top: 1rem;
@@ -110,14 +108,13 @@ button.category-btn.active {
 }
 
 .retry-btn:hover {
-  background: #f59e0b;
-  transform: translateY(-2px);
+  background: #FFFFFF;
 }
 
 .societies-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 2rem;
+  gap: 3rem;
   margin-top: 2rem;
   max-width: 1400px;
   margin-left: auto;
@@ -125,51 +122,72 @@ button.category-btn.active {
 }
 
 .society-card {
-  background: #1a1a1a;
-  border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  padding: 2rem 1.5rem;
+  background: #000000;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 2.5rem 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  transition: all 0.4s ease;
   cursor: pointer;
-  border: 1px solid #2a2a2a;
   position: relative;
-  min-height: 280px;
+  min-height: 300px;
+  overflow: hidden;
+}
+.society-card {
+  position: relative;
+  border-radius: 0; /* adjust if needed */
+  overflow: hidden;
+  background-color: #121212;
 }
 
+/* Hover effect */
 .society-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 12px 40px rgba(251, 191, 36, 0.15);
-  border-color: #fbbf24;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  border-color: rgba(255, 255, 255, 0.1);
 }
 
+/* Full border overlay */
+.society-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 2px solid transparent;
+  border-radius: 0;
+  transition: border-color 0.4s ease;
+  pointer-events: none;
+}
+
+/* Yellow border on hover */
+.society-card:hover::before {
+  border-color: #FED403;
+}
 .society-logo {
-  width: 110px;
-  height: 110px;
+  width: 100px;
+  height: 100px;
   margin: 0 auto 1.5rem;
-  border-radius: 20px;
+  border-radius: 50%;
   overflow: hidden;
-  background: #fff;
+  background: #111;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-  border: 3px solid #fbbf24;
-  padding: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.4s ease;
+}
+
+.society-card:hover .society-logo {
+  transform: scale(1.05);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 .society-logo img {
   width: 100%;
   height: 100%;
-  border-radius: 12px;
-  object-fit: contain;
-  background: #fff;
-  border: none;
-  margin: 0;
-  box-shadow: none;
+  object-fit: cover;
+  display: block;
 }
 
 .society-info {
@@ -182,101 +200,72 @@ button.category-btn.active {
 }
 
 .society-name {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: #fbbf24;
-  margin-bottom: 1rem;
-  letter-spacing: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin-bottom: 0.5rem;
   line-height: 1.4;
+  font-family: "Montserrat", sans-serif;
 }
 
 .social-icons {
   display: flex;
   justify-content: center;
-  gap: 0.75rem;
+  gap: 1rem;
   margin-top: auto;
-  padding-top: 1rem;
+  padding-top: 1.5rem;
 }
 
 .social-link {
-  color: #888;
+  color: #B0B0B0;
   font-size: 1.1rem;
-  transition: color 0.2s ease, transform 0.2s ease, background 0.2s ease;
+  transition: all 0.3s ease;
   padding: 0.5rem;
-  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 36px;
   height: 36px;
-  background: #2a2a2a;
+  background: #111;
+  border-radius: 50%;
 }
 
 .social-link:hover {
-  color: #000;
-  background: #fbbf24;
-  transform: scale(1.1);
+  background: rgba(254, 212, 3, 0.1);
+  color: #FED403;
+  transform: translateY(-3px);
 }
 
 @media (max-width: 768px) {
   .societies-container {
-    padding: 1rem;
-    margin-top: 5rem;
+    padding: 80px 1rem;
   }
 
   .societies-title {
-    font-size: 2.125rem;
+    font-size: 2.5rem;
     margin-bottom: 2rem;
   }
 
-  .category-filters {
+  .category-tabs {
     gap: 0.5rem;
-      justify-content: flex-start;
-
+    justify-content: flex-start;
   }
 
   .category-btn {
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    min-width: 140px;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.95rem;
+    min-width: max-content;
   }
 
   .societies-grid {
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 1.5rem;
-  }
-
-  .society-card {
-    min-height: 220px;
-  }
-
-  .society-logo {
-    width: 100px;
-    height: 100px;
-    margin: 1.5rem auto 1rem;
-  }
-
-  .society-name {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-  }
-
-  .social-link {
-    width: 35px;
-    height: 35px;
-    font-size: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
   }
 }
 
 @media (max-width: 480px) {
   .societies-title {
     font-size: 2rem;
-  }
-
-  .category-btn {
-    padding: 0.5rem 1rem;
-    font-size: 0.9rem;
-    min-width: 120px;
   }
 
   .societies-grid {

@@ -6,6 +6,29 @@ import PostModal from "./PostModal";
 import { BASE_URL } from "../constants/api";
 import "./PostsSection.css";
 import AppImage from "../components/AppImage";
+import { motion } from "framer-motion";
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1
+    }
+  }
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut"
+    }
+  }
+};
 
 const PostsSection = () => {
   const routeParams = useParams();
@@ -130,15 +153,25 @@ const PostsSection = () => {
           No posts available
         </div>
       ) : (
-        <div className="posts-grid">
+        <motion.div 
+          className="posts-grid"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
           {imagePosts.map((post) => (
-            <div key={post.id} className="post-card" onClick={() => handlePostClick(post)}>
+            <motion.div 
+              variants={cardVariants} 
+              key={post.id} 
+              className="post-card" 
+              onClick={() => handlePostClick(post)}
+            >
               <div className="post-image">
                 <AppImage src={post.image_url} alt="" width={400} height={500} />
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       )}
 
       {loading && (

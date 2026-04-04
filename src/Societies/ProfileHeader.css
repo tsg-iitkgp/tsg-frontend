@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Inter:wght@400;500;600&display=swap");
+
 .header-container {
   position: relative;
 }
@@ -6,33 +8,26 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: rgba(251, 191, 36, 0.1);
-  border: 1px solid rgba(251, 191, 36, 0.3);
-  color: #fbbf24;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
   padding: 0.6rem 1.2rem;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: 0.95rem;
+  font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
   margin-bottom: 1.5rem;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 .back-button:hover {
-  background: #fbbf24;
-  color: #000;
-  transform: translateX(-4px);
-  box-shadow: 0 4px 15px rgba(251, 191, 36, 0.3);
+  background: rgba(254, 212, 3, 0.1);
+  color: #FED403;
+  border-color: #FED403;
 }
 
-.back-icon {
-  font-size: 0.9rem;
-  transition: transform 0.3s ease;
-}
-
-.back-button:hover .back-icon {
-  transform: translateX(-3px);
+.back-button:active {
+  transform: scale(0.95);
 }
 
 .top-nav {
@@ -41,9 +36,8 @@
   left: 0;
   right: 0;
   z-index: 10;
-  background: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid #fbbf24;
+  background: transparent;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
 .nav-content {
@@ -59,14 +53,14 @@
 }
 
 .logo {
-  width: 64px;
+  width: 48px;
   height: 48px;
-  background-color: #3b82f6;
-  border-radius: 4px;
+  background-color: #FED403;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: #000;
   font-weight: bold;
 }
 
@@ -78,29 +72,30 @@
 
 .nav-social {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .nav-icon {
   font-size: 1.25rem;
-  color: white;
+  color: #fff;
   cursor: pointer;
   transition: color 0.3s ease;
 }
 
 .nav-icon:hover {
-  color: #fbbf24;
+  color: #FED403;
 }
 
 .header-content {
   position: relative;
-  background: linear-gradient(to right, rgba(180, 83, 9, 0.2), rgba(0, 0, 0, 1));
-  padding-top: 7rem;
-  padding-bottom: 3rem;
+  background: #000000;
+  padding-top: 10rem;
+  padding-bottom: 80px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
 .header-wrapper {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 2rem;
 }
@@ -108,93 +103,98 @@
 .profile-section {
   display: flex;
   align-items: flex-start;
-  gap: 2rem;
+  gap: 4rem;
 }
 
 .profile-logo {
-  width: 224px;
-  height: 224px;
-  background: transparent;
+  width: 200px;
+  height: 200px;
+  background: #111;
+  border: 1px solid rgba(255,255,255,0.1);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: #FFFFFF;
   font-weight: bold;
   flex-shrink: 0;
+  overflow: visible;
 }
 
 .profile-info {
   flex: 1;
-  padding-top: 2rem;
+  padding-top: 1rem;
 }
 
 .profile-title {
   font-size: 3rem;
-  font-weight: bold;
-  color: #fbbf24;
+  font-weight: 700;
+  color: #FFFFFF;
   margin-bottom: 1rem;
-  text-align: left;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 1px;
 }
 
 .profile-quote {
-  font-size: 1.25rem;
-  color: white;
-  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 2rem;
+  font-weight: 400;
   font-style: italic;
-  line-height: 1.5;
+  font-family: 'Inter', sans-serif;
+  max-width: 800px;
 }
 
 .profile-domain {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .domain-label {
-  color: #fbbf24;
-  font-size: 1.125rem;
-  font-weight: 600;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-right: 0.5rem;
+  letter-spacing: 1px;
 }
 
 .domain-value {
-  color: white;
+  color: #FED403;
+  font-size: 1.1rem;
+  font-weight: 600;
 }
 
 .profile-tags {
   display: flex;
-  gap: 0.5rem;;
+  gap: 1rem;
   flex-wrap: wrap;
-}
-.gymkhana-logo-badge {
-  transition: transform 0.18s;
-}
-.gymkhana-logo-badge:hover {
-  transform: scale(1.08) rotate(-8deg);
-  box-shadow: 0 4px 16px #fbbf2444;
-}
-
-@media (max-width: 768px) {
-  .profile-title {
-  text-align: center;
-}
-
-  .profile-social-tags{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-  }
 }
 
 .tag {
-  background: rgba(55, 65, 81, 0.7);
-  color: white;
-  padding: 0.65rem;
-  border-radius: 100px;
-  font-size: 0.875rem;
-  border: 1px solid #fbbf24;
+  background: rgba(255, 255, 255, 0.05);
+  color: #FFFFFF;
+  padding: 0.5rem 1.2rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid rgba(255,255,255,0.1);
 }
+
 .profile-social-tags {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.gymkhana-logo-badge {
+  transition: transform 0.3s ease;
+  background: transparent;
+  border-radius: 50%;
+  padding: 0;
+  cursor: pointer;
+}
+
+.gymkhana-logo-badge:hover {
+  transform: scale(1.05);
 }
 
 .loading-container {
@@ -202,63 +202,58 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 300px;
-  color: #fbbf24;
+  min-height: 50vh;
+  color: #FFFFFF;
+  font-weight: 500;
 }
 
 .loading-spinner {
-  width: 40px;
-  height: 40px;
-  border: 4px solid rgba(251, 191, 36, 0.3);
-  border-left: 4px solid #fbbf24;
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(255,255,255,0.1);
+  border-left: 4px solid #FED403;
   border-radius: 50%;
   animation: spin 1s linear infinite;
   margin-bottom: 1rem;
 }
 
 @keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 .error-container {
   text-align: center;
-  color: #ef4444;
+  color: #FFFFFF;
+  background: rgba(255, 0, 0, 0.1);
+  border: 1px solid rgba(255,0,0,0.2);
   padding: 2rem;
   min-height: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-weight: 500;
+  font-size: 1.2rem;
 }
 
 .header-social-icon {
   font-size: 1.5rem;
   color: #fff;
+  background: #111;
+  border-radius: 50%;
   cursor: pointer;
   transition: all 0.3s ease;
-  padding: 0.5rem;
-  border-radius: 50%;
+  padding: 0.8rem;
+  margin-left: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .header-social-icon:hover {
-  color: #fbbf24;
-  transform: translateY(-2px);
-}
-
-.header-social-icon.facebook:hover {
-  color: #1877f2;
-}
-
-.header-social-icon.instagram:hover {
-  color: #e4405f;
-}
-
-.header-social-icon.linkedin:hover {
-  color: #0077b5;
+  background: rgba(254, 212, 3, 0.1);
+  color: #FED403;
+  transform: translateY(-3px);
 }
 
 @media (max-width: 768px) {
@@ -271,19 +266,20 @@
   .profile-logo {
     width: 150px;
     height: 150px;
-    font-size: 3rem;
   }
 
   .profile-title {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   .profile-quote {
     font-size: 1rem;
   }
-}
-.gymkhana-logo-badge {
-  position: relative;
+
+  .profile-social-tags{
+    flex-direction: column;
+    gap: 1.5rem;
+  }
 }
 
 .gymkhana-tooltip {
@@ -291,20 +287,17 @@
   position: absolute;
   bottom: 110%;
   right: 0;
-  background: #232323;
-  color: #fff;
-  padding: 0.45em 1em;
+  background: #111;
+  color: #FED403;
+  border: 1px solid rgba(255,255,255,0.1);
   border-radius: 8px;
-  font-size: 0.98rem;
+  padding: 0.8rem 1.2rem;
+  font-size: 0.9rem;
+  font-weight: 500;
   white-space: nowrap;
-  box-shadow: 0 2px 8px #0005;
   z-index: 10;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.18s;
 }
 
 .gymkhana-logo-badge:hover + .gymkhana-tooltip {
   display: block;
-  opacity: 1;
 }

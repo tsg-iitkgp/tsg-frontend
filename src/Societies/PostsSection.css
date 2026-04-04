@@ -1,39 +1,40 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Inter:wght@400;500;600&display=swap');
 
 .posts-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 2rem;
-  font-family: 'Lato', sans-serif;
+  padding: 80px 2rem;
+  font-family: 'Inter', sans-serif;
+  background: #000000;
 }
 
 .posts-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  margin: 2rem 0;
+  gap: 3rem;
+  margin: 3rem 0;
 }
 
 @media (max-width: 900px) {
   .posts-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.2rem;
+    gap: 2rem;
   }
 }
 
 @media (max-width: 600px) {
   .posts-grid {
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 2rem;
   }
 }
 
 .post-card {
-  background: transparent;
-  border-radius: 0;
+  background: #111;
+  border: 1px solid rgba(255, 255, 255, 0.05);
   overflow: hidden;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
   break-inside: avoid;
   margin-bottom: 15px;
   display: inline-block;
@@ -41,14 +42,16 @@
 }
 
 .post-card:hover {
-  transform: scale(1.02);
+  transform: translateY(-8px);
+  border-color: rgba(255,255,255,0.1);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
 }
 
 .post-image {
   position: relative;
   width: 100%;
   aspect-ratio: 4 / 5;
-  background: #222;
+  background: #111;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -60,19 +63,26 @@
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: transform 0.5s ease;
+  filter: brightness(0.9);
+}
+
+.post-card:hover .post-image img {
+  transform: scale(1.05);
+  filter: brightness(1);
 }
 
 @media (max-width: 768px) {
   .posts-container {
-    padding: 1rem;
+    padding: 60px 1rem;
   }
 
   .posts-grid {
-    column-gap: 10px;
+    column-gap: 15px;
   }
 
   .post-card {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
 
   .post-image {
