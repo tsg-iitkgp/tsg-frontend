@@ -83,6 +83,7 @@
   font-size: 1.1rem;
   color: #fed403;
   text-align: center;
+  font-weight: 500;
   position: relative;
 }
 .activeNavbar {
@@ -100,13 +101,12 @@ ul.navMenu {
   flex-direction: row;
   align-items: center;
   margin-top: auto;
-  margin-right: 1rem;
   margin-bottom: auto;
   justify-content: space-between;
   white-space: nowrap; /* Prevent menu items from wrapping */
 }
 li {
-  margin-right: 1rem;
+  margin-right: 1.5rem;
   display: block;
   list-style: none;
 }
@@ -121,7 +121,7 @@ ul li a, ul li span {
   z-index: 1;
   overflow: hidden;
   text-transform: none;
-  font-size: 0.95rem;
+  font-size: 1.1rem;
 }
 .navbar li > a::before, .navbar li > span::before {
   content: "";
@@ -182,7 +182,7 @@ ul li a, ul li span {
   font-size: 1.4rem;
   font-weight: 400; /* "2026" shouldn't be bold */
   color: #000000 !important;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif !important;
 }
 .bannerTitle strong {
   font-weight: 700; /* "TSG Elections" should be bold */

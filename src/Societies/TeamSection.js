@@ -90,7 +90,21 @@ const TeamSection = () => {
   }
 
   if (loading) {
-    return <div className="team-container">Loading...</div>;
+    return (
+      <div className="team-container team-loading">
+        <div className="skeleton-team-title"></div>
+        <div className="team-grid">
+          {[...Array(4)].map((_, i) => (
+            <div key={i} className="skeleton-team-card">
+              <div className="skeleton-team-image"></div>
+              <div className="skeleton-team-info">
+                <div className="skeleton-team-name"></div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    );
   }
 
   return (

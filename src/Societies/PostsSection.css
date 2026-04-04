@@ -101,3 +101,35 @@
     display: block;
   }
 }
+
+/* Skeletons */
+.posts-loading {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  margin: 3rem 0;
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .posts-loading {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .posts-loading {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin: 0;
+  }
+}
+
+.skeleton-post-card {
+  background: #111;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  aspect-ratio: 4 / 5;
+  width: 100%;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}

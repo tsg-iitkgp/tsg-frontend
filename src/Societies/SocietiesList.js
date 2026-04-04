@@ -101,6 +101,8 @@ const SocietiesList = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
+          
+          <h4 className="yellowSubtitle">Belong. Build. Become.</h4>
           <h1 className="societies-title">Societies</h1>
           <div className="category-filters category-tabs">
             <button
@@ -132,8 +134,17 @@ const SocietiesList = () => {
 
         {loading ? (
           <div className="societies-loading">
-            <div className="loading-spinner"></div>
-            <p style={{ color: "#FED403", fontWeight: "700" }}>Loading societies...</p>
+            {[...Array(8)].map((_, i) => (
+              <div key={i} className="skeleton-card">
+                <div className="skeleton-logo"></div>
+                <div className="skeleton-text"></div>
+                <div className="skeleton-socials">
+                  <div className="skeleton-icon"></div>
+                  <div className="skeleton-icon"></div>
+                  <div className="skeleton-icon"></div>
+                </div>
+              </div>
+            ))}
           </div>
         ) : (
           <motion.div 

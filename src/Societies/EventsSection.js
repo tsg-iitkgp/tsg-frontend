@@ -204,26 +204,28 @@ const EventsSection = () => {
         </motion.div>
       )}
 
-      {loading && (
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            margin: "2rem 0",
-          }}
-        >
+      {loading && events.length === 0 && (
+        <div className="events-loading">
+          {[...Array(3)].map((_, i) => (
+            <div key={i} className="skeleton-event-card">
+              <div className="skeleton-event-image"></div>
+              <div className="skeleton-event-content">
+                <div className="skeleton-event-title"></div>
+                <div className="skeleton-event-line"></div>
+                <div className="skeleton-event-line"></div>
+                <div className="skeleton-event-line short"></div>
+                <div className="skeleton-event-footer">
+                  <div className="skeleton-event-date"></div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {loading && events.length > 0 && (
+        <div style={{ display: "flex", justifyContent: "center", margin: "2rem 0" }}>
           <div className="loading-spinner"></div>
-          <span
-            style={{
-              color: "#fbbf24",
-              fontWeight: "bold",
-              fontSize: "1.2rem",
-              marginTop: "1rem",
-            }}
-          >
-            Loading...
-          </span>
         </div>
       )}
     </div>

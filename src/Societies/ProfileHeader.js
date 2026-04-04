@@ -58,8 +58,22 @@ const ProfileHeader = () => {
         <div className="header-content">
           <div className="header-wrapper">
             <div className="loading-container">
-              <div className="loading-spinner"></div>
-              <p>Loading society...</p>
+              <div className="profile-skeleton">
+                <div className="skeleton-avatar"></div>
+                <div className="skeleton-info">
+                  <div className="skeleton-title"></div>
+                  <div>
+                    <div className="skeleton-desc"></div>
+                    <div className="skeleton-desc" style={{ marginTop: '10px' }}></div>
+                    <div className="skeleton-desc short" style={{ marginTop: '10px' }}></div>
+                  </div>
+                  <div className="skeleton-tags-wrapper">
+                    <div className="skeleton-tag"></div>
+                    <div className="skeleton-tag"></div>
+                    <div className="skeleton-tag"></div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

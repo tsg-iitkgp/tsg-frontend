@@ -215,7 +215,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 50vh;
   color: #FFFFFF;
   font-weight: 500;
 }
@@ -313,4 +312,80 @@ display: none;}
 
 .gymkhana-logo-badge:hover + .gymkhana-tooltip {
   display: block;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.profile-skeleton {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 4rem;
+  width: 100%;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@media (max-width: 768px) {
+  .profile-skeleton {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+
+.skeleton-avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: #222;
+  flex-shrink: 0;
+}
+
+.skeleton-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-top: 1rem;
+  width: 100%;
+}
+
+.skeleton-title {
+  height: 48px;
+  width: 60%;
+  background: #222;
+  border-radius: 4px;
+}
+
+.skeleton-desc {
+  height: 20px;
+  width: 100%;
+  background: #222;
+  border-radius: 4px;
+}
+
+.skeleton-desc.short {
+  width: 80%;
+}
+
+.skeleton-tag {
+  height: 38px;
+  width: 90px;
+  background: #222;
+  border-radius: 4px;
+}
+
+.skeleton-tags-wrapper {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
 }

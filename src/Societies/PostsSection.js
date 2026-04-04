@@ -174,26 +174,17 @@ const PostsSection = () => {
         </motion.div>
       )}
 
-      {loading && (
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            margin: "2rem 0",
-          }}
-        >
+      {loading && posts.length === 0 && (
+        <div className="posts-loading">
+          {[...Array(6)].map((_, i) => (
+            <div key={i} className="skeleton-post-card"></div>
+          ))}
+        </div>
+      )}
+
+      {loading && posts.length > 0 && (
+        <div style={{ display: "flex", justifyContent: "center", margin: "2rem 0" }}>
           <div className="loading-spinner"></div>
-          <span
-            style={{
-              color: "#fbbf24",
-              fontWeight: "bold",
-              fontSize: "1.2rem",
-              marginTop: "1rem",
-            }}
-          >
-            Loading...
-          </span>
         </div>
       )}
 
