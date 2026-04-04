@@ -1,0 +1,66 @@
+.container {
+  background-color: #000;
+  color: #fff;
+  padding: 5rem 2rem;
+  width: 100%;
+}
+
+.headerRegion {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.yellowSubtitle {
+  color: #fed403;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.mainTitle {
+  font-size: 5rem;
+  font-weight: 900;
+  color: #666;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.imageContainer {
+  margin: 0 auto;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.imagePadWhite {
+  background-color: #fff;
+  padding: 20px 20px 40px 20px;
+}
+
+.imagePadWhite img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.buttonContainer {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.viewAllBtn {
+  background-color: #000;
+  color: #fed403;
+  border: 1px solid #fed403;
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.viewAllBtn:hover {
+  background-color: #fed403;
+  color: #000;
+}

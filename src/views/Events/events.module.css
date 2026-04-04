@@ -1,17 +1,79 @@
 .bgContainer {
-  margin-top: 12vh;
-  width: min(100%, 1280px);
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 1rem;
+  background: #000;
+  color: #fff;
+  padding: 5rem 2rem;
+  padding-top: 12vh;
+  min-height: 100vh;
 }
 
+/* Section header — homepage pattern */
+.headerRegion {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.yellowSubtitle {
+  color: #fed403;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.mainTitle {
+  font-size: 5rem;
+  font-weight: 900;
+  color: #666;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Slider */
 .sliderSection {
-  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto 5rem;
+}
+
+.eventSlider {
+  border: 1px solid #333;
+  overflow: hidden;
+}
+
+.eventSlider div img {
+  object-fit: contain;
+}
+
+/* Event cards grid */
+.cardsSection {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sectionHeading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fed403;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.cardsGrid {
   display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+
+/* Skeleton loading */
+.skeletonRow {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
+/* Legacy compat */
 .mainContainer {
   display: flex;
   flex-direction: column;
@@ -23,6 +85,7 @@
   padding: 3rem 0;
   color: white;
 }
+
 .categoryContainer {
   display: flex;
   flex-direction: column;
@@ -30,74 +93,51 @@
   align-items: center;
   width: 100%;
 }
-.eventSlider{
-  width: min(100%, 960px);
-  margin: 2rem auto;
-}
-.eventSlider div img {
-  object-fit: contain;
-}
+
 .categoryHeading {
   font-size: 2rem;
-  color: #f1c40f;
+  color: #fed403;
   margin-bottom: 2rem;
 }
-.categoryHeading2 {
-  font-size: 2rem;
-  color: #f1c40f;
-  margin-bottom: 2rem;
-}
+
 .categoryHeading1 {
   font-size: 2.2rem;
-  color: #f1c40f;
+  color: #fed403;
   margin-bottom: -2%;
   margin-top: 0%;
   text-align: center;
 }
+
+.categoryHeading2 {
+  font-size: 2rem;
+  color: #fed403;
+  margin-bottom: 2rem;
+}
+
 .cardsWrapper {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  gap: 1rem;
   height: 100%;
   width: 100%;
 }
-/* Slider */
+
 .events {
   margin: auto;
-}
-
-.carousel-caption-bottom {
-  font-size: 15px !important;
-  color: black !important;
-}
-.thumbnails img {
-  width: 10% !important;
-}
-
-@media screen and (max-width: 576px) {
-  .categoryHeading2 {
-    font-size: 2rem;
-    color: #f1c40f;
-    margin-bottom: 2rem;
-  }
-  .categoryContainer {
-    margin: 2rem 0;
-  }
 }
 
 .highlightsContainer {
   display: flex;
   flex-direction: column;
-  background-color: #2a2b2f;
+  background-color: #111;
   border-radius: 10px;
-  border-color: #f1c40f;
+  border-color: #fed403;
   border-style: solid;
   border-width: 1px;
 }
 
 .highlightsContainer a {
-  color: #f1c40f;
+  color: #fed403;
 }
 
 .highlightsContainer a:hover {
@@ -111,7 +151,7 @@
   justify-content: space-between;
   padding: 20px 30px;
   border-width: 0;
-  border-color: #f1c40f;
+  border-color: #fed403;
   border-style: solid;
   border-bottom-width: 1px;
 }
@@ -158,18 +198,16 @@
   border: none;
   cursor: pointer;
   list-style-position: inside;
-  border-bottom: 2px solid #f1c40f;
+  border-bottom: 2px solid #fed403;
   position: relative;
   display: block;
   transition: all 0.3s;
-  font-family: var(--font1);
 }
 
 .details > div {
   padding: 8px;
-  border-bottom: 2px solid #f1c40f;
+  border-bottom: 2px solid #fed403;
   line-height: 2rem;
-  font-family: var(--font2);
   transition: 0.3s all ease;
 }
 
@@ -177,7 +215,7 @@
   content: "";
   border-width: 0.4rem;
   border-style: solid;
-  border-color: transparent transparent transparent #f1c40f;
+  border-color: transparent transparent transparent #fed403;
   position: absolute;
   top: 1rem;
   left: 1rem;
@@ -217,7 +255,7 @@
 
 .inductionIntro .info {
   padding: 50px;
-  border: 1px solid red;
+  border: 1px solid #fed403;
   border-radius: 8px;
   max-width: 350px;
   width: 80%;
@@ -231,6 +269,9 @@
 }
 
 @media screen and (max-width: 768px) {
+  .mainTitle {
+    font-size: 3rem;
+  }
   .inductionIntro .info {
     padding: 20px;
     border-radius: 8px;
@@ -255,4 +296,15 @@
 
 .inductionIntro .handbookContainer {
   text-align: center;
+}
+
+@media screen and (max-width: 576px) {
+  .categoryHeading2 {
+    font-size: 2rem;
+    color: #fed403;
+    margin-bottom: 2rem;
+  }
+  .categoryContainer {
+    margin: 2rem 0;
+  }
 }

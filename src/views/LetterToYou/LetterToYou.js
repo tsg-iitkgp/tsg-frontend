@@ -107,7 +107,7 @@ const Form = () => {
 
   return (
     <Layout>
-      <div className="letter-to-me-container">
+      <div className={`letter-to-me-container`}>
         <div className="left-column">
           <div className="overlay"></div>
           <div className="desc-content">
@@ -143,6 +143,7 @@ const Form = () => {
                 id="name"
                 name="name"
                 placeholder="Name"
+                className="underline-input"
                 value={formData.name}
                 onChange={handleChange}
                 required
@@ -152,11 +153,22 @@ const Form = () => {
                 id="graduationYear"
                 name="graduationYear"
                 placeholder="Graduation Year"
+                className="underline-input"
                 value={formData.graduationYear}
                 onChange={handleChange}
                 required
               />
             </div>
+            
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Enter your message"
+              rows="4"
+              value={formData.message}
+              onChange={handleChange}
+              required
+            ></textarea>
             <div className="box1">
               <input
                 type="text"
@@ -178,16 +190,6 @@ const Form = () => {
               />
               {emailError && <p className="error-message">{emailError}</p>}
             </div>
-            <textarea
-              id="message"
-              name="message"
-              placeholder="Enter your message"
-              rows="4"
-              value={formData.message}
-              onChange={handleChange}
-              required
-            ></textarea>
-
             {!isOtpSent && isEmailValid && (
               <button
                 type="button"

@@ -6,9 +6,8 @@ import Layout from "../../components/Layouts/Layout";
 import Styles from "../../styles/views/home.module.css";
 import AboutUs from "./AboutUs/AboutUs";
 import CommitteesHome from "./Committee/CommitteesHome";
-import Societies from "./Societies/Societies";
-import Greet from "./Greet";
-import AppImage from "../../components/AppImage";
+import EventsHome from "./Events/EventsHome";
+import CouncilHome from "./Council/CouncilHome";
 
 export default function Home() {
   const pageTitle = "Technology Students' Gymkhana - IIT Kharagpur | TSG";
@@ -50,22 +49,12 @@ export default function Home() {
         <meta name="twitter:image" content={pageImage} />
       </Head>
 
-      <div
-        className={Styles.backgroundImage}
-        style={{ background: 'url("/images/iitkgp.jpg") center/cover no-repeat' }}
-      >
-        <div className={Styles.textOverlay}>
-          <div className={Styles.kgpSvg}>
-            <AppImage
-              src="/data/media/images/general/gymkhanaLogo.png"
-              alt="KGP Logo"
-              width={120}
-              height={120}
-            />
-          </div>
-          <div className={Styles.greetMessage}>
-            <Greet />
-          </div>
+      <div className={Styles.backgroundImage}>
+        <div className={Styles.montageText}>
+          HERE: Campus<br/>Life Montage
+        </div>
+        <div className={Styles.mottoBox}>
+          &quot;Yogah Karmasu Kausalam&quot;
         </div>
       </div>
       <div>
@@ -75,8 +64,11 @@ export default function Home() {
         {/* Committees Section */}
         <CommitteesHome />
 
-        {/* Socities Section */}
-        <Societies />
+        {/* Events Section */}
+        <EventsHome />
+
+        {/* Council Section */}
+        <CouncilHome />
       </div>
     </Layout>
   );

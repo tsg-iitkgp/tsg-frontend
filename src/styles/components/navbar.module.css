@@ -1,22 +1,35 @@
 /* header */
 * {
   box-sizing: border-box;
-  font-family: "Lato", sans-serif;
 }
-
-
-.navbarContainer {
+.navbarOuter {
   width: 100%;
   position: fixed;
   z-index: 99;
+  top: 0;
+  left: 0;
+}
+.navbarContainer {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
 }
 .navbar {
-  height: 6vh;
-  background: transparent;
-  width: 90%;
+  height: auto;
+  min-height: 4.5rem;
+  background: #000;
+  width: 100%;
+  padding: 0 4rem; /* Reduced padding from 8rem to give more space for text */
   margin: auto;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 100;
+  flex-wrap: nowrap; /* Force one line */
 }
 .menuIcon {
   display: none;
@@ -27,8 +40,33 @@
   padding: 1rem;
 }
 .navLogo img {
-  max-width: 2rem;
-  max-height: 2rem;
+  max-width: 3.5rem;
+  max-height: 3.5rem;
+}
+.logoText {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  color: white;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  white-space: nowrap; /* Prevent "TECHNOLOGY STUDENTS'" from wrapping */
+}
+.logoTextSmall {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+  text-align: left;
+  color: #a0a0a0;
+}
+.logoTextLarge {
+  font-size: 1.65rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  line-height: 0.9;
+  text-align: left;
+  color: #ffffff;
 }
 .navLogo a {
   text-decoration: none;
@@ -43,7 +81,7 @@
 }
 .navItem .acitveLink {
   font-size: 1.1rem;
-  color: #f1c40f;
+  color: #fed403;
   text-align: center;
   position: relative;
 }
@@ -52,7 +90,7 @@
   backdrop-filter: blur(2rem);
   box-shadow: 0 0rem 1rem 0 rgba(255, 255, 255, 0.1);
   -webkit-backdrop-filter: blur(2rem);
-  border: 1px solid rgba(0, 0, 0, 0.18);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.18);
 }
 .active {
   background-color: transparent;
@@ -65,40 +103,42 @@ ul.navMenu {
   margin-right: 1rem;
   margin-bottom: auto;
   justify-content: space-between;
+  white-space: nowrap; /* Prevent menu items from wrapping */
 }
-.navMenu li {
+li {
   margin-right: 1rem;
   display: block;
   list-style: none;
 }
-.navMenu li a {
+ul li a, ul li span {
   padding: 0.5rem 0rem;
   color: white;
   display: inline-block;
-  letter-spacing: 2px;
+  letter-spacing: 0.5px;
   text-decoration: none;
   transition: ease-out 0.5s;
   position: relative;
   z-index: 1;
   overflow: hidden;
-  text-transform: uppercase;
+  text-transform: none;
+  font-size: 0.95rem;
 }
-.navbar li > a::before {
+.navbar li > a::before, .navbar li > span::before {
   content: "";
   position: absolute;
   top: 95%;
   left: 0;
-  background-color: #f1c40f;
+  background-color: #fed403;
   width: 90%;
   height: 100%;
   transform: translateX(-101%);
   transition: ease-out 0.5s;
 }
-.navbar li > a:hover:before {
+.navbar li > a:hover:before, .navbar li > span:hover:before {
   transform: translateX(0);
   z-index: -1;
 }
-.navbar li > a:hover {
+.navbar li > a:hover, .navbar li > span:hover {
   color: white;
 }
 .navbar .notifications {
@@ -116,6 +156,60 @@ ul.navMenu {
 .results{
   position: relative;
 }
+
+.announcementBannerScrollable {
+  background-color: #fed403;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  gap: 12rem;
+  
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin: 0;
+  z-index: 98;
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+}
+
+.bannerHidden {
+  transform: translateY(calc(-100% - 2px));
+}
+.bannerTitle {
+  font-size: 1.4rem;
+  font-weight: 400; /* "2026" shouldn't be bold */
+  color: #000000 !important;
+  font-family: 'Montserrat', sans-serif;
+}
+.bannerTitle strong {
+  font-weight: 700; /* "TSG Elections" should be bold */
+  color: #000000 !important;
+}
+.bannerButtonGroup {
+  display: flex;
+  gap: 1rem;
+}
+.bannerBtn {
+  background-color: #fafa33;
+  border: 1px solid #000;
+  font-weight: 700;
+  padding: 0.4rem 2rem;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+  font-size: 0.95rem;
+  color: #000000;
+  font-family: 'Montserrat', sans-serif;
+  box-shadow: 3px 3px 0px #000; /* Added hard shadow */
+}
+.bannerBtn:hover {
+  background-color: #f2f5ab;
+  box-shadow: none;
+  transform: translate(2px, 2px); /* Click effect */
+}
+
 @media screen and (max-width: 768px) {
   .navLogo a {
     font-size: 2rem;

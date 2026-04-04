@@ -5,7 +5,7 @@
   min-height: 100vh;
   background-color: #000000;
   color: #ffffff;
-  font-family: 'Lato', sans-serif;
+  font-family: "Montserrat", sans-serif;
   overflow-x: hidden;
 }
 
@@ -97,7 +97,7 @@
   font-size: 1.125rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
-  font-family: 'Lato', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .highlight {
@@ -109,7 +109,7 @@
   color: #d1d5db;
   line-height: 1.6;
   margin: 0;
-  font-family: 'Lato', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .website-section {
@@ -135,7 +135,7 @@
 
 .website-url {
   color: #d1d5db;
-  font-family: 'Lato', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .visit-button {
@@ -147,7 +147,7 @@
   cursor: pointer;
   font-size: 1rem;
   font-weight: 600;
-  font-family: 'Lato', sans-serif;
+  font-family: "Montserrat", sans-serif;
   transition: all 0.3s ease;
   text-decoration: none;
 }
@@ -215,7 +215,7 @@
   text-align: center;
   color: #d1d5db;
   font-size: 1.2rem;
-  font-family: 'Lato', sans-serif;
+  font-family: "Montserrat", sans-serif;
   margin-top: 3rem;
   padding: 2rem;
   background: rgba(31, 41, 55, 0.3);

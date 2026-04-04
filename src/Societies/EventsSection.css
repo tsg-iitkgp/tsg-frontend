@@ -4,7 +4,7 @@
   max-width: 1000px;
   margin: 0 auto;
   padding: 2rem;
-  font-family: 'Lato', sans-serif;
+  font-family: "Montserrat", sans-serif;
   background: #000;
 }
 
@@ -62,7 +62,7 @@
   font-weight: 700;
   color: #fbbf24;
   margin: 0 0 1rem 0;
-  font-family: 'Lato', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .event-description-wrapper {
@@ -75,7 +75,7 @@
   font-size: 0.95rem;
   line-height: 1.6;
   margin: 0;
-  font-family: 'Lato', sans-serif;
+  font-family: "Montserrat", sans-serif;
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 4;
@@ -96,7 +96,7 @@
   font-weight: 600;
   cursor: pointer;
   padding: 0.5rem 0 0 0;
-  font-family: 'Lato', sans-serif;
+  font-family: "Montserrat", sans-serif;
   transition: all 0.2s ease;
   display: inline-flex;
   align-items: center;
@@ -129,7 +129,7 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-family: 'Lato', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .period-label {

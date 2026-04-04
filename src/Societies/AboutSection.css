@@ -2,7 +2,7 @@
 
 .about-container {
   margin-bottom: 2rem;
-  font-family: "Lato", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .about-section {
@@ -218,7 +218,7 @@
   color: #d1d5db;
   line-height: 1.75;
   margin: 0;
-  font-family: "Lato", sans-serif;
+  font-family: "Montserrat", sans-serif;
   opacity: 0;
   animation: fadeInUp 0.8s ease 0.5s forwards;
 }

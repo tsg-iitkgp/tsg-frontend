@@ -6,7 +6,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  font-family: 'Lato', sans-serif;
+  font-family: "Montserrat", sans-serif;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -34,7 +34,7 @@
   border-bottom: 3px solid transparent;
   transition: all 0.3s ease;
   color: white;
-  font-family: 'Lato', sans-serif;
+  font-family: "Montserrat", sans-serif;
   position: relative;
   overflow: hidden;
 }

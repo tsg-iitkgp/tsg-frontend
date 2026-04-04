@@ -31,7 +31,7 @@ export default function Societies() {
   const displayedData = fullData ? filteredData : filteredData.slice(0, 6);
 
   return (
-    <div className={Styles.container} data-aos="zoom-in-up">
+    <div className={Styles.container}>
       {/* Heading */}
       <h2
         className={Styles.sectionHeading}

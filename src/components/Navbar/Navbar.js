@@ -17,6 +17,7 @@ export default function Navbar() {
   const [dropdown, setDropdown] = useState(false);
   const navbarClass = useNavbar();
   const [click, setClick] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const [notification, setNotification] = useState({
     badgeContent: 0,
     click: false,
@@ -38,12 +39,15 @@ export default function Navbar() {
     return pathname.startsWith(href);
   };
 
-  const linkStyle = (href) => ({
-    color: isActive(href) ? "#F1C40E" : undefined,
-  });
   useEffect(() => {
     setNotification({ badgeContent: highlightEvents.length, click: false });
   }, [highlightEvents.length]);
+
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 80);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   // Notifcation Click Handlers
   const handleNotificationClick = () => {
@@ -58,19 +62,22 @@ export default function Navbar() {
   };
 
   return (
-    <div className={navbarClass}>
+    <>
+      <div className={navbarClass}>
       <nav className={Styles.navbar}>
         {/* Navbar logo */}
         <div className={Styles.navLogo}>
-          <Link href="/" style={{ display: "flex", alignItems: "center" }}>
-            {" "}
+          <Link href="/" style={{ display: "flex", alignItems: "center", textDecoration: "none" }}>
             <AppImage
               src="/data/media/images/general/gymkhanaLogo.png"
               alt="KGP_logo"
               width={40}
               height={40}
             />
-            <span>&nbsp;TSG</span>
+            <div className={Styles.logoText}>
+              <span className={Styles.logoTextSmall}>TECHNOLOGY STUDENTS&apos;</span>
+              <span className={Styles.logoTextLarge}>GYMKHANA</span>
+            </div>
           </Link>
         </div>
 
@@ -81,22 +88,21 @@ export default function Navbar() {
 
         {/* Navlinks */}
         <ul className={listClass}>
-          {/* HOME */}
           <li className={Styles.navItem}>
-            <Link href="/" className={Styles.navLinks} style={linkStyle("/")}>
+            <Link
+              href="/"
+              className={`${Styles.navLinks} ${isActive("/") ? Styles.acitveLink : ""}`}
+            >
               Home
-            </Link>
-          </li>
-
-          <li className={Styles.navItem}>
-            <Link href="/societies" className={Styles.navLinks} style={linkStyle("/societies")}>
-              Societies
             </Link>
           </li>
 
           {/* EVENTS */}
           <li className={Styles.navItem}>
-            <Link href="/events" className={Styles.navLinks} style={linkStyle("/events")}>
+            <Link
+              href="/events"
+              className={`${Styles.navLinks} ${isActive("/events") ? Styles.acitveLink : ""}`}
+            >
               Events
             </Link>
           </li>
@@ -112,7 +118,10 @@ export default function Navbar() {
 
           {/* AWARDS */}
           <li className={Styles.navItem}>
-            <Link href="/awards" className={Styles.navLinks} style={linkStyle("/awards")}>
+            <Link
+              href="/awards"
+              className={`${Styles.navLinks} ${isActive("/awards") ? Styles.acitveLink : ""}`}
+            >
               Awards
             </Link>
           </li>
@@ -123,7 +132,11 @@ export default function Navbar() {
             onMouseEnter={() => setDropdown(true)}
             onMouseLeave={() => setDropdown(false)}
           >
-            <Link href="#" className={Styles.navLinks} style={linkStyle("/results")}>
+            <Link
+              href="#"
+              className={`${Styles.navLinks} ${isActive("/results") ? Styles.acitveLink : ""}`}
+              style={{ cursor: "default" }}
+            >
               Results
             </Link>
             {dropdown && (
@@ -138,8 +151,7 @@ export default function Navbar() {
           <li className={Styles.navItem}>
             <Link
               href="/letter-to-you"
-              className={Styles.navLinks}
-              style={linkStyle("/letter-to-you")}
+              className={`${Styles.navLinks} ${isActive("/letter-to-you") ? Styles.acitveLink : ""}`}
             >
               Letter to you
             </Link>
@@ -147,75 +159,56 @@ export default function Navbar() {
 
           {/* ELECTIONS */}
           <li className={Styles.navItem}>
-            <Link href="/elections" className={Styles.navLinks} style={linkStyle("/elections")}>
+            <Link
+              href="/elections"
+              className={`${Styles.navLinks} ${isActive("/elections") ? Styles.acitveLink : ""}`}
+            >
               Elections
             </Link>
           </li>
 
           {/* NOMINATIONS */}
           <li className={Styles.navItem}>
-            <Link href="/nominations" className={Styles.navLinks} style={linkStyle("/nominations")}>
+            <Link
+              href="/nominations"
+              className={`${Styles.navLinks} ${isActive("/nominations") ? Styles.acitveLink : ""}`}
+            >
               Nominations
             </Link>
           </li>
 
-          {/* GALLERY */}
-          {/* <li className={Styles.navItem}>
-            <NavLink
-              to="/gallery"
-              className={Styles.navLinks}
-              activeClassName={Styles.acitveLink}
-            >
-              Gallery
-            </NavLink>
-          </li> */}
-
           {/* CONTACTS */}
           <li className={Styles.navItem}>
-            <Link href="/contacts" className={Styles.navLinks} style={linkStyle("/contacts")}>
+            <Link
+              href="/contacts"
+              className={`${Styles.navLinks} ${isActive("/contacts") ? Styles.acitveLink : ""}`}
+            >
               Contacts
             </Link>
           </li>
 
           {/* FAQs */}
           <li className={Styles.navItem}>
-            <Link href="/faq" className={Styles.navLinks} style={linkStyle("/faq")}>
+            <Link
+              href="/faq"
+              className={`${Styles.navLinks} ${isActive("/faq") ? Styles.acitveLink : ""}`}
+            >
               FAQ
             </Link>
           </li>
-
-          {/* NOTIFICATIONS */}
-          {/* {window.innerWidth > 768 && (
-            <li
-              className={Styles.navItem}
-              onClick={handleNotificationClick}
-              style={{ position: "relative" }}
-              id="notification"
-            >
-              <Badge badgeContent={notification.badgeContent} color="secondary">
-                <NotificationsIcon
-                  style={{ color: "darkgrey", cursor: "pointer" }}
-                />
-              </Badge>
-              {notification.click && (
-                <div className={Styles.notifications}>
-                  {highlightEvents.length ? (
-                    highlightEvents.map((event, index) => (
-                      <Notification
-                        key={index}
-                        event={event}
-                        handleClick={handleNotiClick}
-                      />
-                    ))
-                  ) : (
-                    <p style={{ padding: "1rem" }}>No Notifications</p>
-                  )}
-                </div>
-              )}
-            </li>
-          )} */}
         </ul>
       </nav>
+
+    {pathname === '/' && (
+      <div className={`${Styles.announcementBannerScrollable}${isScrolled ? ` ${Styles.bannerHidden}` : ''}`}>
+        <span className={Styles.bannerTitle}><strong>TSG Elections</strong> 2026</span>
+        <div className={Styles.bannerButtonGroup}>
+          <button className={Styles.bannerBtn} onClick={() => router.push('/elections')}>Results</button>
+          <button className={Styles.bannerBtn} onClick={() => router.push('/elections')}>Details</button>
+        </div>
+      </div>
+    )}
     </div>
+    </>
   );
 }

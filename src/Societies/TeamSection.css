@@ -4,7 +4,7 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
-  font-family: 'Lato', sans-serif;
+  font-family: "Montserrat", sans-serif;
   background: #000;
 }
 
@@ -18,7 +18,7 @@
   color: #fbbf24;
   text-align: center;
   margin-bottom: 3rem;
-  font-family: 'Lato', sans-serif;
+  font-family: "Montserrat", sans-serif;
   text-shadow: 0 2px 8px rgba(251, 191, 36, 0.3);
 }
 
@@ -147,7 +147,7 @@
   font-weight: 600;
   color: #fff;
   margin: 0;
-  font-family: 'Lato', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 @media (max-width: 768px) {

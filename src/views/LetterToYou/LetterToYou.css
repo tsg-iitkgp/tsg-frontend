@@ -19,6 +19,8 @@
   justify-content: center;
   align-items: center;
   padding: 20px;
+  transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  overflow: hidden;
 }
 
 .overlay {
@@ -37,6 +39,8 @@
   justify-content: center;
   align-items: center;
   color: #f7f9f8;
+  /* Prevent text from wrapping weirdly during animation */
+  min-width: 400px; 
 }
 
 .left-column h2 {
@@ -65,14 +69,28 @@
 
 .right-column {
   width: 52%;
-  background-color: #1c272b;
+  background-color: #000000;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 20px;
   height: 100%; /* Ensure the form container takes up full height */
+  transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
+
+/* --- NEW: Expansion Classes --- */
+.letter-to-me-container.form-expanded .left-column {
+  width: 0%;
+  padding-left: 0;
+  padding-right: 0;
+  opacity: 0;
+}
+
+.letter-to-me-container.form-expanded .right-column {
+  width: 100%;
+}
+/* ------------------------------ */
 
 form {
   display: flex;
@@ -84,17 +102,38 @@ form {
   padding: 0 60px;
   height: 100vh; /* Make the form take up the full viewport height */
   box-sizing: border-box; /* To ensure padding doesn’t affect the height */
+  max-width: 800px; /* Keeps form from stretching too wide when expanded */
+  margin: 0 auto;
 }
 
 form input,
+form select,
 form textarea,
 form button {
-  background-color: white;
+  background-color: rgb(0, 0, 0);
   width: 100%;
   padding: 12px;
-  border: 1px solid white;
+  border: 1px solid rgb(64, 64, 64);
   border-radius: 4px;
   font-size: 1rem;
+  color:white;
+  transition: border-color 0.3s ease;
+}
+
+select.placeholder-selected {
+  color: #a0a0a0; 
+}
+
+select option {
+  color: white;
+  background-color: rgb(30, 30, 30);
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+  outline : none;
+  border-color: #fed403;
 }
 
 .box1 {
@@ -111,19 +150,28 @@ form button {
 
 #message {
   height: 220px;
+  resize: vertical;
 }
 
 form button {
-  background-color: #68d128;
-  color: #fff;
+  background-color: #fed403; /* Your custom yellow */
+  color: #000000; /* Black text */
   font-weight: bold;
   cursor: pointer;
   border: none;
-  transition: background-color 0.3s ease;
+  /* Faster transition for a snappier feel */
+  transition: background-color 0.2s ease, transform 0.1s ease; 
 }
 
+/* Triggers when the mouse hovers over the button */
 form button:hover {
-  background-color: #4eda0d;
+  background-color: #ffe24d; /* A lighter, brighter yellow */
+}
+
+/* Triggers the moment the user clicks and holds down */
+form button:active {
+  background-color: #cca700; /* A darker, deeper yellow */
+  transform: scale(0.98); /* Optional: Adds a tiny "press down" physical effect */
 }
 
 .error-message {
@@ -197,6 +245,7 @@ form button:hover {
   }
 
   form input,
+  form select,
   form textarea,
   form button {
     font-size: 0.9rem; /* Adjust input sizes */
@@ -213,4 +262,31 @@ form button:hover {
   #rollNo {
     width: 100%; /* Make inputs full-width on small screens */
   }
+}
+
+/* Remove default arrows from number inputs in Chrome, Safari, Edge, Opera */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Remove default arrows in Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* --- Underline Inputs for Name & Batch --- */
+.underline-input {
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  border-bottom: 2px solid rgb(64, 64, 64) !important;
+  border-radius: 0 !important;
+  background-color: transparent !important;
+  padding: 8px 4px !important; 
+}
+
+.underline-input:focus {
+  border-bottom-color: #fed403 !important; 
 }

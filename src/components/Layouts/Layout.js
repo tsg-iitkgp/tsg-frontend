@@ -6,7 +6,7 @@ export default function Layout({ children }) {
   return (
     <div className="layout">
       <Navbar />
-      <main style={{ paddingBottom: "5rem" }}>{children}</main>
+      <main style={{ backgroundColor: "black", paddingBottom: "8rem" }}>{children}</main>
       <Footer />
     </div>
   );

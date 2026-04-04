@@ -55,7 +55,7 @@ export default function EventCard(props) {
           </div>
         )}
         <div className={Styles.description}>
-          <h1 style={{ textAlign: "center" }}>{props.title}</h1>
+          <h1>{props.title}</h1>
           <h2>{props.date}</h2>
           <p> {props.description.toString().substring(0, 150) + "..."}</p>
           <div>
