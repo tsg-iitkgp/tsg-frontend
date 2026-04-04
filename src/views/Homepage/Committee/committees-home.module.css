@@ -1,0 +1,44 @@
+.container {
+  background-color: #000;
+  padding-bottom: 4rem;
+}
+
+.innerContainer {
+  width: 90%;
+  max-width: 1200px;
+  margin: 3rem auto 0 auto;
+}
+
+.headerRegion {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.yellowSubtitle {
+  color: #fed403;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.mainTitle {
+  color: #666;
+  font-size: 5rem;
+  font-weight: 900;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 0.5rem;
+}
+
+.exploreSpan {
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}

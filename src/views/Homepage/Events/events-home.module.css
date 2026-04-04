@@ -1,0 +1,175 @@
+.container {
+  background-color: #000;
+  color: #fff;
+  padding: 5rem 2rem;
+  width: 100%;
+}
+
+.headerRegion {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.yellowSubtitle {
+  color: #fed403;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.mainTitle {
+  font-size: 5rem;
+  font-weight: 900;
+  color: #666;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.eventsGrid {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
+
+.eventRow {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.eventImageContainer {
+  flex: 1;
+  position: relative;
+}
+
+.eventImageContainer img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+.dateBadge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #fed403;
+  color: #000;
+  font-weight: 700;
+  padding: 8px 15px;
+  font-size: 0.9rem;
+}
+
+.dateBadgeLeft {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: #fed403;
+  color: #000;
+  font-weight: 700;
+  padding: 8px 15px;
+  font-size: 0.9rem;
+}
+
+.eventTextContainer {
+  flex: 1;
+}
+
+.textLeft {
+  text-align: right;
+}
+
+.eventTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.eventTitleRight {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.eventDesc {
+  font-size: 0.9rem;
+  color: #bbb;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  max-width: 400px;
+}
+
+.eventDescRight {
+  font-size: 0.9rem;
+  color: #bbb;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  margin-left: auto;
+  max-width: 400px;
+}
+
+.exploreLink, .exploreLinkRight {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.exploreLink span, .exploreLinkRight span {
+  color: #fed403;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.exploreLinkRight {
+  justify-content: flex-end;
+}
+
+.yellowLine {
+  height: 2px;
+  background-color: #fed403;
+  width: 60px;
+}
+
+.buttonContainer {
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.viewMoreBtn {
+  background-color: #000;
+  color: #fed403;
+  border: 1px solid #fed403;
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.viewMoreBtn:hover {
+  background-color: #fed403;
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  .eventRow {
+    flex-direction: column;
+  }
+  .textLeft {
+    text-align: left;
+  }
+  .eventDescRight {
+    margin-left: 0;
+  }
+  .exploreLinkRight {
+    justify-content: flex-start;
+  }
+}

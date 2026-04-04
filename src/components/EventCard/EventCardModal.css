@@ -53,7 +53,7 @@
   color: #000;
   text-align: center;
   line-height: 1;
-  font-family: Poppins, sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.4rem;
   margin-bottom: 10px;
 }
@@ -67,7 +67,7 @@
   font-weight: 300;
   color: #918a8a;
   margin-top: 5px;
-  font-family: Poppins, sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 .poster-img {
   /* max-width: 100%; */

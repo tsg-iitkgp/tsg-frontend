@@ -1,45 +1,43 @@
-:global(*) {
+* {
   box-sizing: border-box;
 }
-:global(body) {
-  background: black;
-}
-/*Font Awesome Fonts*/
-@font-face {
-  font-family: "FontAwesome";
-  font-weight: normal;
-  font-display: auto;
-  font-style: normal;
-  src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2")
-    format("woff2");
-}
+
+/* Event Card — Dark Theme */
 .blogCard {
   display: flex;
   flex-direction: column;
-  margin: 1rem auto;
-  box-shadow: 0 3px 7px -1px rgba(0, 0, 0, 0.1);
-  margin-bottom: 1rem;
+  margin: 0 auto;
   line-height: 1.4;
-  font-family: sans-serif;
-  border-radius: 0.5rem;
+  border: 1px solid #333;
   overflow: hidden;
   z-index: 0;
   width: 100%;
+  background: #111;
+  transition: border-color 0.3s ease;
 }
+
+.blogCard:hover {
+  border-color: #fed403;
+}
+
 .blogCard a {
-  color: inherit;
+  color: #fed403;
 }
+
 .blogCard a:hover {
-  color: #e4b601;
+  color: #ffd633;
 }
+
 .blogCard:hover .photo {
-  transform: scale(1.3) rotate(3deg);
+  transform: scale(1.05);
 }
+
 .blogCard .meta {
   position: relative;
   z-index: 0;
   height: 120px;
 }
+
 .blogCard .photo {
   position: absolute;
   top: 0;
@@ -48,14 +46,16 @@
   left: 0;
   background-size: cover;
   background-position: center;
-  transition: transform 0.2s;
+  transition: transform 0.3s ease;
 }
+
 .blogCard .details,
 .blogCard .details ul {
   margin: auto;
   padding: 0;
   list-style: none;
 }
+
 .blogCard .details {
   position: absolute;
   top: 0;
@@ -63,70 +63,93 @@
   left: -100%;
   margin: auto;
   transition: left 0.2s;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.75);
   padding: 10px;
   width: 100%;
   font-size: 0.9rem;
 }
+
 .blogCard .details a {
   text-decoration: none;
 }
+
 .blogCard .details ul li {
   display: inline-block;
 }
+
 .blogCard .details .date:before {
   font-family: FontAwesome;
   margin-right: 10px;
   content: "\f133";
 }
+
 .blogCard .details .tags ul:before {
   font-family: FontAwesome;
   content: "\f02b";
   margin-right: 10px;
 }
+
 .blogCard .details .tags li {
   margin-right: 2px;
 }
+
 .blogCard .details .tags li:first-child {
   margin-left: -4px;
 }
+
+/* Description panel — dark theme */
 .blogCard .description {
   padding: 2rem;
-  background: rgb(255, 255, 255);
+  background: #111;
   position: relative;
   flex-grow: 1;
   z-index: 1;
 }
+
 .blogCard .description h1,
 .blogCard .description h2 {
-  font-family: Poppins, sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
+
 .blogCard .description h1 {
-  color: black;
-  line-height: 1;
+  color: #fff;
+  line-height: 1.2;
   margin: 0;
   font-size: 1.7rem;
 }
+
 .blogCard .description h2 {
   font-size: 1rem;
   font-weight: 300;
   text-transform: uppercase;
-  color: #918a8a;
+  color: #fed403;
   margin-top: 5px;
 }
+
 .blogCard .description .readMore {
   text-align: right;
 }
-.blogCard .description .readMore button{
-  /* color: #e4b601; */
+
+.blogCard .description .readMore button {
   position: relative;
   top: 1vw;
   text-decoration: none;
-  /* border: 2px solid #e4b601; */
-  border-radius: 0.5rem;
-  padding: 0.25rem 0.5rem;
+  border: 1px solid #fed403;
+  border-radius: 0;
+  padding: 0.5rem 1.5rem;
   margin: 0 0.5rem;
+  background: transparent;
+  color: #fed403;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
+
+.blogCard .description .readMore button:hover {
+  background: #fed403;
+  color: #000;
+}
+
 .blogCard .description .readMore button:after {
   content: "\f061";
   font-family: FontAwesome;
@@ -135,28 +158,33 @@
   vertical-align: middle;
   transition: margin 0.3s, opacity 0.3s;
 }
+
 .blogCard .description .readMore button:hover:after {
   margin-left: 5px;
   opacity: 1;
 }
+
 .blogCard p {
   position: relative;
   margin: 1rem 0 0;
-  color: black;
+  color: #bbb;
 }
+
 .blogCard p:first-of-type {
   margin-top: 1.25rem;
   white-space: pre-wrap;
 }
+
 .blogCard p:first-of-type:before {
   content: "";
   position: absolute;
-  height: 5px;
-  background: #f1c40f;
+  height: 3px;
+  background: #fed403;
   width: 35px;
   top: -0.75rem;
   border-radius: 3px;
 }
+
 .blogCard:hover .details {
   left: 0%;
 }
@@ -165,8 +193,10 @@
   display: flex;
   flex-direction: row;
   justify-content: right;
+  gap: 0.5rem;
 }
-.disable{
+
+.disable {
   display: none;
 }
 
@@ -186,7 +216,7 @@
   .blogCard .description:before {
     transform: skewX(-3deg);
     content: "";
-    background: #fff;
+    background: #111;
     width: 30px;
     position: absolute;
     left: -10px;
