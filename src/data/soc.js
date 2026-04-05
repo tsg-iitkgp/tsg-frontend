@@ -1,7 +1,6 @@
 const soc = {
   data: [
     {
-      img: "https://github.com/tsg-iitkgp/tsg-site/blob/main/public/societies/swg.png",
       name: "Student Welfare Group",
       description:
         "SWG, is a student body under the office of Dean of Students’ Affairs, IIT Kharagpur. SWG works towards ensuring the smooth functioning of student’s lives on the campus by assisting students of IIT Kharagpur in developing their skills and personality. SWG provides the required resources contributing to the success of student’s college life as well as flaring productivity by organizing informatory and interactive events.  ",
@@ -10,6 +9,7 @@ const soc = {
       linkedin_link:"https://www.linkedin.com/company/student-welfare-group-iit-kharagpur/?originalSubdomain=in",
       wiki_link: "https://wiki.metakgp.org/w/Student_Welfare_Group",
       shortform: "swg",
+      img: "/images/societies/swg.png",
       category: "Welfare",
       Heads: [
         { name: "Nikhil Kumar ", email: "nikhilkumar041299@gmail.com" },
@@ -33,6 +33,7 @@ const soc = {
       linkedin_link:"https://www.linkedin.com/company/technology-literary-society/?originalSubdomain=in",
       wiki_link: "https://wiki.metakgp.org/w/Technology_Literary_Society",
       shortform: "tls",
+      img: "/images/societies/tls.png",
       category: "Socult",
       Heads: [
         { name: "Archi Banerjee", email: "archibanerjee2018@gmail.com" },
@@ -51,6 +52,7 @@ const soc = {
       linkedin_link:"https://www.linkedin.com/company/debating-society-iit-kharagpur/",
       wiki_link: "https://wiki.metakgp.org/w/Debating_Society",
       shortform: "debsoc",
+      img: "/images/societies/debsoc.png",
       category: "Socult",
       Heads: [
         { name: "Devika Narayanan", email: "devika247@gmail.com" },
@@ -73,6 +75,7 @@ const soc = {
       wiki_link:
         "https://wiki.metakgp.org/w/Technology_Filmmaking_%26_Photography_Society",
       shortform: "tfps",
+      img: "/images/societies/tfps.png",
       category: "Socult",
       Heads: [
         { name: "Rohit Ahirrao", email: "rohitahirrao.iitkgp@gmail.com" },
@@ -95,6 +98,7 @@ const soc = {
       linkedin_link:"https://www.linkedin.com/company/technology-dance-society-iit-kharagpur/",
       wiki_link: "https://wiki.metakgp.org/w/Technology_Dance_Society",
       shortform: "tds",
+      img: "/images/societies/tds.png",
       category: "Socult",
       Heads: [
         { name: "Pranali Rahangdale", email: "pranalirahangdale27@gmail.com" },
@@ -112,6 +116,7 @@ const soc = {
       linkedin_link:"https://www.linkedin.com/company/pravahiitkgp/?originalSubdomain=in",
       wiki_link: "https://wiki.metakgp.org/w/Pravah",
       shortform: "pravah",
+      img: "/images/societies/pravah.png",
       category: "Socult",
       Heads: [
         { name: "Abhyudaya Nilosey", email: "abhyudaya27nilosey@gmail.com" },
@@ -129,6 +134,7 @@ const soc = {
       linkedin_link:"https://linkedin.com/company/etds-encore/?originalSubdomain=in",
       wiki_link: "https://wiki.metakgp.org/w/Encore",
       shortform: "encore",
+      img: "/images/societies/encore.png",
       category: "Socult",
       Heads: [
         { name: "Saumyata Khandewal", email: "saumyata0427@gmail.com" },
@@ -146,6 +152,7 @@ const soc = {
       linkedin_link:"https://www.linkedin.com/company/prasthanam-tds/?originalSubdomain=in",
       wiki_link: "https://wiki.metakgp.org/w/Prasthanam",
       shortform: "prasthanam",
+      img: "/images/societies/prasthanam.png",
       category: "Socult",
       Heads: [
         { name: "Avanthika Didroy", email: "avanthikadidroy2000@gmail.com" },
@@ -163,6 +170,7 @@ const soc = {
       instagram_link:"https://www.instagram.com/btdsdruheeniitkgp/",
       linkedin_link:"https://www.linkedin.com/company/druheen-bengali-technology-dramatics-society-iit-kharagpur/?originalSubdomain=in",
       shortform: "druheen",
+      img: "/images/societies/druheen.png",
       category: "Socult",
       Heads: [
         { name: "Avanthika Didroy", email: "avanthikadidroy2000@gmail.com" },
@@ -180,6 +188,7 @@ const soc = {
       linkedin_link:"https://www.linkedin.com/company/technology-robotix-society/",
       wiki_link: "https://wiki.metakgp.org/w/Technology_Robotix_Society",
       shortform: "trs",
+      img: "/images/societies/trs.png",
       category: "Tech",
       Heads: [],
     },
@@ -193,6 +202,7 @@ const soc = {
       linkedin_link:"https://www.linkedin.com/company/communiqu%C3%A9-iit-kharagpur/",
       wiki_link: "https://wiki.metakgp.org/w/Communique",
       shortform: "communique",
+      img: "/images/societies/communique.png",
       category: "Socult",
       Heads: [
         { name: "Abhishek Chandak", email: "abbhchhan@gmail.com" },
@@ -210,6 +220,7 @@ const soc = {
       linkedin_link:"https://www.linkedin.com/company/institute-wellness-group-iit-kharagpur/",
       wiki_link: "",
       shortform: "iwg",
+      img: "/images/societies/iwg.png",
       category: "Welfare",
       Heads: [
         { name: "Aditi Singhania", email: "singhania2603@gmail.com" },
@@ -230,6 +241,7 @@ const soc = {
       linkedin_link:"https://linkedin.com/company/bclubiitkgp/",
       wiki_link: "https://wiki.metakgp.org/w/Business_Club",
       shortform: "bclub",
+      img: "/images/societies/bclub.png",
       category: "Tech",
       Heads: [],
     },
@@ -243,6 +255,7 @@ const soc = {
       linkedin_link:"https://www.linkedin.com/company/technology-adventure-society-tads-iit-kharagpur/",
       wiki_link: "https://wiki.metakgp.org/w/Technology_Adventure_Society",
       shortform: "tads",
+      img: "/images/societies/tads.png",
       category: "Sports & Games",
       Heads: [],
     },
@@ -256,6 +269,7 @@ const soc = {
       linkedin_link:"",// no link
       wiki_link: "https://wiki.metakgp.org/w/Eastern_Technology_Music_Society",
       shortform: "etms",
+      img: "/images/societies/etms.png",
       category: "Socult",
       Heads: [
         { name: "Abhirami S", email: "sabhirami1999@gmail.com" },
@@ -273,6 +287,7 @@ const soc = {
       linkedin_link:"https://linkedin.com/company/western-technology-music-society/",
       wiki_link: "https://wiki.metakgp.org/w/Western_Technology_Music_Society",
       shortform: "wtms",
+      img: "/images/societies/wtms.png",
       category: "Socult",
       Heads: [
         { name: "Siddhartha Kapuria", email: "siddharthakapuria@gmail.com" },
@@ -292,6 +307,7 @@ const soc = {
       linkedin_link:"https://linkedin.com/company/chessclub-iitkgp/",
       wiki_link: "https://wiki.metakgp.org/w/Chess_IITKGP",
       shortform: "chess",
+      img: "/images/societies/chess.png",
       category: "Sports & Games",
       Heads: [],
     },
@@ -305,6 +321,7 @@ const soc = {
       linkedin_link:"https://www.linkedin.com/company/quiz-club-iit-kharagpur/",
       wiki_link: "https://wiki.metakgp.org/w/Quiz_Club",
       shortform: "quiz",
+      img: "/images/societies/quiz.png",
       category: "Tech",
       Heads: [],
     },
@@ -318,6 +335,7 @@ const soc = {
       linkedin_link:"https://linkedin.com/company/spectra-iit-kharagpur/",
       wiki_link: "https://wiki.metakgp.org/w/Spectra",
       shortform: "spectra",
+      img: "/images/societies/spectra.png",
       category: "Socult",
       Heads: [
         { name: "Abhijeet Mahato", email: "mahato.abhijeet7@gmail.com" },
@@ -335,6 +353,7 @@ const soc = {
       linkedin_link:"https://linkedin.com/company/technology-culinary-arts-society/",
       wiki_link: "https://wiki.metakgp.org/w/Technology_Culinary_Arts_Society",
       shortform: "tcas",
+      img: "/images/societies/tcas.png",
       category: "Socult",
       Heads: [
         { name: "Aniket Talreja", email: "anikettalreja@gmail.com" },
@@ -352,6 +371,7 @@ const soc = {
       linkedin_link:"https://www.linkedin.com/company/ambariitkgp/",
         wiki_link: "https://wiki.metakgp.org/w/Ambar",
         shortform: "ambar",
+      img: "/images/societies/ambar.png",
         category: "Welfare",
         Heads: [],
       },
@@ -363,6 +383,7 @@ const soc = {
       linkedin_link:"https://linkedin.com/company/comedy-club-iit-kharagpur/",
         wiki_link: "",
         shortform: "tcc",
+      img: "/images/societies/tcc.png",
         category: "Socult",
         Heads: [],
       },
@@ -375,6 +396,7 @@ const soc = {
       linkedin_link:"https://www.linkedin.com/company/devlopers-society/",
         wiki_link: "",
         shortform: "devsoc",
+      img: "/images/societies/devsoc.png",
         category: "Tech",
         Heads: [],
       },
@@ -387,6 +409,7 @@ const soc = {
       linkedin_link:"https://linkedin.com/company/tesiitkgp/",
         wiki_link: "",
         shortform: "tes",
+      img: "/images/societies/tes.png",
         category: "Welfare",
         Heads: [],
       },
@@ -399,6 +422,7 @@ const soc = {
       linkedin_link:"https://www.linkedin.com/company/thinkindia-iit-kharagpur/",
         wiki_link: "",
         shortform: "thinkindia",
+      img: "/images/societies/thinkindia.png",
         category: "Welfare",
         Heads: [],
       },
@@ -411,6 +435,7 @@ const soc = {
       linkedin_link:"https://linkedin.com/company/kharagpur-robosoccer-students-group/",
       wiki_link: "https://wiki.metakgp.org/w/Kharagpur_Robosoccer_Students'_Group",
       shortform: "krssg",
+      img: "/images/societies/krssg.png",
       category: "Tech",
       Heads: [],
     },
@@ -423,6 +448,7 @@ const soc = {
       linkedin_link:"https://www.linkedin.com/company/grimoire-of-code/",
       wiki_link: "",
       shortform: "goc",
+      img: "/images/societies/goc.png",
       category: "Tech",
       Heads: [],
     },
@@ -435,6 +461,7 @@ const soc = {
       linkedin_link:"https://linkedin.com/company/kdag/",
       wiki_link: "",
       shortform: "kdag",
+      img: "/images/societies/kdag.png",
       category: "Tech",
       Heads: [],
     },
@@ -447,6 +474,7 @@ const soc = {
       linkedin_link:"https://linkedin.com/company/computer-graphics-lab/",
       wiki_link: "",
       shortform: "cgs",
+      img: "/images/societies/cgs.png",
       category: "Tech",
       Heads: [],
     },

@@ -21,10 +21,10 @@ export default function AwardSection({ currentYear, currentTab }) {
   return (
     <>
       <h2 className="awards-sectionTitle">Awards</h2>
-      <div className="awards-cards" data-aos="zoom-in-up">
+      <div className="awards-cards">
         {awards.map((winner, index) => (
           <ContactCard
-            key={index}
+            key={winner.Name || index}
             name={winner.Name}
             imgSrc={`data/media/images/awards/${winner.Image}`}
             designation={winner.Award}

@@ -18,7 +18,7 @@ export default function Societies() {
       <div className={Styles.full} data-aos="zoom-in-up">
         {committees.map((committee, index) => {
           return (
-            <RotatingCards key="k-21"
+            <RotatingCards key={committee.category || index}
               name={committee.name}
               category={committee.category}
             />

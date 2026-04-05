@@ -1,0 +1,235 @@
+.templateContainer {
+    background-color: black;
+    color: white;
+    min-height: 100vh;
+    padding-bottom: 5rem;
+}
+
+.heroSection {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.heroBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/images/display/committees.png');
+    background-size: cover;
+    background-position: center;
+    filter: blur(4px) brightness(0.6);
+    z-index: 1;
+}
+
+.heroContent {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.committeeSubtitle {
+    color: #fed403;
+    font-size: 1.25rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.committeeTitle {
+    font-size: 4.5rem;
+    font-weight: 800;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.descriptionSection {
+    max-width: 800px;
+    margin: 4rem auto;
+    text-align: center;
+}
+
+.descriptionText {
+    color: #ccc;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+}
+
+.societiesHeader {
+    text-align: center;
+    margin-top: 6rem;
+    margin-bottom: 3rem;
+}
+
+.societiesSubtitle {
+    color: #fed403;
+    font-size: 1.1rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 0.25rem;
+}
+
+.societiesTitle {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #444;
+    /* As per mockup, dark grey bold background title */
+    text-transform: uppercase;
+    letter-spacing: -2px;
+}
+
+.societiesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* ── Card Container ───────────────────────────── */
+/* ── Card Container ───────────────────────────── */
+.container {
+    background-color: #0d0d0d;
+    width: 100%;
+    height: 400px;
+    border-radius: 0px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    position: relative;
+    overflow: hidden;
+    cursor: default;
+    text-decoration: none;
+    display: block;
+}
+
+/* ── Image Box ────────────────────────────────── */
+.imgbox {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    height: 230px;
+    border-radius: 0px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 0;
+    background-color: white;
+    /* to make logos legible before hover */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.imgbox img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+
+/* ── Details ──────────────────────────────────── */
+.details {
+    position: absolute;
+    top: 248px;
+    left: 0;
+    right: 0;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    z-index: 2;
+}
+
+.details h2 {
+    font-family: inherit;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0;
+    letter-spacing: 0.01em;
+    line-height: 1.35;
+}
+
+.details span {
+    font-family: inherit;
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: #fed403;
+    margin-top: 2px;
+}
+
+/* ── Social Links ─────────────────────────────── */
+.sociallinks {
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    z-index: 2;
+    margin: 0;
+}
+
+.sociallinks li {
+    list-style: none;
+}
+
+.sociallinks li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(255, 255, 255, 0.45);
+    background: transparent;
+    color: #fff;
+    font-size: 1.05rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.sociallinks li a:hover {
+    background: white;
+    border-color: white;
+    transform: translateY(-2px);
+    color: black;
+}
+
+.loading,
+.error {
+    text-align: center;
+    color: white;
+    margin: 4rem 0;
+    font-size: 1.25rem;
+}
+
+@media (max-width: 768px) {
+    .committeeTitle {
+        font-size: 3rem;
+    }
+
+    .societiesTitle {
+        font-size: 2.5rem;
+    }
+
+    .descriptionSection {
+        padding: 0 2rem;
+    }
+}

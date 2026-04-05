@@ -161,7 +161,7 @@ export default function CurrentOfficeBearers({ year }) {
                                 {contacts["THIRD YEAR COUNCIL"].map(
                                     (member, index) => {
                                         return (
-                                            <div key="k-165" data-aos="zoom-in-up">
+                                            <div key={index} data-aos="zoom-in-up">
                                                 <ContactCard
                                                     name={member.name}
                                                     designation={member.por}
@@ -184,7 +184,7 @@ export default function CurrentOfficeBearers({ year }) {
                             <div className={Styles.multipleCards}>
                                 {contacts["SECRETARY"].map((member, index) => {
                                     return (
-                                        <div key="k-188" data-aos="zoom-in-up">
+                                        <div key={index} data-aos="zoom-in-up">
                                             <ContactCard
                                                 name={member.name}
                                                 designation={member.por}
