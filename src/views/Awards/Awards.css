@@ -1,114 +1,370 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap");
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
+/* ── Awards Page Container ──────────────────── */
+.awards-page {
+  width: min(100%, 1200px);
+  margin: 1.5rem auto 0;
+  padding: 4rem 1rem 3rem;
 }
 
-.container {
-  background-color: black;
-  border-radius: 0.5rem;
-  box-shadow: 0px 0.5rem 1rem rgba(0, 0, 0, 0.5);
-  position: relative;
-  overflow: hidden;
-}
-.imgbox {
-  transition: 0.5s;
-  height: 80%;
-  overflow: hidden;
-}
-img {
-  width: 100%;
-  height: 100%;
-  transition: all 0.5s;
-  object-fit: cover;
+/* ── Header ──────────────────────────────────── */
+.awards-headerRegion {
+  text-align: center;
+  margin-bottom: 2rem;
+  animation: fadeDown 0.6s ease both;
 }
 
-.container:hover .imgbox img {
-  opacity: 0.4;
-  transform: scale(1.1);
-}
-.sociallinks {
-  height: auto;
-  position: absolute;
-  top: 60%;
-  display: flex;
-  width: 100%;
-  justify-content: space-around;
-}
-.sociallinks li {
-  list-style: none;
-}
-.sociallinks li a {
-  color: black;
-  display: block;
-  background-color: #fff;
-  padding: 0.5rem 0.75rem;
-  font-size: 1.75rem;
-  border-radius: 50%;
-  pointer-events: none;
-  cursor: default;
-  transform: translateY(140%);
-  transition: 0.4s ease;
-  opacity: 0;
-}
-.container:hover .sociallinks li a {
-  transform: translateY(25%);
-  opacity: 1;
-  pointer-events: auto;
-  cursor: pointer;
-}
-.container .sociallinks li a:hover i {
-  transition: 0.5s ease-in-out;
-  color: rgb(86, 38, 139);
-  /* transform: rotateY(360deg); */
-}
-.container:hover .sociallinks li:nth-child(1) a {
-  transition-delay: 0s;
-}
-.container:hover .sociallinks li:nth-child(2) a {
-  transition-delay: 0.2s;
-}
-.container:hover .sociallinks li:nth-child(3) a {
-  transition-delay: 0.3s;
-}
-.details {
-  padding: 0rem auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  /* background-color: white; */
-  background-color: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(2rem);
-  box-shadow: 0 1rem 1rem rgba(255, 255, 255, 0.8);
-  -webkit-backdrop-filter: blur(2rem);
-  height: 20%;
-  align-items: center;
-}
-.details h2 {
+.awards-yellowSubtitle {
+  color: #fed403;
   font-size: 1.25rem;
-  margin-bottom: 0.25rem;
-  font-weight: 500;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
-.details span {
-  color: rgb(86, 38, 139);
-  font-size: 1rem;
+
+.awards-mainTitle {
+  color: #666;
+  font-size: 5rem;
+  font-weight: 900;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* ── Segmented Slider ────────────────────────── */
+.awards-sliderWrap {
+  position: relative;
+  display: flex;
+  max-width: 700px;
+  margin: 1.5rem auto 2.5rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  overflow: hidden;
+  animation: fadeUp 0.6s ease 0.15s both;
+}
+
+.awards-sliderHighlight {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  bottom: 3px;
+  background: linear-gradient(135deg, #f1c40f 0%, #d4a10e 100%);
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.awards-sliderTab {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  padding: 0.7rem 0.5rem;
+  border: none;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.55);
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.82rem;
   font-weight: 600;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  white-space: nowrap;
 }
-.cards {
+
+.awards-sliderTab:hover {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.awards-sliderTabActive {
+  color: #000 !important;
+}
+
+/* ── Year Dropdown ───────────────────────────── */
+.awards-yearSelect {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  animation: fadeUp 0.5s ease 0.25s both;
+  position: relative;
+  z-index: 1;
+}
+
+.awards-dropdown {
+  position: relative;
+  width: fit-content;
+  z-index: 100;
+}
+
+.awards-dropdown-btn {
+  border: 1px solid #FFD402;
+  color: #FFD402;
+  padding: 8px 16px;
+  cursor: pointer;
+  background: #000;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  user-select: none;
+  transition: background 0.2s ease;
+}
+
+.awards-dropdown-btn:hover {
+  background: rgba(255, 212, 2, 0.06);
+}
+
+.awards-dropdown-arrow {
+  font-size: 0.55rem;
+  opacity: 0.8;
+  transition: transform 0.25s ease;
+}
+
+.awards-dropdown-arrow.open {
+  transform: rotate(180deg);
+}
+
+.awards-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #000;
+  border: 1px solid #FFD402;
+  z-index: 999;
+  opacity: 1;
+  backdrop-filter: none;
+  animation: fadeUp 0.15s ease both;
+}
+
+.awards-dropdown-item {
+  padding: 10px 16px;
+  color: #FFD402;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  line-height: 1.4;
+  white-space: nowrap;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.awards-dropdown-item:hover {
+  background: #FFD402;
+  color: #000;
+}
+
+.awards-dropdown-item-active {
+  background: rgba(255, 212, 2, 0.15);
+}
+
+/* ── Section Headings (Awards / Honours) ─────── */
+.awards-sectionTitle {
+  color: #666;
+  font-size: 3.5rem;
+  font-weight: 900;
+  margin: 2.5rem 0 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  animation: fadeUp 0.5s ease both;
+  position: relative;
+  z-index: 0;
+}
+
+/* ── Content Transition ──────────────────────── */
+.awards-contentTransition {
+  animation: contentFadeIn 0.4s ease both;
+}
+
+@keyframes contentFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Cards Container ─────────────────────────── */
+.awards-cards {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  padding: 0;
-  margin: -1rem;
+  justify-content: center;
+  align-items: stretch;
+  gap: 0.5rem;
+  animation: fadeUp 0.5s ease 0.1s both;
 }
 
+/* ── Honours Table ───────────────────────────── */
+.awards-tableContainer {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  overflow-x: auto;
+  animation: fadeUp 0.5s ease 0.1s both;
+}
+
+.awards-tableContainer table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.awards-tableContainer thead th {
+  background: linear-gradient(135deg, #f1c40f 0%, #d4a10e 100%);
+  color: #000;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 0.85rem 1rem;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.awards-tableContainer tbody tr {
+  background: transparent;
+  border-bottom: 0.5px solid #FFD402;
+  transition: background 0.2s ease;
+  animation: slideInRow 0.4s ease both;
+}
+
+.awards-tableContainer tbody tr:nth-of-type(1) {
+  animation-delay: 0.05s;
+}
+
+.awards-tableContainer tbody tr:nth-of-type(2) {
+  animation-delay: 0.08s;
+}
+
+.awards-tableContainer tbody tr:nth-of-type(3) {
+  animation-delay: 0.11s;
+}
+
+.awards-tableContainer tbody tr:nth-of-type(4) {
+  animation-delay: 0.14s;
+}
+
+.awards-tableContainer tbody tr:nth-of-type(5) {
+  animation-delay: 0.17s;
+}
+
+.awards-tableContainer tbody tr:nth-of-type(6) {
+  animation-delay: 0.20s;
+}
+
+.awards-tableContainer tbody tr:nth-of-type(7) {
+  animation-delay: 0.23s;
+}
+
+.awards-tableContainer tbody tr:nth-of-type(8) {
+  animation-delay: 0.26s;
+}
+
+.awards-tableContainer tbody tr:nth-of-type(9) {
+  animation-delay: 0.29s;
+}
+
+.awards-tableContainer tbody tr:nth-of-type(10) {
+  animation-delay: 0.32s;
+}
+
+.awards-tableContainer tbody tr:nth-of-type(n+11) {
+  animation-delay: 0.35s;
+}
+
+.awards-tableContainer tbody tr:nth-of-type(even) {
+  background: #27200080;
+}
+
+.awards-tableContainer tbody tr:hover {
+  background: rgba(241, 196, 15, 0.12);
+}
+
+.awards-tableContainer tbody td {
+  color: #ddd;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.85rem;
+  padding: 0.75rem 1rem;
+}
+
+/* ── Keyframes ───────────────────────────────── */
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRow {
+  from {
+    opacity: 0;
+    transform: translateX(-15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ── Responsive ──────────────────────────────── */
 @media screen and (max-width: 768px) {
-  .cards {
+  .awards-mainTitle {
+    font-size: 3rem;
+  }
+
+  .awards-sectionTitle {
+    font-size: 2.5rem;
+  }
+
+  .awards-sliderWrap {
+    max-width: 95%;
+  }
+
+  .awards-sliderTab {
+    font-size: 0.7rem;
+    padding: 0.6rem 0.3rem;
+  }
+
+  .awards-cards {
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .awards-sliderTab {
+    font-size: 0.6rem;
+    letter-spacing: 0.01em;
+  }
+
+  .awards-mainTitle {
+    font-size: 2.5rem;
+  }
+
+  .awards-sectionTitle {
+    font-size: 2rem;
   }
 }
