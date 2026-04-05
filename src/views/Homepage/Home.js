@@ -34,22 +34,53 @@ export default function Home() {
           autoStartLoad: true,
         });
 
+        let hasResumed = false;
+
         hls.loadSource(hlsSource);
         hls.attachMedia(video);
 
         hls.on(Hls.Events.FRAG_BUFFERED, () => {
-          if (video.buffered.length && video.buffered.end(0) >= 10) {
+          // Stop loading once we have at least 10 seconds buffered
+          if (!hasResumed && video.buffered.length && video.buffered.end(0) >= 10) {
             hls.stopLoad();
           }
         });
 
-        // Optional: Start loading again on interaction or scroll if needed
-        // For background video, 10s might be enough for initial impression
-        // but we usually want it to eventually load the whole thing if it loops.
-        // However, per instructions, we stop at 10s.
+        const resumeLoading = () => {
+          if (!hasResumed) {
+            hasResumed = true;
+            hls.startLoad();
+            // Cleanup interaction listeners
+            window.removeEventListener("scroll", resumeLoading);
+            window.removeEventListener("mousedown", resumeLoading);
+            window.removeEventListener("keydown", resumeLoading);
+          }
+        };
+
+        // Resume if user interacts with the page
+        window.addEventListener("scroll", resumeLoading, { passive: true });
+        window.addEventListener("mousedown", resumeLoading, { passive: true });
+        window.addEventListener("keydown", resumeLoading, { passive: true });
+
+        // Also resume automatically if the video is playing and nears the end of the current buffer
+        const checkBuffer = () => {
+          if (!hasResumed && video.buffered.length) {
+            const remainingBuffered = video.buffered.end(0) - video.currentTime;
+            // If less than 3 seconds of buffer remains, start loading the rest
+            if (remainingBuffered < 3) {
+              resumeLoading();
+            }
+          }
+        };
+
+        video.addEventListener("timeupdate", checkBuffer);
 
         return () => {
           hls.destroy();
+          window.removeEventListener("scroll", resumeLoading);
+          window.removeEventListener("mousedown", resumeLoading);
+          window.removeEventListener("keydown", resumeLoading);
+          video.removeEventListener("timeupdate", checkBuffer);
         };
       } else if (video.canPlayType("application/vnd.apple.mpegurl")) {
         // Native HLS support (Safari)
