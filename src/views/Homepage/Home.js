@@ -56,7 +56,9 @@ export default function Home() {
           loop 
           muted 
           playsInline
+          poster="/videos/hero-bg.webp"
         >
+          <source src="/videos/hero-bg.webm" type="video/webm" />
           <source src="/videos/hero-bg.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
