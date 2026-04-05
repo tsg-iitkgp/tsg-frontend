@@ -8,14 +8,33 @@ html {
 .backgroundImage {
   width: 100%;
   height: 100vh;
-  background: url("/images/hero_placeholder.png");
-  background-size: cover;
-  background-position: center;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+}
+
+.videoBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.backgroundImage::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 2;
 }
 
 .montageText {
@@ -25,15 +44,16 @@ html {
   font-size: 3.5rem;
   font-weight: 800;
   font-style: italic;
-  color: #111;
+  color: #fff;
   text-align: right;
   line-height: 1.2;
+  z-index: 3;
 }
 
 .mottoBox {
   position: absolute;
-  bottom: 0px;
-  left: 10%;
+  bottom: 4vh;
+  left: 5%;
   background-color: #fed403;
   color: #000;
   font-size: 2.2rem;
@@ -41,7 +61,7 @@ html {
   font-style: italic;
   padding: 1.5rem 2.5rem;
   z-index: 10;
-  transform: translateY(50%);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
   font-family: 'Cuprum', sans-serif;
 }
 

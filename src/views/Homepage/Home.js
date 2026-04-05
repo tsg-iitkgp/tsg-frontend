@@ -50,9 +50,16 @@ export default function Home() {
       </Head>
 
       <div className={Styles.backgroundImage}>
-        <div className={Styles.montageText}>
-          HERE: Campus<br/>Life Montage
-        </div>
+        <video 
+          className={Styles.videoBackground} 
+          autoPlay 
+          loop 
+          muted 
+          playsInline
+        >
+          <source src="/videos/hero-bg.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
         <div className={Styles.mottoBox}>
           &quot;Yogah Karmasu Kausalam&quot;
         </div>
