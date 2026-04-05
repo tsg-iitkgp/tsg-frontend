@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import Head from "next/head";
 import Layout from "../../components/Layouts/Layout";
 import Styles from "../../styles/views/home.module.css";
@@ -9,8 +9,10 @@ import CommitteesHome from "./Committee/CommitteesHome";
 import EventsHome from "./Events/EventsHome";
 import CouncilHome from "./Council/CouncilHome";
 import Preloader from "../../components/Preloader/Preloader";
+import Hls from "hls.js";
 
 export default function Home() {
+  const videoRef = useRef(null);
   const pageTitle = "Technology Students' Gymkhana - IIT Kharagpur | TSG";
   const pageDescription =
     "Technology Students' Gymkhana is the hub of the numerous extra-curricular and co-curricular activities in IIT Kharagpur ranging from sports to socio-cultural. The Gymkhana is managed by the students, for the students, under the guidance and active participation of the faculty and staff members.";
@@ -21,6 +23,39 @@ export default function Home() {
 
   useEffect(() => {
     document.title = pageTitle;
+
+    if (videoRef.current) {
+      const video = videoRef.current;
+      const hlsSource = "/videos/hls/playlist.m3u8";
+
+      if (Hls.isSupported()) {
+        const hls = new Hls({
+          maxBufferLength: 10,
+          autoStartLoad: true,
+        });
+
+        hls.loadSource(hlsSource);
+        hls.attachMedia(video);
+
+        hls.on(Hls.Events.FRAG_BUFFERED, () => {
+          if (video.buffered.length && video.buffered.end(0) >= 10) {
+            hls.stopLoad();
+          }
+        });
+
+        // Optional: Start loading again on interaction or scroll if needed
+        // For background video, 10s might be enough for initial impression
+        // but we usually want it to eventually load the whole thing if it loops.
+        // However, per instructions, we stop at 10s.
+
+        return () => {
+          hls.destroy();
+        };
+      } else if (video.canPlayType("application/vnd.apple.mpegurl")) {
+        // Native HLS support (Safari)
+        video.src = hlsSource;
+      }
+    }
   }, []);
 
   return (
@@ -55,11 +90,12 @@ export default function Home() {
       <div style={{ zoom: "110%" }}>
         <div className={Styles.backgroundImage}>
         <div className={Styles.videoWrapper}>
-          <video 
-            className={Styles.videoBackground} 
-            autoPlay 
-            loop 
-            muted 
+          <video
+            ref={videoRef}
+            className={Styles.videoBackground}
+            autoPlay
+            loop
+            muted
             playsInline
             poster="/videos/hero-bg.webp"
           >
@@ -68,9 +104,7 @@ export default function Home() {
             Your browser does not support the video tag.
           </video>
         </div>
-        <div className={Styles.mottoBox}>
-          &quot;Yogah Karmasu Kausalam&quot;
-        </div>
+        <div className={Styles.mottoBox}>&quot;Yogah Karmasu Kausalam&quot;</div>
       </div>
       <div>
         {/* About Us Section */}
