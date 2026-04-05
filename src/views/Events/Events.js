@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import Styles from "./events.module.css";
 import eventsData from "./eventsData";
 import EventCard from "../../components/EventCard/EventCard";
@@ -23,6 +24,27 @@ export default function Events() {
   const [index, setIndex] = useState(null);
   const [events, setEvents] = useState(eventsData);
   const [loading, setLoading] = useState(false);
+
+  // Animation Variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.3,
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: -30 },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      transition: { duration: 0.5, ease: "easeOut" }
+    }
+  };
 
   const handlePosterClick = (videoLink) => {
     window.open(videoLink);
@@ -100,10 +122,24 @@ export default function Events() {
           </div>
         </div>
 
-        {/* Event cards from API */}
+        {/* Event cards section */}
         <div className={Styles.cardsSection}>
-          <h3 className={Styles.sectionHeading}>All Events</h3>
-          <div className={Styles.cardsGrid}>
+          <motion.h3 
+            className={Styles.sectionHeading}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+          >
+            All Events
+          </motion.h3>
+          
+          <motion.div 
+            className={Styles.cardsGrid}
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.05 }}
+          >
             {loading ? (
               <div className={Styles.skeletonRow}>
                 <SkeletonElement type="thumbnail" />
@@ -112,30 +148,31 @@ export default function Events() {
               </div>
             ) : (
               events.map((event, idx) => (
-                <EventCard
-                  key={idx}
-                  index={idx}
-                  title={event.title}
-                  date={event.date}
-                  description={event.description || ''}
-                  imgSrc={event.poster}
-                  resultExists={event.resultExists}
-                  displayTrue={() => {
-                    const firstLink = event.links && event.links[0]?.href;
-                    if (firstLink) {
-                      window.open(firstLink, "_blank");
-                    }
-                  }}
-                  displayResults={() => {
-                    setTitle(event.title);
-                    setIndex(idx);
-                    setShowRes(true);
-                  }}
-                  setEventResults={setEventResults}
-                />
+                <motion.div key={idx} variants={itemVariants}>
+                  <EventCard
+                    index={idx}
+                    title={event.title}
+                    date={event.date}
+                    description={event.description || ''}
+                    imgSrc={event.poster}
+                    resultExists={event.resultExists}
+                    displayTrue={() => {
+                      const firstLink = event.links && event.links[0]?.href;
+                      if (firstLink) {
+                        window.open(firstLink, "_blank");
+                      }
+                    }}
+                    displayResults={() => {
+                      setTitle(event.title);
+                      setIndex(idx);
+                      setShowRes(true);
+                    }}
+                    setEventResults={setEventResults}
+                  />
+                </motion.div>
               ))
             )}
-          </div>
+          </motion.div>
         </div>
       </div>
     </Layout>

@@ -30,7 +30,7 @@
 
 .titleContainer {
   position: absolute;
-  top: 15%;
+  top: 6%;
   left: 0;
   width: 100%;
   text-align: center;
@@ -39,37 +39,40 @@
 }
 
 .titleSocult {
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.8rem;
+  font-family: 'Instrument Serif', serif;
+  font-size: 2.2rem;
   color: #fed403;
   text-transform: uppercase;
-  margin: 0;
-  font-weight: 400;
-}
-
-.titleTech {
-  font-family: inherit;
-  font-size: 2rem;
-  color: #fed403;
   margin: 0;
   font-weight: 500;
 }
 
+.titleTech {
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 2.2rem;
+  color: #fed403;
+  margin: 0;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
 .titleSports {
-  font-family: "Montserrat", sans-serif;
-  font-size: 2rem;
+  font-family: 'Graduate', serif;
+  font-size: 2.2rem;
   color: #fed403;
   text-transform: uppercase;
   margin: 0;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .titleWelfare {
-  font-family: "Montserrat", sans-serif;
-  font-size: 2.8rem;
+  font-family: 'Style Script', cursive;
+  font-size: 2.2rem;
   color: #fed403;
   margin: 0;
   line-height: 1;
+  font-weight: 500;
 }
 
 .description {
