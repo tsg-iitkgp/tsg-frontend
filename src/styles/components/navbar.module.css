@@ -244,7 +244,7 @@ ul li span {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0.5rem 1rem;
+  padding: 0.6rem 1rem;
   gap: 12rem;
 
   position: absolute;
@@ -261,7 +261,7 @@ ul li span {
 }
 
 .bannerTitle {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: 400;
   /* "2026" shouldn't be bold */
   color: #000000 !important;
@@ -281,10 +281,10 @@ ul li span {
 
 .bannerBtn {
   font-weight: 700;
-  padding: 0.4rem 2rem;
+  padding: 0.5rem 2rem;
   cursor: pointer;
   transition: all 0.2s ease-out;
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-family: 'Montserrat', sans-serif;
   border-radius: 0;
 }
@@ -316,13 +316,58 @@ ul li span {
 }
 
 @media screen and (max-width: 768px) {
+  .navbar {
+    padding: 0.5rem 1.5rem;
+    min-height: 5.5rem;
+  }
+
   .navLogo a {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   .navLogo img {
-    max-width: 2.25rem;
-    max-height: 2.25rem;
+    max-width: 3.5rem;
+    max-height: 3.5rem;
+  }
+
+  .logoTextSmall {
+    font-size: 1.2rem;
+  }
+
+  .logoTextLarge {
+    font-size: 2.2rem;
+  }
+
+  .announcementBannerScrollable {
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem 1.5rem;
+    text-align: center;
+    white-space: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .announcementBannerScrollable::-webkit-scrollbar {
+    display: none;
+  }
+
+  .bannerTitle {
+    font-size: 1.8rem;
+  }
+  
+  .bannerButtonGroup {
+    display: flex;
+    flex-direction: row;
+    gap: 1.2rem;
+    flex-shrink: 0;
+  }
+
+  .bannerBtn {
+    font-size: 1.3rem;
+    padding: 0.6rem 2rem;
   }
 
   .activeNavbar {
@@ -368,6 +413,18 @@ ul li span {
     z-index: 0;
     transform: scale(0);
     transition: all 1s ease-out;
+  }
+
+  .navLinks {
+    font-size: 1.5rem;
+  }
+
+  ul li a, ul li span {
+    font-size: 1.5rem;
+  }
+
+  .dropdownLink {
+    font-size: 1.35rem !important;
   }
 }
 

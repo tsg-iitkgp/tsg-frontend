@@ -8,6 +8,7 @@ import AboutUs from "./AboutUs/AboutUs";
 import CommitteesHome from "./Committee/CommitteesHome";
 import EventsHome from "./Events/EventsHome";
 import CouncilHome from "./Council/CouncilHome";
+import Preloader from "../../components/Preloader/Preloader";
 
 export default function Home() {
   const pageTitle = "Technology Students' Gymkhana - IIT Kharagpur | TSG";
@@ -23,8 +24,10 @@ export default function Home() {
   }, []);
 
   return (
-    <Layout>
-      <Head>
+    <>
+      <Preloader />
+      <Layout>
+        <Head>
         <meta name="description" content={pageDescription} />
 
         {/* Open Graph / Facebook */}
@@ -49,7 +52,8 @@ export default function Home() {
         <meta name="twitter:image" content={pageImage} />
       </Head>
 
-      <div className={Styles.backgroundImage}>
+      <div style={{ zoom: "110%" }}>
+        <div className={Styles.backgroundImage}>
         <div className={Styles.videoWrapper}>
           <video 
             className={Styles.videoBackground} 
@@ -81,6 +85,8 @@ export default function Home() {
         {/* Council Section */}
         <CouncilHome />
       </div>
+      </div>
     </Layout>
+    </>
   );
 }

@@ -76,7 +76,11 @@ export default function Navbar() {
           </div>
 
           <div className={Styles.menuIcon} onClick={handleClick}>
-            <i className={click ? "fas fa-times" : "fas fa-bars"} suppressHydrationWarning></i>
+            {click ? (
+              <span key="close"><i className="fas fa-times" suppressHydrationWarning></i></span>
+            ) : (
+              <span key="open"><i className="fas fa-bars" suppressHydrationWarning></i></span>
+            )}
           </div>
 
           <ul className={click ? `${Styles.navMenu} ${Styles.active}` : Styles.navMenu}>

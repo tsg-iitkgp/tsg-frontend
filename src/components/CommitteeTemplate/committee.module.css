@@ -18,28 +18,15 @@
     overflow: hidden;
 }
 
-.heroSection::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(0deg, #000000 -4.52%, rgba(0, 0, 0, 0) 38.31%);
-    z-index: 2;
-    pointer-events: none;
-}
-
 .heroBackground {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('/images/display/committees.png');
+    background-image: url('/images/display/comm-bg.png');
     background-size: cover;
     background-position: center;
-    filter: blur(4px) brightness(0.6);
     z-index: 1;
 }
 
@@ -51,30 +38,32 @@
 
 .committeeSubtitle {
     color: #fed403;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: 800;
-    letter-spacing: 2px;
+    letter-spacing: 4px;
     text-transform: uppercase;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0;
 }
 
 .committeeTitle {
-    font-size: 4.5rem;
+    font-size: 6.5rem;
     font-weight: 800;
     color: white;
-    letter-spacing: 1px;
+    letter-spacing: -2px;
+    margin: 0;
 }
 
 .descriptionSection {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 4rem auto;
     text-align: center;
+    padding: 0 1.5rem;
 }
 
 .descriptionText {
-    color: #ccc;
-    font-size: 1.1rem;
-    line-height: 1.7;
+    color: #eeeeee;
+    font-size: 1.25rem;
+    line-height: 1.8;
     margin-bottom: 1.5rem;
     font-weight: 400;
 }

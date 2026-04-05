@@ -99,3 +99,19 @@
     width: 100%;
   }
 }
+
+@media (max-width: 768px) {
+  .mainTitle {
+    font-size: 4.5rem;
+  }
+  .yellowSubtitle {
+    font-size: 1.5rem;
+  }
+  .councilDescription {
+    font-size: 1.5rem;
+  }
+  .viewAllBtn {
+    font-size: 1.4rem;
+    padding: 1rem 3rem;
+  }
+}

@@ -42,3 +42,15 @@
   text-decoration: underline;
   text-underline-offset: 4px;
 }
+
+@media (max-width: 768px) {
+  .gridContainer {
+    gap: 3rem;
+  }
+  .mainTitle {
+    font-size: 4.5rem;
+  }
+  .yellowSubtitle {
+    font-size: 1.5rem;
+  }
+}

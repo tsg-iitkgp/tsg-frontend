@@ -1,0 +1,71 @@
+.preloaderContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+  opacity: 1;
+  visibility: visible;
+}
+
+.fadeOut {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: pulse 1.5s infinite alternate ease-in-out;
+}
+
+.textWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5rem;
+  color: white;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.textSmall {
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 6px;
+  color: #a0a0a0;
+  margin-bottom: 0.2rem;
+  white-space: nowrap;
+}
+
+.textLarge {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: 3px;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+@keyframes pulse {
+  0% { transform: scale(0.98); }
+  100% { transform: scale(1.02); }
+}
+
+@media (max-width: 768px) {
+  .textSmall {
+    font-size: 0.65rem;
+    letter-spacing: 3px;
+  }
+  .textLarge {
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+}

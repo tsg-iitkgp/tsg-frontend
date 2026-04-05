@@ -41,9 +41,10 @@ html {
   top: 50%;
   left: 0;
   width: 100%;
-  height: auto; /* Allows height to scale naturally with the width */
-  transform: translateY(-50%); /* Keeps the video perfectly centered vertically */
-  filter: blur(1px);
+  height: auto;
+  /* Allows height to scale naturally with the width */
+  transform: translateY(-50%);
+  /* Keeps the video perfectly centered vertically */
   /* Removed: object-fit: cover; and transform: scale(1.1); */
 }
 
@@ -113,10 +114,10 @@ html {
 .aboutUsSectionWrapper {
   display: flex;
   margin: 0;
-  
+
   /* Update this line (changed top padding from 4rem to 1.5rem or 0 depending on preference): */
-  padding: 1.5rem 10% 4rem 10%; 
-  
+  padding: 1.5rem 10% 4rem 10%;
+
   background-color: transparent;
   color: white;
   width: 100%;
@@ -381,6 +382,34 @@ html {
 }
 
 @media screen and (max-width: 768px) {
+  .backgroundImage {
+    height: 60vh;
+    aspect-ratio: unset;
+  }
+  .videoBackground {
+    height: 100%;
+    object-fit: cover;
+  }
+  .aboutHeading {
+    font-size: 4rem;
+  }
+  .aboutDescription {
+    font-size: 1.5rem;
+  }
+  .sectionHeading {
+    font-size: 3.2rem;
+  }
+  .description {
+    font-size: 1.5rem;
+  }
+  .mottoBox {
+    font-size: 2rem;
+    padding: 1.5rem 2rem;
+  }
+  .montageText {
+    font-size: 3rem;
+  }
+
   .societiesSection {
     display: flex;
     flex-direction: column;

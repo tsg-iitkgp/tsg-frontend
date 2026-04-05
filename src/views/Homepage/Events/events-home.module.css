@@ -163,6 +163,13 @@
   .eventRow {
     flex-direction: column;
   }
+  .eventImageContainer {
+    order: 1;
+    width: 100%;
+  }
+  .eventTextContainer {
+    order: 2;
+  }
   .textLeft {
     text-align: left;
   }
@@ -171,5 +178,21 @@
   }
   .exploreLinkRight {
     justify-content: flex-start;
+  }
+  .eventTitle, .eventTitleRight {
+    font-size: 2.8rem;
+  }
+  .eventDesc, .eventDescRight {
+    font-size: 1.4rem;
+  }
+  .mainTitle {
+    font-size: 4.5rem;
+  }
+  .yellowSubtitle {
+    font-size: 1.5rem;
+  }
+  .viewMoreBtn {
+    font-size: 1.4rem;
+    padding: 1rem 3rem;
   }
 }
