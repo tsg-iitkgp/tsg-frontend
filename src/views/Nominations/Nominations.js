@@ -7,59 +7,62 @@ import Layout from "../../components/Layouts/Layout";
 export default function Nominations() {
   if (typeof window !== "undefined") document.title = "Nominations 2025-2026 | TSG";
 
+  const tabFormUrls = {
+    "Public Relations' Chairperson": "https://docs.google.com/forms/d/e/1FAIpQLScjKNDbMhFhoqIMMLreN0Cp-q1IcndvyYczy6PYF6GpVQQRcg/viewform?socod=true&pli=1",
+    "Technology Coordinators": "https://docs.google.com/forms/d/e/1FAIpQLScYUBiVw9YU_0pLtcE6Q3TRnIDe1hkawNNjwe2-Uk5kYYUNag/viewform?usp%3Dheader",
+    "Editors": "https://docs.google.com/forms/d/e/1FAIpQLScx49-BdvhSmWOXLMcJxcnGF_u1TJDEC7Qptskb-tYfKUmCzA/viewform?usp%3Dsend_form",
+    "Institute Girls' Sports Nominee": "https://docs.google.com/forms/d/e/1FAIpQLScYh3heOcACxbfWs0mSRkuWB2HYXNF88AjIO4k3vG1VghAllQ/viewform",
+  };
+
+  const tabs = Object.keys(tabFormUrls);
   const [currentTab, setCurrentTab] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  const tabFormUrls = {
-    "Public Relations' Chairperson": "https://forms.gle/26D1EfaycHzHftca9",
-    "Technology Coordinators": "https://forms.gle/HSRmquLEUuzrNRTy6",
-    "Editors": "https://forms.gle/6GcDdCe2gCPepfqKA",
-    "Institute Girls' Sports Nominee": "https://forms.gle/r42APyuWTPx81RE66",
-  };
-
-  const handleTabChange = (s) => {
-    setCurrentTab(s);
-    setLoading(true); // Set loading to true when a new tab is selected
+  const handleTabChange = (tab) => {
+    setCurrentTab(tab);
+    setLoading(true);
   };
 
   return (
     <Layout>
-      <div className={Styles.electionHeaderImg}>
-      </div>
-      <Container className={Styles.electionsContainer}>
-        <Typography
-          variant="h4"
-          style={{
-            color: "#f1c40f",
-            fontFamily: "Lato",
-            fontWeight: "600",
-            margin: "1rem 0",
-          }}
-          align="center"
-        >
-          Applications - Nominated Office Bearers (2025-2026)
-        </Typography>
+      <div className={Styles.pageContainer}>
+        {/* Header Region */}
+        <div className={Styles.headerRegion}>
+          <div className={Styles.yellowSubtitle}>Nominated Office Bearers (2026-2027)</div>
+          <h1 className={Styles.mainTitle}>Applications</h1>
+        </div>
 
-        <Box className={Styles.electionBody}>
-          <Typography component="div" className={Styles.notice}>
-            <Box className={Styles.buttonGroup}>
-              {Object.keys(tabFormUrls).map((tab, index) => (
-                <Button key={index} onClick={() => handleTabChange(tab)}>
-                  <a>{tab}</a>
-                </Button>
-              ))}
-            </Box>
-          </Typography>
-        </Box>
+        {/* Tab Selection */}
+        <div className={Styles.sliderWrap}>
+          <div
+            className={Styles.sliderHighlight}
+            style={{
+              width: `${100 / tabs.length}%`,
+              transform: `translateX(${tabs.indexOf(currentTab) !== -1 ? tabs.indexOf(currentTab) * 100 : 0}%)`,
+              opacity: currentTab ? 1 : 0
+            }}
+          />
+          {tabs.map((tab) => (
+            <button
+              key={tab}
+              className={`${Styles.sliderTab} ${currentTab === tab ? Styles.sliderTabActive : ""
+                }`}
+              onClick={() => handleTabChange(tab)}
+            >
+              {tab.toUpperCase()}
+            </button>
+          ))}
+        </div>
 
-        <div>
+        {/* Form Container */}
+        <div className={Styles.formTransition} key={currentTab}>
           {currentTab ? (
             <>
               {loading && (
                 <Box display="flex" justifyContent="center" alignItems="center" padding="2rem">
-                  <CircularProgress />
-                  <Typography variant="h6" className={Styles.loadingStateLabel}>
-                    Loading...
+                  <CircularProgress style={{ color: "#f1c40f" }} />
+                  <Typography variant="h6" className={Styles.loadingStateLabel} style={{ marginLeft: "1rem" }}>
+                    Loading form...
                   </Typography>
                 </Box>
               )}
@@ -67,7 +70,7 @@ export default function Nominations() {
                 title={currentTab}
                 src={tabFormUrls[currentTab]}
                 onLoad={() => setLoading(false)}
-                className={`${Styles.loadingStateLabel} ${Styles.googleForm}`}
+                className={`${Styles.googleForm}`}
                 style={{ display: loading ? 'none' : 'block' }}
               >
                 Loading…
@@ -79,7 +82,7 @@ export default function Nominations() {
             </Typography>
           )}
         </div>
-      </Container>
+      </div>
     </Layout>
   );
 }

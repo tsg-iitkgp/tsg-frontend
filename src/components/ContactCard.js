@@ -10,7 +10,6 @@ function ContactCard({ name, designation, email, facebook, linkedin, whatsapp, w
   const [open, setOpen] = React.useState(false);
 
   const handleClick = () => {
-    // console.log("handleclick")
     setOpen(true);
   };
 
@@ -18,14 +17,21 @@ function ContactCard({ name, designation, email, facebook, linkedin, whatsapp, w
     if (reason === "clickaway") {
       return;
     }
-
     setOpen(false);
   };
+
   return (
     <div className={Styles.container}>
       <div className={Styles.imgbox}>
         <AppImage src={imgSrc} alt={`${name}_image`} width={200} height={200} />
       </div>
+      <div className={Styles.details}>
+        <h2>{name}</h2>
+        <span>{designation}</span>
+      </div>
+      {open && (
+        <div className={Styles.toast}>Email address copied</div>
+      )}
       <ul className={Styles.sociallinks}>
         <li>
           <a href={`${facebook}`} target="_blank" rel="noreferrer">
@@ -49,29 +55,6 @@ function ContactCard({ name, designation, email, facebook, linkedin, whatsapp, w
           </a>
         </li>
       </ul>
-      <div className={Styles.details}>
-        <div>
-          <Snackbar
-            anchorOrigin={{
-              vertical: "center",
-              horizontal: "center",
-            }}
-            open={open}
-            autoHideDuration={2000}
-            onClose={handleClose}
-            message="Email address copied"
-            action={
-              <React.Fragment>
-                <IconButton size="small" aria-label="close" color="inherit" onClick={handleClose}>
-                  <CloseIcon fontSize="small" />
-                </IconButton>
-              </React.Fragment>
-            }
-          />
-        </div>
-        <h2>{String(name).toUpperCase()}</h2>
-        <span>{designation}</span>
-      </div>
     </div>
   );
 }

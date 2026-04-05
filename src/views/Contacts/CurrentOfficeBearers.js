@@ -85,7 +85,7 @@ export default function CurrentOfficeBearers({ year }) {
         };
 
         getContacts();
-// eslint-disable-next-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [refreshContacts]);
 
     return (
@@ -103,7 +103,7 @@ export default function CurrentOfficeBearers({ year }) {
                         />
                     </div>
                 </div>
-                <div>
+                <div className={Styles.multipleCards}>
                     <div data-aos="zoom-in-up">
                         <ContactCard
                             name={Associate_President1.Name}
@@ -114,8 +114,6 @@ export default function CurrentOfficeBearers({ year }) {
                             imgSrc={`/data/media/images/contacts/${Associate_President1.img}`}
                         />
                     </div>
-                </div>
-                <div>
                     <div data-aos="zoom-in-up">
                         <ContactCard
                             name={Associate_President2.Name}

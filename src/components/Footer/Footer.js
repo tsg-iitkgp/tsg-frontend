@@ -1,10 +1,12 @@
+"use client";
 //Footer.js
-import React from "react";
+import React, { useState } from "react";
 import Styles from "./footer.module.css";
 import { FaFacebook, FaGithub, FaInstagram, FaYoutube } from "react-icons/fa";
 import AppImage from "../AppImage";
 
 export default function Footer() {
+  const [crazyLine, setCrazyLine] = useState(false);
   const linksList = [
     {
       title: "SETU",
@@ -125,7 +127,16 @@ export default function Footer() {
           </a>
         </div>
       </div>
-      <div className={Styles.footerLine}></div>
+      <div
+        className={`${Styles.footerLine} ${crazyLine ? Styles.crazy : ""}`}
+        onDoubleClick={() => {
+          setCrazyLine(true);
+          setTimeout(() => setCrazyLine(false), 2500);
+        }}
+        title="Double click me!"
+      >
+        You are crazy!
+      </div>
       <div>
         <p className={Styles.copyright}>
           &copy; Technology Students&apos; Gymkhana, IIT Kharagpur &diams;{" "}

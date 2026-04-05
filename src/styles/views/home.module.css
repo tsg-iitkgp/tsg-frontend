@@ -32,7 +32,7 @@ html {
 
 .mottoBox {
   position: absolute;
-  bottom: 0px; 
+  bottom: 0px;
   left: 10%;
   background-color: #fed403;
   color: #000;
@@ -152,6 +152,36 @@ html {
   flex: 1;
   display: flex;
   justify-content: flex-end;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+
+.easterEggText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  font-weight: 800;
+  color: #fed403;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+  pointer-events: none;
+  animation: fadeOutUp 2s ease forwards;
+  z-index: 10;
+  white-space: nowrap;
+}
+
+@keyframes fadeOutUp {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -80%);
+  }
 }
 
 .aboutImageContainer img {

@@ -59,7 +59,6 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/icon?family=Material+Icons"
           rel="stylesheet"
         />
-        <link rel="manifest" href="/manifest.json" />
         {/* Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-FVQPEQMVHD"

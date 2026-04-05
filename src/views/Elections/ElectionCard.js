@@ -20,7 +20,6 @@ function ElectionCard({
       </div>
       {post !== "Secy" && (
         <ul className={Styles.sociallinks}>
-          <li></li>
           {proposalLink ? (
             <li>
               <a
@@ -35,7 +34,6 @@ function ElectionCard({
           ) : (
             <li>Proposal not received by TSG</li>
           )}
-          <li></li>
         </ul>
       )}
 

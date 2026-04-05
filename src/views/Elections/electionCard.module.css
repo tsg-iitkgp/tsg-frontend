@@ -7,104 +7,155 @@
 }
 
 .container {
-  background-color: black;
+  background-color: #0d0d0d;
   width: 300px;
-  height: 350px;
-  border-radius: 0.5rem;
-  box-shadow: 0px 0.5rem 1rem rgba(0, 0, 0, 0.5);
+  height: 400px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
   position: relative;
   overflow: hidden;
-  margin: 1rem 1rem;
+  margin: 1rem;
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
 }
+
+.container:hover {
+  transform: scale(1.06);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.6);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* ── Image Box ────────────────────────────────── */
 .imgbox {
-  transition: 0.5s;
-  height: 80%;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  height: 230px;
+  border-radius: 4px;
   overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: top 0.4s ease, left 0.4s ease, right 0.4s ease,
+    height 0.4s ease, border-radius 0.4s ease, border-color 0.4s ease;
+  z-index: 0;
 }
-img,
-.svgContainer {
+
+.imgbox img {
   width: 100%;
   height: 100%;
-  transition: all 0.5s;
   object-fit: cover;
-}
-
-.container:hover .imgbox img,
-.container:hover .imgbox .svgContainer {
-  opacity: 0.4;
-  transform: scale(1.1);
-}
-.sociallinks {
-  height: auto;
-  position: absolute;
-  top: 60%;
-  display: flex;
-  width: 100%;
-  justify-content: space-around;
-}
-.sociallinks li {
-  list-style: none;
-}
-.sociallinks li a {
-  color: black;
   display: block;
-  background-color: #fff;
-  padding: 0.5rem 0.75rem;
-  font-size: 1.75rem;
-  border-radius: 50%;
-  pointer-events: none;
-  cursor: default;
-  transform: translateY(140%);
-  transition: 0.4s ease;
-  opacity: 0;
-}
-.container:hover .sociallinks li a {
-  transform: translateY(25%);
-  opacity: 1;
-  pointer-events: auto;
-  cursor: pointer;
-}
-.container .sociallinks li a:hover i {
-  transition: 0.5s ease-in-out;
-  color: rgb(86, 38, 139);
-  /* transform: rotateY(360deg); */
-}
-.container:hover .sociallinks li:nth-child(1) a {
-  transition-delay: 0s;
+  transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
+/* On hover: image fills the entire card */
+.container:hover .imgbox {
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  border-radius: 0;
+  border-color: transparent;
+}
+
+.container:hover .imgbox img {
+  opacity: 0.35;
+  transform: scale(1.05);
+}
+
+/* ── Details ──────────────────────────────────── */
 .details {
-  padding: 0rem auto;
+  position: absolute;
+  top: 248px;
+  left: 0;
+  right: 0;
+  padding: 0 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  /* background-color: white; */
-  background-color: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(2rem);
-  box-shadow: 0 1rem 1rem rgba(255, 255, 255, 0.8);
-  -webkit-backdrop-filter: blur(2rem);
-  height: 20%;
-  align-items: center;
-  text-align: center;
+  text-align: left;
+  z-index: 2;
+  transition: top 0.4s ease, padding 0.4s ease;
 }
+
 .details h2 {
-  font-size: 1.5rem;
-  margin-bottom: 0.25rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: 0.01em;
+  line-height: 1.35;
+  transition: font-size 0.4s ease, text-shadow 0.4s ease;
+}
+
+.details span {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: #f1c40f;
+  margin-top: 2px;
+  transition: font-size 0.4s ease, text-shadow 0.4s ease;
+}
+
+/* ── Social Links ─────────────────────────────── */
+.sociallinks {
+  position: absolute;
+  bottom: 25px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 1rem;
+  z-index: 2;
+  margin: 0;
+}
+
+.sociallinks li {
+  list-style: none;
+  color: rgba(255, 255, 255, 0.5);
+  /* For "Proposal not received" text */
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.85rem;
   font-weight: 500;
 }
-.details span {
-  color: rgb(86, 38, 139);
-  font-size: 1.25rem;
-  font-weight: 600;
+
+.sociallinks li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, 0.45);
+  background: transparent;
+  color: #fff;
+  font-size: 1.05rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
 }
 
+.sociallinks li a:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: #f1c40f;
+  transform: translateY(-2px);
+  color: #f1c40f;
+}
+
+/* ── Responsive ───────────────────────────────── */
 @media screen and (max-width: 552px) {
   .container {
-    width: 250px;
-    height: 300px;
+    width: 260px;
+    height: 370px;
   }
-}
 
-.svgContainer {
-  padding: 10px;
+  .imgbox {
+    height: 200px;
+  }
+
+  .details {
+    top: 220px;
+  }
 }

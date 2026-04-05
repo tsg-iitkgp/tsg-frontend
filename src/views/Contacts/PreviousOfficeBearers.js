@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Styles from "../../styles/views/previous.module.css";
 import senateData from "./senateData.json";
-import { useState } from "react";
 import ContactCard from "../../components/ContactCard";
 import primg from "./../Contacts/Images/prf.png";
 import CurrentOfficeBearers from "./CurrentOfficeBearers";
@@ -84,44 +83,57 @@ const years = [
 export default function PreviousOfficeBearers() {
     const [currentTab, setCurrentTab] = useState("senate");
     const [currentYear, setCurrentYear] = useState("2024-2025");
-const startYear = parseInt(currentYear.split("-")[0], 10);
+    const startYear = parseInt(currentYear.split("-")[0], 10);
+    const [open, setOpen] = useState(false);
+    const dropdownRef = useRef(null);
+
+    // Close on outside click
+    useEffect(() => {
+        function handleClick(e) {
+            if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+                setOpen(false);
+            }
+        }
+        document.addEventListener("mousedown", handleClick);
+        return () => document.removeEventListener("mousedown", handleClick);
+    }, []);
 
     let current;
     if (startYear > 2023) {
-    current = <CurrentOfficeBearers year={currentYear} />;
-}else{
-    current = (
-        <>
-        {(senateData[currentYear][currentTab]["profs"] !== undefined ||
+        current = <CurrentOfficeBearers year={currentYear} />;
+    } else {
+        current = (
+            <>
+                {(senateData[currentYear][currentTab]["profs"] !== undefined ||
                     currentTab === "specialRecog") && (
-                    <>
-                        <div className="cards">
-                            {currentTab !== "specialRecog"
-                                ? senateData[currentYear][currentTab][
-                                      "profs"
-                                  ]?.map((winner) => (
-                                      <div key="k-103" data-aos="zoom-in-up">
-                                          <ContactCard
-                                              name={winner.Name}
-                                              imgSrc={primg}
-                                              designation={winner.Post}
-                                          />
-                                      </div>
-                                  ))
-                                : senateData[currentYear][currentTab].map(
-                                      (winner) => (
-                                          <div key="k-113" data-aos="zoom-in-up">
-                                              <ContactCard
-                                                  name={winner.Name}
-                                                  imgSrc={"primg"}
-                                                  designation={winner.Post}
-                                              />
-                                          </div>
-                                      )
-                                  )}
-                        </div>
-                    </>
-                )}
+                        <>
+                            <div className="cards">
+                                {currentTab !== "specialRecog"
+                                    ? senateData[currentYear][currentTab][
+                                        "profs"
+                                    ]?.map((winner) => (
+                                        <div key="k-103" data-aos="zoom-in-up">
+                                            <ContactCard
+                                                name={winner.Name}
+                                                imgSrc={primg}
+                                                designation={winner.Post}
+                                            />
+                                        </div>
+                                    ))
+                                    : senateData[currentYear][currentTab].map(
+                                        (winner) => (
+                                            <div key="k-113" data-aos="zoom-in-up">
+                                                <ContactCard
+                                                    name={winner.Name}
+                                                    imgSrc={"primg"}
+                                                    designation={winner.Post}
+                                                />
+                                            </div>
+                                        )
+                                    )}
+                            </div>
+                        </>
+                    )}
                 {currentTab !== "specialRecog" && (
                     <>
                         <div className={Styles.senateCard}>
@@ -150,24 +162,42 @@ const startYear = parseInt(currentYear.split("-")[0], 10);
                         </div>
                     </>
                 )}
-    </>
-    );
-}
+            </>
+        );
+    }
     return (
         <div>
             <section className="awards content">
                 <div className="tabs"></div>
-                <div className="select">
-                    <select
-                        value={currentYear}
-                        onChange={(e) => setCurrentYear(e.target.value)}
-                    >
-                        {years.map((year) => (
-                            <option key={year} value={year}>
-                                {year}
-                            </option>
-                        ))}
-                    </select>
+                <div className={Styles.yearSelectWrapper}>
+                    <div className={Styles.dropdown} ref={dropdownRef}>
+                        <div
+                            className={Styles.dropdownBtn}
+                            onClick={() => setOpen(!open)}
+                        >
+                            {currentYear}{" "}
+                            <span className={`${Styles.dropdownArrow} ${open ? Styles.open : ""}`}>
+                                ▼
+                            </span>
+                        </div>
+
+                        {open && (
+                            <div className={Styles.dropdownMenu}>
+                                {years.map((year) => (
+                                    <div
+                                        key={year}
+                                        className={`${Styles.dropdownItem} ${year === currentYear ? Styles.dropdownItemActive : ""}`}
+                                        onClick={() => {
+                                            setCurrentYear(year);
+                                            setOpen(false);
+                                        }}
+                                    >
+                                        {year}
+                                    </div>
+                                ))}
+                            </div>
+                        )}
+                    </div>
                 </div>
                 {current}
             </section>
