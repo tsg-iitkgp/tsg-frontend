@@ -11,7 +11,7 @@
 
 .topSection {
   position: relative;
-  height: 75%;
+  height: 60%;
   width: 100%;
   overflow: hidden;
 }
@@ -86,7 +86,7 @@
 .clubList {
   display: flex;
   flex-direction: column;
-  height: 25%;
+  height: 40%;
   background: #000;
 }
 
@@ -119,7 +119,6 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  border-radius: 4px;
   background: #fff;
 }
 

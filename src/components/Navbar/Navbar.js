@@ -127,7 +127,7 @@ export default function Navbar() {
             <span className={Styles.bannerTitle}><strong>TSG Elections</strong> 2026</span>
             <div className={Styles.bannerButtonGroup}>
               <button className={Styles.bannerBtn} onClick={() => router.push('/elections')}>Results</button>
-              <button className={Styles.bannerBtn} onClick={() => router.push('/elections')}>Details</button>
+              <button className={`${Styles.bannerBtn} ${Styles.hideOnMobile}`} onClick={() => router.push('/elections')}>Details</button>
             </div>
           </div>
         )}

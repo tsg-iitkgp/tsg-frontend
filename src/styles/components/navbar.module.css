@@ -370,6 +370,10 @@ ul li span {
     padding: 0.6rem 2rem;
   }
 
+  .hideOnMobile {
+    display: none !important;
+  }
+
   .activeNavbar {
     border: none;
   }

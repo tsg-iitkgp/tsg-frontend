@@ -28,6 +28,13 @@ export default function Home() {
       const video = videoRef.current;
       const hlsSource = "/videos/hls/playlist.m3u8";
 
+      // iOS Safari strict autoplay bypass: 
+      // React hydration natively drops these attributes occasionally on mobile devices causing autoplay rejections.
+      video.muted = true;
+      video.defaultMuted = true;
+      video.playsInline = true;
+      video.setAttribute("playsinline", "");
+
       if (Hls.isSupported()) {
         const hls = new Hls({
           maxBufferLength: 10,
@@ -85,6 +92,9 @@ export default function Home() {
       } else if (video.canPlayType("application/vnd.apple.mpegurl")) {
         // Native HLS support (Safari)
         video.src = hlsSource;
+        video.addEventListener("loadedmetadata", () => {
+          video.play().catch((e) => console.log("iOS Autoplay blocked:", e));
+        });
       }
     }
   }, []);
