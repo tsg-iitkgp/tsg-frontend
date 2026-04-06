@@ -90,11 +90,22 @@ export default function Home() {
           video.removeEventListener("timeupdate", checkBuffer);
         };
       } else if (video.canPlayType("application/vnd.apple.mpegurl")) {
-        // Native HLS support (Safari)
+        // Native HLS support (iOS Safari)
+        // Critical: Remove existing <source> children — they conflict with setting video.src directly.
+        // Without this, Safari ignores the programmatic src because it's already begun loading from <source> tags.
+        while (video.firstChild) {
+          video.removeChild(video.firstChild);
+        }
+
         video.src = hlsSource;
-        video.addEventListener("loadedmetadata", () => {
-          video.play().catch((e) => console.log("iOS Autoplay blocked:", e));
-        });
+
+        // video.load() is mandatory here to reset Safari's internal media pipeline
+        // so it acknowledges the new src after the prior <source> children stalled it.
+        video.load();
+
+        video.addEventListener("canplay", () => {
+          video.play().catch((e) => console.log("iOS autoplay blocked:", e));
+        }, { once: true });
       }
     }
   }, []);
