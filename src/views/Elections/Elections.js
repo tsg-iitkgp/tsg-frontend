@@ -13,6 +13,11 @@ export default function Elections() {
 
   const notices = [
     {
+      title: "Results of TSG Election 2026-2027",
+      buttonLabel: "View Results",
+      href: "/data/media/files/results.pdf",
+    },
+    {
       title: "Final Proposals of Candidates",
       buttonLabel: "View Proposals",
       href: "/elections/candidates",
