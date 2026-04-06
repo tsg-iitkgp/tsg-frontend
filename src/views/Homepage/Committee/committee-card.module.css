@@ -162,10 +162,16 @@
   }
 
   .titleSocult,
-  .titleTech,
-  .titleSports,
-  .titleWelfare {
+  .titleTech {
     font-size: 2.5rem;
+  }
+
+  .titleSports {
+    font-size: 3.25rem;
+  }
+
+  .titleWelfare {
+    font-size: 4rem;
   }
   .description {
     font-size: 1.25rem;
