@@ -170,7 +170,7 @@ export const candidates = {
       Proposal: "",
       ProposalLink: "24ME10074.pdf",
       FacebookLink: "",
-      img: "",
+      img: "Akil_Socult.jpeg",
     },
   ],
   Gsec_Tech: [
