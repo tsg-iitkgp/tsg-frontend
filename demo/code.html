@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>IIT KGP Sports</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;family=Lexend:wght@600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "surface": "#131313",
+                        "on-error-container": "#ffdad6",
+                        "secondary-fixed": "#e5e2e1",
+                        "tertiary-container": "#d7d5d4",
+                        "primary-fixed": "#ffe07f",
+                        "surface-variant": "#353534",
+                        "on-tertiary": "#303030",
+                        "surface-container": "#201f1f",
+                        "primary": "#fff1ce",
+                        "outline-variant": "#4d4632",
+                        "outline": "#9a9077",
+                        "on-secondary-fixed-variant": "#474746",
+                        "primary-fixed-dim": "#edc200",
+                        "tertiary-fixed": "#e4e2e1",
+                        "secondary": "#c8c6c5",
+                        "background": "#131313",
+                        "surface-container-low": "#1c1b1b",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "on-primary-fixed": "#231b00",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "surface-tint": "#edc200",
+                        "on-primary": "#3c2f00",
+                        "surface-dim": "#131313",
+                        "on-tertiary-fixed": "#1b1c1c",
+                        "error-container": "#93000a",
+                        "primary-container": "#ffd100",
+                        "surface-bright": "#3a3939",
+                        "surface-container-highest": "#353534",
+                        "on-background": "#e5e2e1",
+                        "on-secondary-container": "#b7b5b4",
+                        "secondary-container": "#474746",
+                        "surface-container-high": "#2a2a2a",
+                        "on-surface": "#e5e2e1",
+                        "on-primary-container": "#6f5a00",
+                        "on-secondary": "#313030",
+                        "tertiary": "#f4f1f1",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "inverse-on-surface": "#313030",
+                        "on-primary-fixed-variant": "#564500",
+                        "on-tertiary-container": "#5d5c5c",
+                        "inverse-surface": "#e5e2e1",
+                        "on-surface-variant": "#d1c6ab",
+                        "surface-container-lowest": "#0e0e0e",
+                        "error": "#ffb4ab",
+                        "inverse-primary": "#725c00",
+                        "on-error": "#690005"
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.125rem",
+                        lg: "0.25rem",
+                        xl: "0.5rem",
+                        full: "0.75rem"
+                    },
+                    spacing: {
+                        "margin-page": "64px",
+                        "section-v": "120px",
+                        "gutter": "32px",
+                        "base": "8px",
+                        "container-max": "1400px"
+                    },
+                    fontFamily: {
+                        "display-xl": ["Lexend"],
+                        "headline-sm": ["Lexend"],
+                        "body-md": ["Inter"],
+                        "headline-lg": ["Lexend"],
+                        "headline-md": ["Lexend"],
+                        "body-lg": ["Inter"],
+                        "label-caps": ["Inter"]
+                    },
+                    fontSize: {
+                        "display-xl": ["80px", { lineHeight: "90px", letterSpacing: "-0.04em", fontWeight: "800" }],
+                        "headline-sm": ["24px", { lineHeight: "32px", fontWeight: "600" }],
+                        "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+                        "headline-lg": ["48px", { lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "700" }],
+                        "headline-md": ["32px", { lineHeight: "40px", fontWeight: "700" }],
+                        "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+                        "label-caps": ["12px", { lineHeight: "16px", letterSpacing: "0.1em", fontWeight: "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: #0B0B0B; }
+    </style>
+</head>
+<body class="text-on-background font-body-md antialiased overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 h-[80px] flex justify-between items-center px-8 max-w-container-max mx-auto bg-[#0B0B0B]/80 backdrop-blur-xl border-b border-[#2A2A2A] hidden md:flex">
+<div class="text-2xl font-black text-[#FFD100] tracking-widest font-display-xl scale-95 active:opacity-80">GYMKHANA SPORTS</div>
+<ul class="flex space-x-6">
+<li><a class="text-[#FFD100] border-b-2 border-[#FFD100] pb-1 font-lexend font-bold tracking-tighter uppercase text-label-caps hover:bg-[#1A1A1A] transition-all duration-300 scale-95 active:opacity-80 block px-2 py-1" href="#">Sports</a></li>
+<li><a class="text-white/70 hover:text-white transition-colors font-lexend font-bold tracking-tighter uppercase text-label-caps hover:bg-[#1A1A1A] transition-all duration-300 scale-95 active:opacity-80 block px-2 py-1" href="#">Events</a></li>
+<li><a class="text-white/70 hover:text-white transition-colors font-lexend font-bold tracking-tighter uppercase text-label-caps hover:bg-[#1A1A1A] transition-all duration-300 scale-95 active:opacity-80 block px-2 py-1" href="#">GC Scores</a></li>
+<li><a class="text-white/70 hover:text-white transition-colors font-lexend font-bold tracking-tighter uppercase text-label-caps hover:bg-[#1A1A1A] transition-all duration-300 scale-95 active:opacity-80 block px-2 py-1" href="#">Turf</a></li>
+<li><a class="text-white/70 hover:text-white transition-colors font-lexend font-bold tracking-tighter uppercase text-label-caps hover:bg-[#1A1A1A] transition-all duration-300 scale-95 active:opacity-80 block px-2 py-1" href="#">Inter-IIT</a></li>
+<li><a class="text-white/70 hover:text-white transition-colors font-lexend font-bold tracking-tighter uppercase text-label-caps hover:bg-[#1A1A1A] transition-all duration-300 scale-95 active:opacity-80 block px-2 py-1" href="#">Contacts</a></li>
+</ul>
+<button class="bg-[#FFD100] text-[#0B0B0B] font-bold px-6 py-2 rounded uppercase tracking-wider text-sm hover:bg-[#e6bc00] transition-colors">LOGIN</button>
+</nav>
+<!-- BottomNavBar (Mobile) -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center h-16 px-4 md:hidden bg-[#0B0B0B]/95 backdrop-blur-2xl border-t border-[#2A2A2A] shadow-[0_-4px_20px_rgba(0,0,0,0.5)]">
+<a class="flex flex-col items-center justify-center text-[#FFD100] scale-110 transition-transform tap-highlight-transparent active:scale-90" href="#">
+<span class="material-symbols-outlined" data-weight="fill" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-lexend text-[10px] font-bold uppercase tracking-widest mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-white/40 hover:text-white transition-colors tap-highlight-transparent active:scale-90" href="#">
+<span class="material-symbols-outlined">sports_score</span>
+<span class="font-lexend text-[10px] font-bold uppercase tracking-widest mt-1">Sports</span>
+</a>
+<a class="flex flex-col items-center justify-center text-white/40 hover:text-white transition-colors tap-highlight-transparent active:scale-90" href="#">
+<span class="material-symbols-outlined">leaderboard</span>
+<span class="font-lexend text-[10px] font-bold uppercase tracking-widest mt-1">Standings</span>
+</a>
+<a class="flex flex-col items-center justify-center text-white/40 hover:text-white transition-colors tap-highlight-transparent active:scale-90" href="#">
+<span class="material-symbols-outlined">event</span>
+<span class="font-lexend text-[10px] font-bold uppercase tracking-widest mt-1">Events</span>
+</a>
+<a class="flex flex-col items-center justify-center text-white/40 hover:text-white transition-colors tap-highlight-transparent active:scale-90" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-lexend text-[10px] font-bold uppercase tracking-widest mt-1">Profile</span>
+</a>
+</nav>
+<!-- Main Content -->
+<main class="pt-[80px] pb-[80px] md:pb-0">
+<!-- Hero Section -->
+<section class="relative h-screen min-h-[600px] flex items-center justify-center text-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="IIT KGP Main Building" class="w-full h-full object-cover object-center opacity-70" data-alt="A dramatic, low-angle photograph of a grand institutional building, reminiscent of IIT Kharagpur's main building, taken during twilight. The image is styled for a premium athletic brand, featuring a stark, high-contrast aesthetic with deep, crushing blacks and subtle highlights. A heavy dark gradient overlay rises from the bottom, fading into the architecture, creating a moody, elite atmosphere that perfectly aligns with a modern sports identity focused on tradition and intensity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaTrP0WiKOenozvBQIKOTuT3tB9WNPwd8xrZIoJjouBYqN7UJX_dV92ApDXLgVqomuDvHV6C38kCMAahlG6j46DYUDlJPoGD5vUTUMkVXZB2CNv6cRqw7xDJwfEN8kUqIRuKF6O8mhtaf4UAVIRQxs7bUtBwqwyJkCanlkxTyFIISR8klpCMIMDmvTu4BNPH5VAVBP7UPcWAk4DsjPAn7kuoizmX99QYGaUonk29bIDZs6w0oIiAo6LCk2BV_lKJeGSbZ42P-_C4Yr"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0B0B0B] via-[#0B0B0B]/40 to-[#0B0B0B]/20"></div>
+</div>
+<div class="relative z-10 max-w-4xl px-gutter mx-auto flex flex-col items-center">
+<div class="relative p-12">
+<!-- Geometric Accents -->
+<div class="absolute top-0 left-0 w-16 h-16 border-t-2 border-l-2 border-[#FFD100]"></div>
+<div class="absolute bottom-0 right-0 w-16 h-16 border-b-2 border-r-2 border-[#FFD100]"></div>
+<h1 class="font-display-xl text-display-xl text-white mb-6 uppercase drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">
+        THE SPIRIT OF <br/> <span class="text-[#FFD100]">KGP SPORTS</span>
+</h1>
+<p class="font-headline-sm text-headline-sm text-secondary-fixed-dim mb-10 tracking-wide uppercase drop-shadow-md">
+        Intensity. Culture. Pride.
+    </p>
+<a class="inline-block border border-[#FFD100] text-[#FFD100] font-label-caps text-label-caps px-8 py-4 rounded hover:bg-[#FFD100] hover:text-[#0B0B0B] transition-colors duration-300 relative z-20" href="#">
+        EXPLORE SPORTS
+    </a>
+</div>
+</div>
+</section>
+<!-- About Us Section -->
+<section class="py-section-v px-gutter max-w-container-max mx-auto">
+<div class="flex flex-col lg:flex-row items-center gap-[80px]">
+<div class="lg:w-1/2 flex flex-col items-start">
+<h2 class="font-headline-md text-headline-md text-[#FFD100] uppercase mb-8 border-b-2 border-[#FFD100] pb-2 inline-block">ABOUT US</h2>
+<p class="font-headline-sm text-headline-sm text-white italic mb-8 leading-relaxed">
+                        "Wear it with weight. Play it with heart."
+                    </p>
+<p class="font-body-lg text-body-lg text-secondary-fixed-dim leading-relaxed mb-6">
+                        At IIT Kharagpur, sports is more than recreation — it's a way of life. Whether you're chasing glory on the football ground, racing through the pool, or rallying on the courts, KGP's campus gives every athlete the stage to shine. From fiercely contested inter-hall battles to representing India's best engineering minds at the Inter-IIT Sports Meet, the spirit here runs deep.
+                    </p>
+</div>
+<div class="lg:w-1/2 w-full relative">
+<div class="absolute inset-0 border border-[#FFD100] translate-x-4 translate-y-4 rounded z-0"></div>
+<img alt="Athletes in training" class="relative z-10 w-full h-[500px] object-cover rounded shadow-[0_10px_40px_rgba(0,0,0,0.8)] filter grayscale contrast-125" data-alt="A high-contrast, black and white photograph of athletes engaged in intense training, capturing a moment of extreme physical exertion and focus. The lighting is dramatic, highlighting muscle definition and sweat, embodying a premium, elite sports aesthetic. The image exudes a serious, dedicated mood, fitting perfectly within a sophisticated dark-mode UI that prioritizes institutional pride and athletic excellence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlQfmHnoV7gm83qelbTq-MNd3q5zaA_JZloKdyPZimvydHFPAGmYjnn7FtjUWtoWWDa9ZtHiwMxHxnjkMQYxERuQ9HQJu1LTJ4lbbCs53FvjqrvIXUUSoSLvPMfg5tjLmf-qg6J5a5LJnTquMSOClJBRquiv8WQL--LN9ArRwsEqizGvp5XMM1qD92IImE_pz_f8jonogJ8fa2GbGj5t2RA1pnEv64lX-8RAG0vyN2CvS8mC8hTOR0mvOFQ7mP47BsE-MCHaJsmrJG"/>
+</div>
+</div>
+</section>
+<!-- Inter-IIT Section -->
+<section class="relative py-[160px] my-section-v flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0 bg-[#0B0B0B]">
+<div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1461896836934-ffe607ba8211?q=80&amp;w=2070&amp;auto=format&amp;fit=crop')] bg-cover bg-center opacity-20 filter grayscale blend-luminosity" data-alt="A moody, atmospheric background image showing a sprawling sports stadium under stadium lights at night. The scene is rendered in deep, monochromatic tones with a heavy vignette, creating a sense of scale and historical weight. The subtle texture of the crowd and field provides depth to the dark UI, reinforcing the theme of institutional prestige and long-standing athletic tradition."></div>
+<div class="absolute inset-0 bg-gradient-to-r from-[#0B0B0B] via-transparent to-[#0B0B0B]"></div>
+</div>
+<div class="relative z-10 text-center px-gutter max-w-4xl mx-auto">
+<p class="font-label-caps text-label-caps text-[#FFD100] mb-4 uppercase tracking-[0.3em]">Since 1961</p>
+<h2 class="font-display-xl text-[64px] md:text-display-xl text-white mb-8 uppercase leading-tight">
+                    UNSHAKEABLE <br/> PRIDE
+                </h2>
+<div class="font-body-lg text-body-lg text-secondary-fixed-dim mb-10 max-w-3xl mx-auto space-y-6 md:text-center text-left">
+<p>
+                        The IIT Kharagpur team at the Inter-IIT Sports Meet is something built over time — not in boardrooms or on paper, but on early morning tracks, in dusty gymnasiums, and through the kind of late-night grind that only a fellow athlete truly understands. Since 1961, when this tradition first took shape, Kharagpur has shown up. Every single time.
+                    </p>
+<p>
+                        There's something different about a KGPian who competes. Maybe it's the sheer size of the campus — where sport is never far from your doorstep — or maybe it's the culture that's been passed down through generations of students who refused to give anything less than everything. Whatever it is, you feel it when the team steps onto the field together.
+                    </p>
+<p>
+                        These aren't just athletes representing an institution. They're friends pushing each other through one more rep, one more lap, one more match. They celebrate together, hurt together, and grow together. And when they wear Kharagpur's colours at the Inter-IIT Meet, they carry all of that with them — the sweat, the stories, and an unshakeable pride in where they come from.
+                    </p>
+</div>
+<a class="inline-block border-b-2 border-[#FFD100] text-white font-label-caps text-label-caps pb-2 hover:text-[#FFD100] transition-colors duration-300 uppercase" href="#">
+                    VIEW HISTORY <span class="material-symbols-outlined align-middle ml-2 text-sm">arrow_forward</span>
+</a>
+</div>
+</section>
+<!-- Turf Booking Section -->
+<section class="py-section-v px-gutter max-w-container-max mx-auto flex justify-center">
+<div class="bg-[#1A1A1A] border border-[#FFD100] rounded p-12 text-center max-w-2xl w-full relative overflow-hidden">
+<div class="absolute top-0 right-0 w-24 h-24 bg-[#FFD100]/5 rounded-bl-full"></div>
+<span class="material-symbols-outlined text-5xl text-[#FFD100] mb-6">sports_tennis</span>
+<h2 class="font-headline-lg text-headline-lg text-white uppercase mb-4">TURF BOOKING</h2>
+<p class="font-label-caps text-label-caps text-secondary-fixed-dim tracking-[0.2em] border border-[#2A2A2A] inline-block px-4 py-2 rounded bg-[#0B0B0B]">
+                    COMING SOON
+                </p>
+</div>
+</section>
+<!-- Quick Actions Section -->
+<section class="py-section-v px-gutter max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<a class="group relative bg-[#1A1A1A] border border-[#2A2A2A] rounded p-8 flex flex-col items-center justify-center overflow-hidden transition-all duration-300 hover:border-[#FFD100]/50" href="#">
+<div class="absolute top-0 left-0 w-full h-[2px] bg-[#FFD100] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
+<span class="material-symbols-outlined text-4xl text-[#FFD100] mb-4">sports_football</span>
+<h3 class="font-headline-sm text-headline-sm text-white uppercase tracking-wider group-hover:text-[#FFD100] transition-colors">SPORTS</h3>
+</a>
+<a class="group relative bg-[#1A1A1A] border border-[#2A2A2A] rounded p-8 flex flex-col items-center justify-center overflow-hidden transition-all duration-300 hover:border-[#FFD100]/50" href="#">
+<div class="absolute top-0 left-0 w-full h-[2px] bg-[#FFD100] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
+<span class="material-symbols-outlined text-4xl text-[#FFD100] mb-4">calendar_month</span>
+<h3 class="font-headline-sm text-headline-sm text-white uppercase tracking-wider group-hover:text-[#FFD100] transition-colors">EVENTS</h3>
+</a>
+<a class="group relative bg-[#1A1A1A] border border-[#2A2A2A] rounded p-8 flex flex-col items-center justify-center overflow-hidden transition-all duration-300 hover:border-[#FFD100]/50" href="#">
+<div class="absolute top-0 left-0 w-full h-[2px] bg-[#FFD100] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
+<span class="material-symbols-outlined text-4xl text-[#FFD100] mb-4">scoreboard</span>
+<h3 class="font-headline-sm text-headline-sm text-white uppercase tracking-wider group-hover:text-[#FFD100] transition-colors">GC SCORES</h3>
+</a>
+<a class="group relative bg-[#1A1A1A] border border-[#2A2A2A] rounded p-8 flex flex-col items-center justify-center overflow-hidden transition-all duration-300 hover:border-[#FFD100]/50" href="#">
+<div class="absolute top-0 left-0 w-full h-[2px] bg-[#FFD100] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
+<span class="material-symbols-outlined text-4xl text-[#FFD100] mb-4">contact_mail</span>
+<h3 class="font-headline-sm text-headline-sm text-white uppercase tracking-wider group-hover:text-[#FFD100] transition-colors">CONTACTS</h3>
+</a>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-[#0B0B0B] text-white pt-20 pb-8 px-8 border-t border-[#2A2A2A]">
+<div class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center md:items-start gap-12 md:gap-8">
+<!-- Left Section -->
+<div class="flex flex-col items-center md:items-center text-center flex-1">
+<div class="mb-6 text-[#FFD100]">
+<!-- Placeholder for Gymkhana Logo using Material Icon -->
+<span class="material-symbols-outlined text-6xl">emoji_events</span>
+</div>
+<h2 class="text-xl md:text-2xl font-lexend font-bold mb-2">Technology Students' Gymkhana</h2>
+<p class="text-sm text-gray-300 mb-8 max-w-xs leading-relaxed">
+                Indian Institute of Technology Kharagpur,<br/> West Bengal - 721302
+            </p>
+<div class="flex gap-6">
+<a class="text-white hover:text-[#FFD100] transition-colors" href="#">
+<svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24"><path clip-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" fill-rule="evenodd"></path></svg>
+</a>
+<a class="text-white hover:text-[#FFD100] transition-colors" href="#">
+<svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24"><path clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" fill-rule="evenodd"></path></svg>
+</a>
+<a class="text-white hover:text-[#FFD100] transition-colors" href="#">
+<svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24"><path clip-rule="evenodd" d="M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.746 22 12 22 12s-.002 3.254-.42 4.814c-.23.861-.908 1.538-1.768 1.768-1.56.419-7.812.419-7.812.419s-6.252 0-7.812-.419c-.861-.23-1.538-.907-1.768-1.768C2.002 15.254 2 12 2 12s.002-3.254.42-4.814c.23-.861.908-1.538 1.768-1.768C5.748 5 12 5 12 5s6.252 0 7.812.418zM10 15l5-3-5-3v6z" fill-rule="evenodd"></path></svg>
+</a>
+<a class="text-white hover:text-[#FFD100] transition-colors" href="#">
+<svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24"><path clip-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" fill-rule="evenodd"></path></svg>
+</a>
+</div>
+</div>
+<!-- Divider -->
+<div class="hidden md:block w-px border-l-[3px] border-dashed border-[#2A2A2A] h-64 mx-4"></div>
+<!-- Middle Section (Links) -->
+<div class="flex-1 w-full max-w-lg">
+<div class="grid grid-cols-2 gap-x-12 gap-y-0">
+<!-- Column 1 -->
+<div class="flex flex-col">
+<a class="py-4 text-center text-lg font-lexend text-white hover:text-[#FFD100] transition-colors border-b-[2px] border-dotted border-[#2A2A2A]" href="#">SETU</a>
+<a class="py-4 text-center text-lg font-lexend text-white hover:text-[#FFD100] transition-colors border-b-[2px] border-dotted border-[#2A2A2A]" href="#">Yellow Pages</a>
+<a class="py-4 text-center text-lg font-lexend text-white hover:text-[#FFD100] transition-colors border-b-[2px] border-dotted border-[#2A2A2A]" href="#">Library</a>
+<a class="py-4 text-center text-lg font-lexend text-white hover:text-[#FFD100] transition-colors border-b-[2px] border-dotted border-[#2A2A2A]" href="#">Your Dost</a>
+<a class="py-4 text-center text-lg font-lexend text-white hover:text-[#FFD100] transition-colors border-b-[2px] border-dotted border-[#2A2A2A]" href="#">CIC</a>
+</div>
+<!-- Column 2 -->
+<div class="flex flex-col">
+<a class="py-4 text-center text-lg font-lexend text-white hover:text-[#FFD100] transition-colors border-b-[2px] border-dotted border-[#2A2A2A]" href="#">IIT KGP Website</a>
+<a class="py-4 text-center text-lg font-lexend text-white hover:text-[#FFD100] transition-colors border-b-[2px] border-dotted border-[#2A2A2A]" href="#">HMC</a>
+<a class="py-4 text-center text-lg font-lexend text-white hover:text-[#FFD100] transition-colors border-b-[2px] border-dotted border-[#2A2A2A]" href="#">ERP</a>
+<a class="py-4 text-center text-lg font-lexend text-white hover:text-[#FFD100] transition-colors border-b-[2px] border-dotted border-[#2A2A2A]" href="#">Grievance Form</a>
+<a class="py-4 text-center text-lg font-lexend text-white hover:text-[#FFD100] transition-colors border-b-[2px] border-dotted border-[#2A2A2A]" href="#">Apna IIT</a>
+</div>
+</div>
+</div>
+<!-- Divider -->
+<div class="hidden md:block w-px border-l-[3px] border-dashed border-[#2A2A2A] h-64 mx-4"></div>
+<!-- Right Section -->
+<div class="flex flex-col items-center justify-center text-center flex-1 py-8 md:py-0">
+<h2 class="text-4xl font-lexend font-bold text-white mb-2">We're here</h2>
+<h2 class="text-4xl font-lexend font-bold text-[#FFD100] mb-8">Let's talk</h2>
+<a class="border-2 border-[#FFD100] text-white font-lexend font-bold px-8 py-3 rounded-lg hover:bg-[#FFD100] hover:text-[#0B0B0B] transition-colors duration-300" href="#">
+                Get in Touch
+            </a>
+</div>
+</div>
+<!-- Bottom Bar -->
+<div class="w-full max-w-container-max mx-auto mt-16 pt-8 border-t border-[#2A2A2A] text-center">
+<p class="font-lexend text-sm text-gray-300 flex items-center justify-center gap-2">
+            © Technology Students' Gymkhana, IIT Kharagpur 
+            <span class="text-white text-xs">♦</span>
+<a class="text-[#FFD100] hover:underline underline-offset-4" href="#">Source Code</a>
+</p>
+</div>
+</footer>
+</body></html>
