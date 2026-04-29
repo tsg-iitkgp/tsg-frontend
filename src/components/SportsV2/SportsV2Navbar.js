@@ -1,7 +1,9 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import Styles from "./sportsV2.module.css";
+import gymkhanaLogo from "../../assets/gymkhanaLogo.png";
 import {
   FaHome,
   FaTrophy,
@@ -31,7 +33,15 @@ export default function SportsV2Navbar() {
   return (
     <>
       <nav className={Styles.topNav}>
-        <div className={Styles.brand}>GYMKHANA SPORTS</div>
+        <div className={Styles.brand}>
+          <Image
+            src={gymkhanaLogo}
+            alt="Gymkhana Logo"
+            className={Styles.brandLogo}
+            priority
+          />
+          <span>GYMKHANA SPORTS</span>
+        </div>
         <ul className={Styles.navLinks}>
           {NAV_LINKS.map((link) => (
             <li key={link.label}>
@@ -44,9 +54,6 @@ export default function SportsV2Navbar() {
             </li>
           ))}
         </ul>
-        <button type="button" className={Styles.loginBtn}>
-          LOGIN
-        </button>
       </nav>
 
       <nav className={Styles.bottomNav}>

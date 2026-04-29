@@ -38,6 +38,7 @@ export default function SportsV2Page() {
               alt="Sports at IIT Kharagpur"
               className={Styles.heroImage}
             />
+            <div className={Styles.heroVignette} />
             <div className={Styles.heroOverlay} />
           </div>
           <div className={Styles.heroContent}>

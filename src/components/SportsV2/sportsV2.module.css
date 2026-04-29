@@ -68,12 +68,22 @@
 }
 
 .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
     font-family: "Lexend", sans-serif;
     font-size: 1.25rem;
     font-weight: 900;
     color: var(--sv2-yellow);
     letter-spacing: 0.15em;
     text-transform: uppercase;
+}
+
+.brandLogo {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    flex-shrink: 0;
 }
 
 .navLinks {
@@ -107,25 +117,6 @@
 
 .navLinkActive:hover {
     color: var(--sv2-yellow);
-}
-
-.loginBtn {
-    background-color: var(--sv2-yellow);
-    color: var(--sv2-bg);
-    font-family: "Inter", sans-serif;
-    font-weight: 700;
-    padding: 8px 24px;
-    border-radius: 4px;
-    border: none;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    font-size: 14px;
-    cursor: pointer;
-    transition: background-color 0.2s;
-}
-
-.loginBtn:hover {
-    background-color: var(--sv2-yellow-hover);
 }
 
 /* ----------- MOBILE BOTTOM NAV ----------- */
@@ -215,17 +206,32 @@
     height: 100%;
     object-fit: cover;
     object-position: center;
-    opacity: 0.7;
+    opacity: 0.85;
+    filter: brightness(0.6) contrast(1.05);
+}
+
+.heroVignette {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+        radial-gradient(
+            ellipse at center,
+            rgba(11, 11, 11, 0) 35%,
+            rgba(11, 11, 11, 0.55) 75%,
+            rgba(11, 11, 11, 0.95) 100%
+        );
 }
 
 .heroOverlay {
     position: absolute;
     inset: 0;
+    pointer-events: none;
     background: linear-gradient(
         to top,
         rgba(11, 11, 11, 1) 0%,
-        rgba(11, 11, 11, 0.4) 50%,
-        rgba(11, 11, 11, 0.2) 100%
+        rgba(11, 11, 11, 0.35) 55%,
+        rgba(11, 11, 11, 0.1) 100%
     );
 }
 
