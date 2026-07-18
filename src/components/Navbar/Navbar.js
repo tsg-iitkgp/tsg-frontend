@@ -29,6 +29,7 @@ export default function Navbar() {
 
   const menuGroups = {
     societies: [
+      { title: "All Societies", path: "/societies" },
       { title: "Social & Cultural", path: "/committees/socult" },
       { title: "Sports", path: "/committees/sports" },
       { title: "Technology", path: "/committees/tech" },
@@ -93,7 +94,7 @@ export default function Navbar() {
             <NavbarDropdown 
               title="Societies" 
               items={menuGroups.societies} 
-              isActive={pathname.startsWith("/committees")} 
+              isActive={pathname.startsWith("/committees") || pathname.startsWith("/societies")} 
             />
 
             <li className={Styles.navItem}>
