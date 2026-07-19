@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Make sure we are in the correct directory
-cd /home/techcoordi/tsg-site/frontend || exit 1
+cd /home/techcoordi/tsg-frontend || exit 1
 
 # Sync with remote repository
 git fetch origin
