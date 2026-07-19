@@ -202,7 +202,6 @@ const ProfileHeader = () => {
                       rel="noopener noreferrer"
                     >
                       <FaFacebook
-                        style={{ fontSize: "2.8rem" }}
                         className="header-social-icon facebook"
                       />
                     </a>
@@ -214,7 +213,6 @@ const ProfileHeader = () => {
                       rel="noopener noreferrer"
                     >
                       <FaInstagram
-                        style={{ fontSize: "2.8rem" }}
                         className="header-social-icon instagram"
                       />
                     </a>
@@ -226,7 +224,6 @@ const ProfileHeader = () => {
                       rel="noopener noreferrer"
                     >
                       <FaLinkedin
-                        style={{ fontSize: "2.8rem" }}
                         className="header-social-icon linkedin"
                       />
                     </a>
