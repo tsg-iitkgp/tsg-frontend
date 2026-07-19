@@ -5,6 +5,7 @@ import ContactCard from "../../components/ContactCard";
 import primg from "./../Contacts/Images/prf.png";
 import CurrentOfficeBearers from "./CurrentOfficeBearers";
 const years = [
+    "2025-2026",
     "2024-2025",
     "2023-2024",
     "2022-2023",
@@ -82,7 +83,7 @@ const years = [
 
 export default function PreviousOfficeBearers() {
     const [currentTab, setCurrentTab] = useState("senate");
-    const [currentYear, setCurrentYear] = useState("2024-2025");
+    const [currentYear, setCurrentYear] = useState("2025-2026");
     const startYear = parseInt(currentYear.split("-")[0], 10);
     const [open, setOpen] = useState(false);
     const dropdownRef = useRef(null);
