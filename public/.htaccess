@@ -5,7 +5,3 @@ RewriteEngine On
 # WhatsApp user agents: WhatsApp, WhatsAppBot, WhatsApp/2.x
 RewriteCond %{HTTP_USER_AGENT} (facebookexternalhit|WhatsApp|WhatsAppBot|Twitterbot|LinkedInBot|Slackbot|SkypeUriPreview|crawler|spider|bot) [NC]
 RewriteRule ^events/iit-kharagpur-university-cambridge-gaia-platform-collaboration-2025/?$ /events/iit-kharagpur-university-cambridge-gaia-platform-collaboration-2025.html [L]
-
-# Default SPA fallback for all other requests
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^ index.html [QSA,L]
