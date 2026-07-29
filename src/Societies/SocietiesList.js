@@ -48,11 +48,32 @@ const SocietiesList = () => {
     totalPages: 1,
   });
 
-  // Fetch categories from API
+  const CATEGORY_ORDER = [
+    "Technology",
+    "Social & Cultural",
+    "Students' Welfare",
+    "Sports & Games",
+    "Department",
+    "Indepedent",
+    "Cell",
+    "Regional",
+  ];
+
+  // Fetch categories from API and sort in specified order
   useEffect(() => {
     fetch(`${BASE_URL}/categories`)
       .then((res) => res.json())
-      .then((data) => setCategories(data.categories || []))
+      .then((data) => {
+        const rawCats = data.categories || [];
+        const sortedCats = [...rawCats].sort((a, b) => {
+          const idxA = CATEGORY_ORDER.indexOf(a.name);
+          const idxB = CATEGORY_ORDER.indexOf(b.name);
+          const posA = idxA !== -1 ? idxA : 999;
+          const posB = idxB !== -1 ? idxB : 999;
+          return posA - posB;
+        });
+        setCategories(sortedCats);
+      })
       .catch(() => setCategories([]));
   }, []);
 

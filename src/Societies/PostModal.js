@@ -21,12 +21,17 @@ const PostModal = ({ post, onClose }) => {
       try {
         const res = await fetch(`${BASE_URL}/posts/${post.id}`);
         const data = await res.json();
-        setPostData(data);
+        if (res.ok && data) {
+          setPostData({ ...post, ...data });
+        } else {
+          setPostData(post);
+        }
       } catch (err) {
-        setPostData(null);
+        setPostData(post);
       }
     }
     if (post?.id) fetchPost();
+    else if (post) setPostData(post);
 
     return () => {
       document.removeEventListener("keydown", handleEscape);
@@ -66,6 +71,40 @@ const PostModal = ({ post, onClose }) => {
     );
   }
 
+  const applyLink =
+    postData.apply_link ||
+    postData.registration_link ||
+    postData.form_link ||
+    postData.link ||
+    post?.apply_link;
+
+  const renderDescriptionWithLinks = (text) => {
+    if (!text) return null;
+    const urlRegex = /(https?:\/\/[^\s]+)/g;
+    const parts = text.split(urlRegex);
+    return parts.map((part, i) => {
+      if (part.match(urlRegex)) {
+        return (
+          <a
+            key={i}
+            href={part}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              color: "#fbbf24",
+              wordBreak: "break-all",
+              overflowWrap: "anywhere",
+              textDecoration: "underline",
+            }}
+          >
+            {part}
+          </a>
+        );
+      }
+      return part;
+    });
+  };
+
   return (
     <div className="modal-backdrop" onClick={handleBackdropClick}>
       <div className="modal-container">
@@ -99,7 +138,8 @@ const PostModal = ({ post, onClose }) => {
             </div>
             <span>
               {(() => {
-                const d = new Date(postData.created_at);
+                const rawDate = postData.created_at || postData.event_date;
+                const d = rawDate ? new Date(rawDate) : new Date();
                 const day = d.getDate();
                 const month = d.toLocaleString("default", { month: "short" });
                 const year = d.getFullYear();
@@ -112,31 +152,37 @@ const PostModal = ({ post, onClose }) => {
             </span>
           </div>
           <hr className="modal-divider" />
-          <div className="modal-text">{postData.description}</div>
+          <div className="modal-text">{renderDescriptionWithLinks(postData.description)}</div>
           <div
             className="modal-footer"
-            style={{ display: "flex", justifyContent: "space-between" }}
+            style={{ display: "flex", justifyContent: "space-between", gap: "1rem" }}
           >
-            {postData.form_structure && (
+            {applyLink ? (
+              <a
+                href={applyLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="modal-share-bottom modal-register-button"
+                style={{ textDecoration: "none", display: "inline-flex", alignItems: "center", justifyContent: "center" }}
+              >
+                Apply
+              </a>
+            ) : postData.form_structure ? (
               <button
                 className="modal-share-bottom modal-register-button"
                 onClick={() => {
-                  // Navigate to the form page for this post
                   window.location.href = `/posts/${postData.id}/form`;
                 }}
               >
                 Register
               </button>
-            )}
-            <>
-              <button className="modal-share-bottom" onClick={handleShare} title="Share this post">
-                {/* <Share2 size={28} style={{ color: "red" }} /> */}
-                {copied ? "Link copied!" : "Share"}
-              </button>
-            </>
+            ) : null}
+
+            <button className="modal-share-bottom" onClick={handleShare} title="Share this post">
+              {copied ? "Link copied!" : "Share"}
+            </button>
           </div>
         </div>
-        {/* Share button at the bottom */}
       </div>
     </div>
   );

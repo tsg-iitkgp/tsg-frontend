@@ -101,15 +101,27 @@
 /* Event cards grid */
 .cardsSection {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0 auto 6rem;
+}
+
+.sectionHeaderWrapper {
+  text-align: center;
+  margin-bottom: 2.5rem;
 }
 
 .sectionHeading {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 700;
   color: #fed403;
-  margin-bottom: 2.5rem;
-  text-align: center;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+
+.sectionSubheading {
+  font-size: 1rem;
+  color: #aaa;
+  margin: 0;
 }
 
 .cardsGrid {
@@ -125,6 +137,359 @@
   gap: 1.5rem;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+/* SECTION 2: Societies Section */
+.societiesSection {
+  max-width: 1200px;
+  margin: 0 auto 6rem;
+  padding: 0 1rem;
+}
+
+.filterBarContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 1rem 1.5rem;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.categoryFilterPills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.filterPill {
+  background: transparent;
+  color: #ccc;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.5rem 1.25rem;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filterPill:hover {
+  border-color: #fed403;
+  color: #fed403;
+}
+
+.activePill {
+  background: #fed403 !important;
+  color: #000 !important;
+  border-color: #fed403 !important;
+  box-shadow: 0 0 15px rgba(254, 212, 3, 0.3);
+}
+
+.searchBox {
+  display: flex;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 30px;
+  padding: 0.4rem 1rem;
+  width: 100%;
+  max-width: 320px;
+  transition: border-color 0.3s ease;
+}
+
+.searchBox:focus-within {
+  border-color: #fed403;
+}
+
+.searchIcon {
+  color: #888;
+  margin-right: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.searchInput {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 0.9rem;
+  outline: none;
+  width: 100%;
+}
+
+.societiesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.societyCard {
+  background: rgba(18, 18, 18, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.societyCard:hover {
+  transform: translateY(-6px);
+  border-color: rgba(254, 212, 3, 0.4);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(254, 212, 3, 0.15);
+}
+
+.societyLogoWrapper {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  border: 2px solid rgba(254, 212, 3, 0.3);
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.societyLogoImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.societyCardContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.societyCategoryBadge {
+  align-self: flex-start;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #fed403;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.4rem;
+}
+
+.societyName {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  color: #fff;
+}
+
+.societyOneLiner {
+  font-size: 0.85rem;
+  color: #aaa;
+  line-height: 1.4;
+  margin: 0 0 1rem 0;
+}
+
+.societyCardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #fed403;
+  padding-top: 0.8rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.linkIcon {
+  font-size: 0.75rem;
+  transition: transform 0.2s ease;
+}
+
+.societyCard:hover .linkIcon {
+  transform: translateX(3px);
+}
+
+/* SECTION 3: Society Updates / Posts Section */
+.postsSection {
+  max-width: 1200px;
+  margin: 0 auto 4rem;
+  padding: 0 1rem;
+}
+
+.postsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.postCard {
+  background: rgba(20, 20, 20, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.postCard:hover {
+  transform: translateY(-8px);
+  border-color: rgba(254, 212, 3, 0.5);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6), 0 0 25px rgba(254, 212, 3, 0.15);
+}
+
+.postCardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  background: rgba(0, 0, 0, 0.4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.postSocietyInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.postSocietyLogo {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid rgba(254, 212, 3, 0.4);
+}
+
+.postSocietyMeta {
+  display: flex;
+  flex-direction: column;
+}
+
+.postSocietyName {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.postCategoryTag {
+  font-size: 0.7rem;
+  color: #fed403;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.postDate {
+  font-size: 0.75rem;
+  color: #888;
+  font-weight: 500;
+}
+
+.postImageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  background: #080808;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.postImg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.5s ease;
+}
+
+.postCard:hover .postImg {
+  transform: scale(1.05);
+}
+
+.postCardBody {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.postTitle {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 0.6rem 0;
+  line-height: 1.35;
+}
+
+.postDescriptionSnippet {
+  font-size: 0.88rem;
+  color: #bbb;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.loadMoreContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.loadMoreBtn {
+  background: transparent;
+  color: #fed403;
+  border: 2px solid #fed403;
+  padding: 0.75rem 2.5rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.loadMoreBtn:hover:not(:disabled) {
+  background: #fed403;
+  color: #000;
+  box-shadow: 0 0 20px rgba(254, 212, 3, 0.4);
+  transform: translateY(-2px);
+}
+
+.loadMoreBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.noDataMsg {
+  text-align: center;
+  color: #fed403;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 3rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.skeletonSocietyCard,
+.skeletonPostCard {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  height: 200px;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.6; }
+  50% { opacity: 0.3; }
+  100% { opacity: 0.6; }
 }
 
 /* Legacy compat */
@@ -327,6 +692,15 @@
     font-size: 3rem;
   }
 
+  .filterBarContainer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .searchBox {
+    max-width: 100%;
+  }
+
   .inductionIntro .info {
     padding: 20px;
     border-radius: 8px;
@@ -364,4 +738,4 @@
   .categoryContainer {
     margin: 2rem 0;
   }
-}
+}
