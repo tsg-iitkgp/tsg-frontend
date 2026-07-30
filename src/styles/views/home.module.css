@@ -227,6 +227,25 @@ html {
   object-fit: cover;
 }
 
+.coachesContainer {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 10%;
+  margin-bottom: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.coachesImage {
+  width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+  object-fit: cover;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+
 .committeesSection {
   max-width: 1200px;
   width: 90%;
@@ -431,6 +450,11 @@ html {
 
   .aboutUsSectionWrapper {
     flex-direction: column;
+  }
+
+  .coachesContainer {
+    padding: 0 5%;
+    margin-bottom: 1.5rem;
   }
 
   .aboutImageContainer {
