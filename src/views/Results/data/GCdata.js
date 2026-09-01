@@ -1,4 +1,193 @@
 const GCdata = {
+  "2025-26": {
+    Sports: {
+      Male: [],
+      Female: []
+    },
+    Technology: [],
+    Socult: [
+      {
+        Event: "Overall",
+        Gold: "RP",
+        Silver: "RK",
+        Bronze: "AZAD"
+      },
+      {
+        Event: "Dance and Dramatics Cup",
+        Gold: "RK",
+        Silver: "MMM",
+        Bronze: "RP"
+      },
+      {
+        Event: "Street Play",
+        Gold: "MMM",
+        Silver: "RP",
+        Bronze: "LLR"
+      },
+      {
+        Event: "Stage Play",
+        Gold: "SNVH",
+        Silver: "RK",
+        Bronze: "MMM"
+      },
+      {
+        Event: "MonoAct",
+        Gold: "RK",
+        Silver: "LLR",
+        Bronze: "NEHRU"
+      },
+      {
+        Event: "Group Dance",
+        Gold: "PATEL",
+        Silver: "RK",
+        Bronze: "MT"
+      },
+      {
+        Event: "Duet Dance",
+        Gold: "RP",
+        Silver: "LBS",
+        Bronze: "NHR"
+      },
+      {
+        Event: "Entertainment Cup",
+        Gold: "RK",
+        Silver: "PATEL & AZAD",
+        Bronze: ""
+      },
+      {
+        Event: "Eastern Instrumentals",
+        Gold: "PATEL",
+        Silver: "NEHRU",
+        Bronze: "RK"
+      },
+      {
+        Event: "Western Instrumentals",
+        Gold: "PATEL",
+        Silver: "RP",
+        Bronze: "NEHRU"
+      },
+      {
+        Event: "Eastern Vocals",
+        Gold: "RK",
+        Silver: "RP",
+        Bronze: "NEHRU"
+      },
+      {
+        Event: "Western Vocals",
+        Gold: "RK",
+        Silver: "AZAD",
+        Bronze: "SBP 1"
+      },
+      {
+        Event: "Groups",
+        Gold: "AZAD",
+        Silver: "RP",
+        Bronze: "MMM"
+      },
+      {
+        Event: "FINE ARTS AND DESIGN CUP",
+        Gold: "AZAD & NEHRU",
+        Silver: "",
+        Bronze: "MS"
+      },
+      {
+        Event: "PAINTING",
+        Gold: "NEHRU",
+        Silver: "RP",
+        Bronze: "AZAD"
+      },
+      {
+        Event: "SKETCHING",
+        Gold: "LLR",
+        Silver: "RP",
+        Bronze: "NEHRU"
+      },
+      {
+        Event: "CARTOONING",
+        Gold: "MS",
+        Silver: "SNIG",
+        Bronze: "MMM"
+      },
+      {
+        Event: "DESIGN MARATHON",
+        Gold: "AZAD",
+        Silver: "RK",
+        Bronze: "NEHRU"
+      },
+      {
+        Event: "Literary Arts Cup",
+        Gold: "PATEL",
+        Silver: "NEHRU",
+        Bronze: "AZAD"
+      },
+      {
+        Event: "General Quiz",
+        Gold: "PATEL",
+        Silver: "VS",
+        Bronze: "NEHRU"
+      },
+      {
+        Event: "Asian Parliamentary Debate",
+        Gold: "NEHRU",
+        Silver: "SNIG",
+        Bronze: "RP"
+      },
+      {
+        Event: "English Poetry Slam",
+        Gold: "AZAD",
+        Silver: "MT",
+        Bronze: "SNIG"
+      },
+      {
+        Event: "Hindi Poetry Slam",
+        Gold: "PATEL",
+        Silver: "LLR",
+        Bronze: "AZAD"
+      },
+      {
+        Event: "English Creative Writing",
+        Gold: "HJB",
+        Silver: "SBP 2",
+        Bronze: "RK"
+      },
+      {
+        Event: "Hindi Creative Writing",
+        Gold: "HJB",
+        Silver: "NEHRU",
+        Bronze: "AZAD"
+      },
+      {
+        Event: "Scrabble",
+        Gold: "AZAD",
+        Silver: "RP",
+        Bronze: "RK"
+      },
+      {
+        Event: "Stand Up Comedy",
+        Gold: "PATEL",
+        Silver: "RK",
+        Bronze: "LLR"
+      },
+      {
+        Event: "Filmmaking and Photography Cup",
+        Gold: "RP",
+        Silver: "RK",
+        Bronze: "ATAL"
+      },
+      {
+        Event: "Shortfilm Making",
+        Gold: "RP",
+        Silver: "ATAL",
+        Bronze: "AZAD"
+      },
+      {
+        Event: "Photostory",
+        Gold: "RK",
+        Silver: "RP",
+        Bronze: "LLR"
+      }
+    ]
+  },
   "2016-17": {
     Sports:
     {
