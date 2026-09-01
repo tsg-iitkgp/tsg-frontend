@@ -13,12 +13,6 @@ const GCdata = {
         Bronze: "AZAD"
       },
       {
-        Event: "Dance and Dramatics Cup",
-        Gold: "RK",
-        Silver: "MMM",
-        Bronze: "RP"
-      },
-      {
         Event: "Street Play",
         Gold: "MMM",
         Silver: "RP",
@@ -47,12 +41,6 @@ const GCdata = {
         Gold: "RP",
         Silver: "LBS",
         Bronze: "NHR"
-      },
-      {
-        Event: "Entertainment Cup",
-        Gold: "RK",
-        Silver: "PATEL & AZAD",
-        Bronze: ""
       },
       {
         Event: "Eastern Instrumentals",
@@ -85,12 +73,6 @@ const GCdata = {
         Bronze: "MMM"
       },
       {
-        Event: "FINE ARTS AND DESIGN CUP",
-        Gold: "AZAD & NEHRU",
-        Silver: "",
-        Bronze: "MS"
-      },
-      {
         Event: "PAINTING",
         Gold: "NEHRU",
         Silver: "RP",
@@ -113,12 +95,6 @@ const GCdata = {
         Gold: "AZAD",
         Silver: "RK",
         Bronze: "NEHRU"
-      },
-      {
-        Event: "Literary Arts Cup",
-        Gold: "PATEL",
-        Silver: "NEHRU",
-        Bronze: "AZAD"
       },
       {
         Event: "General Quiz",
@@ -167,12 +143,6 @@ const GCdata = {
         Gold: "PATEL",
         Silver: "RK",
         Bronze: "LLR"
-      },
-      {
-        Event: "Filmmaking and Photography Cup",
-        Gold: "RP",
-        Silver: "RK",
-        Bronze: "ATAL"
       },
       {
         Event: "Shortfilm Making",
