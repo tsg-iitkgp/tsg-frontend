@@ -37,7 +37,8 @@ export default function Navbar() {
     ],
     hallOfFame: [
       { title: "Awards", path: "/awards" },
-      { title: "InterIIT/GC Results", path: "/results" },
+      { title: "GC Results", path: "/results/gc" },
+      { title: "Inter IIT Results", path: "/results/interiit" },
     ],
     governance: [
       { title: "Council", path: "/contacts" },
