@@ -5,7 +5,6 @@ import Head from "next/head";
 import Layout from "../../components/Layouts/Layout";
 import Styles from "../../styles/views/home.module.css";
 import AboutUs from "./AboutUs/AboutUs";
-import CoachesHome from "./Coaches/CoachesHome";
 import CommitteesHome from "./Committee/CommitteesHome";
 import EventsHome from "./Events/EventsHome";
 import CouncilHome from "./Council/CouncilHome";
@@ -145,9 +144,6 @@ export default function Home() {
         <div className={Styles.mottoBox}>&quot;Yogah Karmasu Kausalam&quot;</div>
       </div>
       <div>
-        {/* Coaches Recruitment Section */}
-        <CoachesHome />
-
         {/* About Us Section */}
         <AboutUs />
 
