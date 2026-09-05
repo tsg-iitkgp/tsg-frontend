@@ -12,6 +12,9 @@ export default function CurrentOfficeBearers({ year }) {
     const President = contactsData.data.find(
         (contact) => contact.Post === "President"
     );
+    const JointPresident = contactsData.data.find(
+        (contact) => contact.Post === "Joint President"
+    );
     const Associate_President1 = contactsData.data.find(
         (contact) => contact.Post === "Associate President 1"
     );
@@ -103,6 +106,20 @@ export default function CurrentOfficeBearers({ year }) {
                         />
                     </div>
                 </div>
+                {JointPresident && (
+                    <div>
+                        <div data-aos="zoom-in-up">
+                            <ContactCard
+                                name={JointPresident.Name}
+                                designation={JointPresident.Post}
+                                facebook={JointPresident.Facebook}
+                                linkedin={JointPresident.LinkedIn}
+                                email={JointPresident.Email}
+                                imgSrc={`/data/media/images/contacts/${JointPresident.img}`}
+                            />
+                        </div>
+                    </div>
+                )}
                 <div className={Styles.multipleCards}>
                     <div data-aos="zoom-in-up">
                         <ContactCard
