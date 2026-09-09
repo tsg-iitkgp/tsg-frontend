@@ -46,7 +46,7 @@ export default function Footer() {
     },
     {
       title: "Grievance Form",
-      href: "https://docs.google.com/forms/d/e/1FAIpQLSft9FXZYvLiNt3oy0K3Iu4d6HoE830RhNWFHMXx1R4IjlhHKA/viewform",
+      href: "https://docs.google.com/forms/d/e/1FAIpQLSdWuyfr_bdqSh5tKTeOAiiDQ2WI2AqtYqaC3DWEFRMFVEqR0g/viewform?usp=sharing&ouid=113227109339493647282",
       target: "_blank",
     },
     {
@@ -54,6 +54,11 @@ export default function Footer() {
       href: "http://www.cic.iitkgp.ac.in/",
       target: "_blank",
       description: "Computer & Informatics Center",
+    },
+    {
+      title: "Food Grievance Form",
+      href: "https://docs.google.com/forms/d/e/1FAIpQLSeJK8vhtCICOvIXHYvM0imiGVTqU2O965juvajyBK69QQwcmA/viewform?usp=sharing&ouid=113227109339493647282",
+      target: "_blank",
     },
     {
       title: "Apna IIT",
