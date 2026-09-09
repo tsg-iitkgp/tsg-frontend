@@ -49,6 +49,8 @@ export default function Navbar() {
       { title: "Letter To You", path: "/letter-to-you" },
       { title: "Blogs", path: "https://tsgblog.iitkgp.ac.in/" },
       { title: "FAQ", path: "/faq" },
+      { title: "Grievance Form", path: "https://docs.google.com/forms/d/e/1FAIpQLSdWuyfr_bdqSh5tKTeOAiiDQ2WI2AqtYqaC3DWEFRMFVEqR0g/viewform?usp=sharing&ouid=113227109339493647282" },
+      { title: "Food Grievance Form", path: "https://docs.google.com/forms/d/e/1FAIpQLSeJK8vhtCICOvIXHYvM0imiGVTqU2O965juvajyBK69QQwcmA/viewform?usp=sharing&ouid=113227109339493647282" },
     ],
   };
 

@@ -1,4 +1,121 @@
 const InterIITdata = {
+    "2025-26": {
+        Sports: {
+            Male: [],
+            Female: []
+        },
+        Technology: [
+            {
+                Event: "Overall",
+                Gold: "IIT Kharagpur",
+                Silver: "IIT Kanpur",
+                Bronze: "IIT Indore"
+            },
+            {
+                Event: "Ebullient Securities",
+                Gold: "IIT Indore",
+                Silver: "IIT Dharwad",
+                Bronze: "IIT Delhi"
+            },
+            {
+                Event: "Arista Networks",
+                Gold: "IIT Jodhpur",
+                Silver: "IIT Guwahati",
+                Bronze: "IIT Kharagpur"
+            },
+            {
+                Event: "Pathway",
+                Gold: "IIT Jodhpur",
+                Silver: "IIT Patna",
+                Bronze: "IIT Kharagpur"
+            },
+            {
+                Event: "LAT Aerospace",
+                Gold: "IIT Kharagpur",
+                Silver: "IIT Patna",
+                Bronze: "IIT Kanpur"
+            },
+            {
+                Event: "Eternal",
+                Gold: "IIT Kanpur",
+                Silver: "IIT Bombay",
+                Bronze: "IIT Mandi"
+            },
+            {
+                Event: "Adobe",
+                Gold: "IIT Kharagpur",
+                Silver: "IIT Indore",
+                Bronze: "IIT Madras"
+            },
+            {
+                Event: "ISRO Geospatial",
+                Gold: "IIT Delhi",
+                Silver: "IIT Gandhinagar",
+                Bronze: "IIT Roorkee"
+            },
+            {
+                Event: "ISRO VLSI",
+                Gold: "IIT Madras",
+                Silver: "IIT Kharagpur",
+                Bronze: "IIT Roorkee"
+            },
+            {
+                Event: "Observe.AI",
+                Gold: "IIT Madras",
+                Silver: "IIT Kharagpur",
+                Bronze: "IIT Delhi"
+            },
+            {
+                Event: "QTrino Labs",
+                Gold: "IIT Madras",
+                Silver: "IIT Indore",
+                Bronze: "IIT ISM"
+            },
+            {
+                Event: "Drona Aviation",
+                Gold: "IIT ISM",
+                Silver: "IIT Guwahati",
+                Bronze: "IIT BHU"
+            },
+            {
+                Event: "Game Connect (GDAI)",
+                Gold: "IIT Palakkad",
+                Silver: "IIT Delhi",
+                Bronze: "IIT Gandhinagar"
+            },
+            {
+                Event: "GenuityIO",
+                Gold: "IIT Gandhinagar",
+                Silver: "IIT Delhi",
+                Bronze: "IIT Jodhpur"
+            },
+            {
+                Event: "Jilo Health",
+                Gold: "IIT BHU",
+                Silver: "IIT Guwahati",
+                Bronze: "IIT Indore"
+            },
+            {
+                Event: "STEMvibe",
+                Gold: "IIT Kanpur",
+                Silver: "IIT Bombay",
+                Bronze: "IIT Kharagpur"
+            },
+            {
+                Event: "SAC",
+                Gold: "IIT Kharagpur",
+                Silver: "IIT Patna",
+                Bronze: "IIT Jodhpur"
+            },
+            {
+                Event: "EC",
+                Gold: "IIT Bombay",
+                Silver: "IIT Kharagpur",
+                Bronze: "IIT Madras"
+            }
+        ],
+        Socult: []
+    },
     "2016-17": {
         Sports:
         {
