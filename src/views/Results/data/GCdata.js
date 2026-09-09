@@ -235,7 +235,74 @@ const GCdata = {
         },
       ],
     },
-    Technology: [],
+    Technology: [
+      {
+        Event: "Overall",
+        Gold: "Nehru",
+        Silver: "Patel",
+        Bronze: "RK"
+      },
+      {
+        Event: "Biz Quiz",
+        Gold: "Patel",
+        Silver: "Azad",
+        Bronze: "Nehru"
+      },
+      {
+        Event: "Tech Quiz",
+        Gold: "RK",
+        Silver: "Azad",
+        Bronze: "Patel"
+      },
+      {
+        Event: "Maths Olympiad",
+        Gold: "Nehru",
+        Silver: "RK",
+        Bronze: "JCB"
+      },
+      {
+        Event: "Ad Design",
+        Gold: "Nehru",
+        Silver: "RK",
+        Bronze: "MS"
+      },
+      {
+        Event: "OpenSoft",
+        Gold: "Nehru",
+        Silver: "AZAD",
+        Bronze: "MS"
+      },
+      {
+        Event: "Case Study",
+        Gold: "Nehru",
+        Silver: "AZAD",
+        Bronze: "Patel"
+      },
+      {
+        Event: "Product Design",
+        Gold: "Patel",
+        Silver: "Nehru",
+        Bronze: "HJB"
+      },
+      {
+        Event: "Data Analytics",
+        Gold: "RK, JCB",
+        Silver: "-",
+        Bronze: "Patel"
+      },
+      {
+        Event: "Prod M",
+        Gold: "Patel",
+        Silver: "Azad",
+        Bronze: "SNVH"
+      },
+      {
+        Event: "HAMO",
+        Gold: "Nehru",
+        Silver: "LLR",
+        Bronze: "RP"
+      }
+    ],
     Socult: [
       {
         Event: "Overall",
