@@ -96,40 +96,40 @@ export default function CurrentOfficeBearers({ year = "2026-2027" }) {
     return (
         <>
             <div className={Styles.contactsContainer}>
-                {President && (
-                    <div>
-                        <div data-aos="zoom-in-up">
-                            <ContactCard
-                                name={President.Name}
-                                designation={President.Post}
-                                facebook={President.Facebook}
-                                linkedin={President.LinkedIn}
-                                email={President.Email}
-                                imgSrc={
-                                    President.img
-                                        ? `/data/media/images/contacts/${President.img}`
-                                        : ""
-                                }
-                            />
-                        </div>
-                    </div>
-                )}
-                {JointPresident && (
-                    <div>
-                        <div data-aos="zoom-in-up">
-                            <ContactCard
-                                name={JointPresident.Name}
-                                designation={JointPresident.Post}
-                                facebook={JointPresident.Facebook}
-                                linkedin={JointPresident.LinkedIn}
-                                email={JointPresident.Email}
-                                imgSrc={
-                                    JointPresident.img
-                                        ? `/data/media/images/contacts/${JointPresident.img}`
-                                        : ""
-                                }
-                            />
-                        </div>
+                {(President || JointPresident) && (
+                    <div className={Styles.multipleCards}>
+                        {President && (
+                            <div data-aos="zoom-in-up">
+                                <ContactCard
+                                    name={President.Name}
+                                    designation={President.Post}
+                                    facebook={President.Facebook}
+                                    linkedin={President.LinkedIn}
+                                    email={President.Email}
+                                    imgSrc={
+                                        President.img
+                                            ? `/data/media/images/contacts/${President.img}`
+                                            : ""
+                                    }
+                                />
+                            </div>
+                        )}
+                        {JointPresident && (
+                            <div data-aos="zoom-in-up">
+                                <ContactCard
+                                    name={JointPresident.Name}
+                                    designation={JointPresident.Post}
+                                    facebook={JointPresident.Facebook}
+                                    linkedin={JointPresident.LinkedIn}
+                                    email={JointPresident.Email}
+                                    imgSrc={
+                                        JointPresident.img
+                                            ? `/data/media/images/contacts/${JointPresident.img}`
+                                            : ""
+                                    }
+                                />
+                            </div>
+                        )}
                     </div>
                 )}
                 {(Associate_President1 || Associate_President2) && (

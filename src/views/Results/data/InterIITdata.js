@@ -114,7 +114,92 @@ const InterIITdata = {
                 Bronze: "IIT Madras"
             }
         ],
-        Socult: []
+        Socult: [
+            {
+                Event: "Overall",
+                Gold: "IIT Kanpur",
+                Silver: "IIT Delhi",
+                Bronze: "IIT Kharagpur"
+            },
+            {
+                Event: "Quiz Cup",
+                Gold: "IIT Madras",
+                Silver: "IIT Delhi",
+                Bronze: "IIT Kharagpur"
+            },
+            {
+                Event: "Literary Arts Cup",
+                Gold: "IIT Delhi",
+                Silver: "IIT Kharagpur",
+                Bronze: "IIT Jodhpur"
+            },
+            {
+                Event: "Speaking Arts Cup",
+                Gold: "IIT Kanpur",
+                Silver: "IIT Kharagpur",
+                Bronze: "IIT Madras"
+            },
+            {
+                Event: "Comedic Arts Cup",
+                Gold: "IIT Guwahati",
+                Silver: "IIT Kharagpur",
+                Bronze: "IIT Kanpur, IIT Bombay"
+            },
+            {
+                Event: "Dance Arts Cup",
+                Gold: "IIT Delhi",
+                Silver: "IIT Kanpur",
+                Bronze: "IIT Mandi"
+            },
+            {
+                Event: "Theatre Arts Cup",
+                Gold: "IIT Kanpur",
+                Silver: "IIT Varanasi (BHU)",
+                Bronze: "IIT Bombay"
+            },
+            {
+                Event: "Musical Arts Cup",
+                Gold: "IIT Patna",
+                Silver: "IIT Kanpur",
+                Bronze: "IIT Guwahati"
+            },
+            {
+                Event: "Filmmaking Arts Cup",
+                Gold: "IIT Kharagpur",
+                Silver: "IIT Delhi, IIT Mandi",
+                Bronze: "-"
+            },
+            {
+                Event: "Fine Arts Cup",
+                Gold: "IIT Delhi",
+                Silver: "IIT Kharagpur",
+                Bronze: "IIT Kanpur, IIT Guwahati"
+            },
+            {
+                Event: "Digital Arts Cup",
+                Gold: "IIT Kanpur",
+                Silver: "IIT Roorkee",
+                Bronze: "IIT Guwahati"
+            },
+            {
+                Event: "Photography Cup",
+                Gold: "IIT Kanpur",
+                Silver: "IIT Varanasi (BHU)",
+                Bronze: "IIT Guwahati"
+            },
+            {
+                Event: "Fashion Cup",
+                Gold: "IIT Kanpur",
+                Silver: "IIT Roorkee",
+                Bronze: "IIT Indore"
+            },
+            {
+                Event: "Culinary Arts Cup",
+                Gold: "IIT Kanpur",
+                Silver: "IIT Kharagpur",
+                Bronze: "IIT Delhi"
+            }
+        ]
     },
     "2016-17": {
         Sports:
