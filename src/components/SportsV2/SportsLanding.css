@@ -360,8 +360,10 @@
   }
 
   /* ===== SECTION SHARED ===== */
-  section {
+  #home, #sports, #achievements, #events, #facilities, #championship, #inter-iit, #contact {
     padding: 100px 5%;
+    margin: 0 auto;
+    max-width: none !important;
   }
 
   .section-label {
@@ -463,7 +465,7 @@
 
   .sports-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2px;
   }
 
@@ -846,7 +848,7 @@
 
   .halls-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     gap: 2px;
     margin-top: 50px;
   }
@@ -1242,7 +1244,7 @@
     nav { padding: 0 4%; }
     .mobile-menu-btn { display: block; }
     .nav-links { display: none; }
-    section { padding: 70px 4%; }
+    #home, #sports, #achievements, #events, #facilities, #championship, #inter-iit, #contact { padding: 70px 4%; }
     .hero { padding: 120px 4%; }
     .hero-stats { gap: 30px; }
     .hero-stat-num { font-size: 36px; }
