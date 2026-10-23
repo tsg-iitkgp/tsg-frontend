@@ -8,10 +8,6 @@ import AppImage from "../../../components/AppImage";
 export default function IICMHome() {
   const iicmUrl = "https://gymkhana.iitkgp.ac.in/iicm/";
 
-  const handleOpenPoster = () => {
-    window.open("/images/iicm9.jpeg", "_blank");
-  };
-
   return (
     <div className={Styles.container}>
       <div className={Styles.innerContainer}>
@@ -27,7 +23,6 @@ export default function IICMHome() {
         <div className={Styles.gridWrapper}>
           <motion.div
             className={Styles.leftColumn}
-            onClick={handleOpenPoster}
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.2 }}
@@ -41,11 +36,6 @@ export default function IICMHome() {
                 height={1536}
                 className={Styles.coachesImg}
               />
-              <div className={Styles.clickOverlay}>
-                <span className={Styles.clickBadge}>
-                  🔍 Click to View Full Poster
-                </span>
-              </div>
             </div>
           </motion.div>
 
@@ -84,13 +74,6 @@ export default function IICMHome() {
 
 
             <div className={Styles.btnRow}>
-              <button
-                className={Styles.openPosterBtn}
-                onClick={handleOpenPoster}
-              >
-                View Poster
-              </button>
-
               <a
                 className={Styles.openPosterBtn}
                 href={iicmUrl}
