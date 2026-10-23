@@ -10,6 +10,7 @@ import EventsHome from "./Events/EventsHome";
 import CouncilHome from "./Council/CouncilHome";
 import Preloader from "../../components/Preloader/Preloader";
 import Hls from "hls.js";
+import IICMHome from "./IICM/IICMHome";
 
 export default function Home() {
   const videoRef = useRef(null);
@@ -103,61 +104,64 @@ export default function Home() {
       <Preloader />
       <Layout>
         <Head>
-        <meta name="description" content={pageDescription} />
+          <meta name="description" content={pageDescription} />
 
-        {/* Open Graph / Facebook */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={pageUrl} />
-        <meta property="og:title" content="Technology Students' Gymkhana - IIT Kharagpur" />
-        <meta
-          property="og:description"
-          content="The hub of extra-curricular and co-curricular activities in IIT Kharagpur. Managed by students, for students."
-        />
-        <meta property="og:image" content={pageImage} />
-        <meta property="og:site_name" content="Technology Students' Gymkhana - IIT Kharagpur" />
-
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content={pageUrl} />
-        <meta name="twitter:title" content="Technology Students' Gymkhana - IIT Kharagpur" />
-        <meta
-          name="twitter:description"
-          content="The hub of extra-curricular and co-curricular activities in IIT Kharagpur. Managed by students, for students."
-        />
-        <meta name="twitter:image" content={pageImage} />
-      </Head>
-
-      <div style={{ zoom: "110%" }}>
-        <div className={Styles.backgroundImage}>
-        <div className={Styles.videoWrapper}>
-          <video
-            ref={videoRef}
-            className={Styles.videoBackground}
-            src="/videos/hls/playlist.m3u8"
-            autoPlay
-            loop
-            muted
-            playsInline
-            poster="/videos/hero-bg.webp"
+          {/* Open Graph / Facebook */}
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content={pageUrl} />
+          <meta property="og:title" content="Technology Students' Gymkhana - IIT Kharagpur" />
+          <meta
+            property="og:description"
+            content="The hub of extra-curricular and co-curricular activities in IIT Kharagpur. Managed by students, for students."
           />
+          <meta property="og:image" content={pageImage} />
+          <meta property="og:site_name" content="Technology Students' Gymkhana - IIT Kharagpur" />
+
+          {/* Twitter */}
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:url" content={pageUrl} />
+          <meta name="twitter:title" content="Technology Students' Gymkhana - IIT Kharagpur" />
+          <meta
+            name="twitter:description"
+            content="The hub of extra-curricular and co-curricular activities in IIT Kharagpur. Managed by students, for students."
+          />
+          <meta name="twitter:image" content={pageImage} />
+        </Head>
+
+        <div style={{ zoom: "110%" }}>
+          <div className={Styles.backgroundImage}>
+            <div className={Styles.videoWrapper}>
+              <video
+                ref={videoRef}
+                className={Styles.videoBackground}
+                src="/videos/hls/playlist.m3u8"
+                autoPlay
+                loop
+                muted
+                playsInline
+                poster="/videos/hero-bg.webp"
+              />
+            </div>
+            <div className={Styles.mottoBox}>&quot;Yogah Karmasu Kausalam&quot;</div>
+          </div>
+          <div>
+            {/* About Us Section */}
+            <AboutUs />
+
+            {/* Committees Section */}
+            <CommitteesHome />
+
+            {/* Events Section */}
+            <EventsHome />
+
+            {/*Inter IIT Cultural Meet Section*/}
+            <IICMHome />
+
+            {/* Council Section */}
+            <CouncilHome />
+          </div>
         </div>
-        <div className={Styles.mottoBox}>&quot;Yogah Karmasu Kausalam&quot;</div>
-      </div>
-      <div>
-        {/* About Us Section */}
-        <AboutUs />
-
-        {/* Committees Section */}
-        <CommitteesHome />
-
-        {/* Events Section */}
-        <EventsHome />
-
-        {/* Council Section */}
-        <CouncilHome />
-      </div>
-      </div>
-    </Layout>
+      </Layout>
     </>
   );
 }
